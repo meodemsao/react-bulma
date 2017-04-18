@@ -28,8 +28,16 @@ describe('Cols', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Col tag="span">Yo!</Col>);
+    const wrapper = shallow(<Cols tag="span">Yo!</Cols>);
 
     expect(wrapper.type()).toBe('span');
+  });
+
+  it('should render custom property', () => {
+    const wrapper = shallow(<Cols responsive="mobile" gapless={true} multiline={true}>Yo!</Cols>);
+
+    expect(wrapper.hasClass('is-mobile')).toBe(true);
+    expect(wrapper.hasClass('is-gapless')).toBe(true);
+    expect(wrapper.hasClass('is-multiline')).toBe(true);
   });
 });

@@ -22,6 +22,7 @@ const Container = (props) => {
     className,
     cssModule,
     fluid,
+    tag: Tag,
     ...attributes,
   } = props;
 
@@ -32,8 +33,7 @@ const Container = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 

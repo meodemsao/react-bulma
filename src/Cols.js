@@ -10,8 +10,7 @@ const propTypes = {
   cssModule: PropTypes.object,
   responsive: PropTypes.string,
   gapless: PropTypes.bool,
-  multiline: PropTypes.bool,
-  narrow: PropTypes.string,
+  multiline: PropTypes.bool
 };
 
 const defaultProps = {
@@ -34,7 +33,7 @@ const Cols = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     responsive ? `is-${responsive}` : '',
-    gapless ? 'is-grapless' : '',
+    gapless ? 'is-gapless' : '',
     multiline ? 'is-multiline' : '',
     defaultClass
   ), cssModule);
