@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Label } from '../';
 
-describe('Hero', () => {
+describe('Label', () => {
   it('should render a label tag by default', () => {
     const wrapper = shallow(<Label />);
 

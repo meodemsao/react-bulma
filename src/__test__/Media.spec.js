@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Media } from '../';
 
-describe('Hero', () => {
+describe('Media', () => {
   it('should render a media tag by default', () => {
     const wrapper = shallow(<Media />);
 

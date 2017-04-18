@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Button } from '../';
 
-describe('Hero', () => {
+describe('Button', () => {
   it('should render a button tag by default', () => {
     const wrapper = shallow(<Button />);
 

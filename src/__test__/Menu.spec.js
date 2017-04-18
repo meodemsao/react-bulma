@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Menu } from '../';
 
-describe('Hero', () => {
+describe('Menu', () => {
   it('should render a menu tag by default', () => {
     const wrapper = shallow(<Menu />);
 

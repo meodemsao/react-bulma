@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Container } from '../';
 
-describe('Cols', () => {
+describe('Container', () => {
   it('should render a col tag by default', () => {
     const wrapper = shallow(<Container />);
 
