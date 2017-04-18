@@ -10,6 +10,7 @@ const propTypes = {
   cssModule: PropTypes.object,
   size: PropTypes.string,
   color: PropTypes.string,
+  bold: PropTypes.bool
 };
 
 const defaultProps = {
@@ -24,6 +25,7 @@ const Hero = (props) => {
     cssModule,
     size,
     color,
+    bold,
     tag: Tag,
     ...attributes,
   } = props;
@@ -32,7 +34,8 @@ const Hero = (props) => {
     className,
     defaultClass,
     size ? `is-${size}` : '',
-    color ? `is-${color}` : ''
+    color ? `is-${color}` : '',
+    bold ? 'is-bold' : ''
   ), cssModule);
 
   return (

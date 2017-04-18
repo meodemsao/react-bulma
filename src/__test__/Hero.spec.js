@@ -32,4 +32,12 @@ describe('Hero', () => {
 
     expect(wrapper.type()).toBe('span');
   });
+
+  it('should render custom property', () => {
+    const wrapper = shallow(<Hero color="primary" size="medium" bold={true}>Yo!</Hero>);
+
+    expect(wrapper.hasClass('is-primary')).toBe(true);
+    expect(wrapper.hasClass('is-medium')).toBe(true);
+    expect(wrapper.hasClass('is-bold')).toBe(true);
+  });
 });

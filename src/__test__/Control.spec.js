@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {Control} from '../';
 
 describe('Control', () => {
-  it('should render a box tag by default', () => {
+  it('should render a control tag by default', () => {
     const wrapper = shallow(<Control />);
 
     expect(wrapper.type()).toBe('p');

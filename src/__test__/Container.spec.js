@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { Container } from '../';
 
 describe('Container', () => {
-  it('should render a col tag by default', () => {
+  it('should render a container tag by default', () => {
     const wrapper = shallow(<Container />);
 
     expect(wrapper.type()).toBe('div');

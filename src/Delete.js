@@ -17,7 +17,7 @@ const defaultProps = {
 
 const defaultClass = 'delete';
 
-const Content = (props) => {
+const Delete = (props) => {
   const {
     className,
     cssModule,
@@ -38,7 +38,7 @@ const Content = (props) => {
   );
 };
 
-Content.propTypes = propTypes;
-Content.defaultProps = defaultProps;
+Delete.propTypes = propTypes;
+Delete.defaultProps = defaultProps;
 
-export default Content;
+export default Delete;
