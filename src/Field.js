@@ -8,43 +8,39 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  size: PropTypes.string,
-  color: PropTypes.string,
+  addons: PropTypes.bool,
+  grouped: PropTypes.bool
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'div'
 };
 
-const defaultClass = 'tag';
+const defaultClass = 'field';
 
-const Tag = (props) => {
+const Field = (props) => {
   const {
     className,
     cssModule,
-    size,
-    color,
     tag: Tag,
+    addons,
+    grouped,
     ...attributes,
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
-    size ? `is-${size}` : '',
-    color ? `is-${color}` : ''
+    addons ? 'has-addons' : '',
+    grouped ? 'is-grouped' : ''
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-      <ul>
-
-      </ul>
-    </Tag>
+    <Tag {...attributes} className={classes}/>
   );
 };
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+Field.propTypes = propTypes;
+Field.defaultProps = defaultProps;
 
-export default Tag;
+export default Field;

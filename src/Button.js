@@ -9,7 +9,8 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   size: PropTypes.string,
-  style: PropTypes.string
+  style: PropTypes.string,
+  disabled: PropTypes.bool
 };
 
 const defaultProps = {
@@ -25,6 +26,7 @@ const Button = (props) => {
     size,
     style,
     state,
+    disabled,
     tag: Tag,
     ...attributes,
   } = props;
@@ -38,8 +40,9 @@ const Button = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    disabled
+      ? <Tag {...attributes} className={classes} disabled />
+      : <Tag {...attributes} className={classes} />
   );
 };
 

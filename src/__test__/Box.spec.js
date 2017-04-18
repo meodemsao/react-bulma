@@ -1,34 +1,34 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Col } from '../';
+import { Box } from '../';
 
-describe('Col', () => {
-  it('should render a col tag by default', () => {
-    const wrapper = shallow(<Col />);
+describe('Hero', () => {
+  it('should render a box tag by default', () => {
+    const wrapper = shallow(<Box />);
 
     expect(wrapper.type()).toBe('div');
   });
 
   it('should render default class', () => {
-    const wrapper = shallow(<Col />);
+    const wrapper = shallow(<Box />);
 
-    expect(wrapper.hasClass('column')).toBe(true);
+    expect(wrapper.hasClass('box')).toBe(true);
   });
 
   it('should render children', () => {
-    const wrapper = shallow(<Col>Yo!</Col>);
+    const wrapper = shallow(<Box>Yo!</Box>);
 
     expect(wrapper.text()).toBe('Yo!');
   });
 
   it('should pass additional classNames', () => {
-    const wrapper = shallow(<Col className="extra">Yo!</Col>);
+    const wrapper = shallow(<Box className="extra">Yo!</Box>);
 
     expect(wrapper.hasClass('extra')).toBe(true);
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Col tag="span">Yo!</Col>);
+    const wrapper = shallow(<Box tag="span"/>);
 
     expect(wrapper.type()).toBe('span');
   });

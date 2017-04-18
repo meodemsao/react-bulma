@@ -8,43 +8,50 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  size: PropTypes.string,
   color: PropTypes.string,
+  size: PropTypes.string,
+  state: PropTypes.string,
+  focus: PropTypes.bool,
+  loading: PropTypes.bool,
+  disable: PropTypes.bool,
+  hasIcon: PropTypes.string
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'input'
 };
 
-const defaultClass = 'tag';
+const defaultClass = 'input';
 
-const Tag = (props) => {
+const Input = (props) => {
   const {
     className,
     cssModule,
-    size,
-    color,
     tag: Tag,
+    color,
+    size,
+    state,
+    disable,
     ...attributes,
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
+    color ? `is-${color}` : '',
     size ? `is-${size}` : '',
-    color ? `is-${color}` : ''
+    state ? `is-${state}` : '',
+
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-      <ul>
-
-      </ul>
-    </Tag>
+    disable
+      ? <Tag {...attributes} className={classes} diabled/>
+      : <Tag {...attributes} className={classes} />
   );
 };
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
 
-export default Tag;
+export default Input;

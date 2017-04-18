@@ -7,32 +7,26 @@ const {PropTypes} = React;
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  cssModule: PropTypes.object,
-  size: PropTypes.string,
-  color: PropTypes.string,
+  cssModule: PropTypes.object
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'textarea'
 };
 
-const defaultClass = 'tag';
+const defaultClass = 'textarea';
 
-const Tag = (props) => {
+const TextArea = (props) => {
   const {
     className,
     cssModule,
-    size,
-    color,
     tag: Tag,
     ...attributes,
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass,
-    size ? `is-${size}` : '',
-    color ? `is-${color}` : ''
+    defaultClass
   ), cssModule);
 
   return (
@@ -44,7 +38,7 @@ const Tag = (props) => {
   );
 };
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+TextArea.propTypes = propTypes;
+TextArea.defaultProps = defaultProps;
 
-export default Tag;
+export default TextArea;

@@ -1,28 +1,28 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Col } from '../';
+import { Cols } from '../';
 
-describe('Col', () => {
+describe('Cols', () => {
   it('should render a col tag by default', () => {
-    const wrapper = shallow(<Col />);
+    const wrapper = shallow(<Cols />);
 
     expect(wrapper.type()).toBe('div');
   });
 
   it('should render default class', () => {
-    const wrapper = shallow(<Col />);
+    const wrapper = shallow(<Cols />);
 
-    expect(wrapper.hasClass('column')).toBe(true);
+    expect(wrapper.hasClass('columns')).toBe(true);
   });
 
   it('should render children', () => {
-    const wrapper = shallow(<Col>Yo!</Col>);
+    const wrapper = shallow(<Cols>Yo!</Cols>);
 
     expect(wrapper.text()).toBe('Yo!');
   });
 
   it('should pass additional classNames', () => {
-    const wrapper = shallow(<Col className="extra">Yo!</Col>);
+    const wrapper = shallow(<Cols className="extra">Yo!</Cols>);
 
     expect(wrapper.hasClass('extra')).toBe(true);
   });

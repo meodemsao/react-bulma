@@ -8,6 +8,9 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  expanded: PropTypes.bool,
+  iconLeft: PropTypes.bool,
+  iconRight: PropTypes.bool
 };
 
 const defaultProps = {
@@ -21,12 +24,18 @@ const Control = (props) => {
     className,
     cssModule,
     tag: Tag,
+    expanded,
+    iconLeft,
+    iconRight,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass
+    defaultClass,
+    expanded ? 'is-expanded' : '',
+    iconLeft ? 'has-icons-left' : '',
+    iconRight ? 'has-icon-right' : ''
   ), cssModule);
 
   return (

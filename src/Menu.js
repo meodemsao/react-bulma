@@ -8,43 +8,35 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  size: PropTypes.string,
-  color: PropTypes.string,
+  type: PropTypes.string
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'aside'
 };
 
-const defaultClass = 'tag';
+const defaultClass = "menu";
 
-const Tag = (props) => {
+const Menu = (props) => {
   const {
     className,
     cssModule,
-    size,
-    color,
     tag: Tag,
+    type,
     ...attributes,
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass,
-    size ? `is-${size}` : '',
-    color ? `is-${color}` : ''
+    type ? `menu-${type}` : defaultClass,
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-      <ul>
-
-      </ul>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+Menu.propTypes = propTypes;
+Menu.defaultProps = defaultProps;
 
-export default Tag;
+export default Menu;

@@ -8,22 +8,20 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  size: PropTypes.string,
-  color: PropTypes.string,
+  active: PropTypes.bool
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'li'
 };
 
-const defaultClass = 'tag';
+const defaultClass = '';
 
-const Tag = (props) => {
+const TabItem = (props) => {
   const {
     className,
     cssModule,
-    size,
-    color,
+    active,
     tag: Tag,
     ...attributes,
   } = props;
@@ -31,20 +29,16 @@ const Tag = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
-    size ? `is-${size}` : '',
-    color ? `is-${color}` : ''
+    active ? 'is-active' : ''
   ), cssModule);
 
   return (
     <Tag {...attributes} className={classes}>
-      <ul>
-
-      </ul>
     </Tag>
   );
 };
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+TabItem.propTypes = propTypes;
+TabItem.defaultProps = defaultProps;
 
-export default Tag;
+export default TabItem;

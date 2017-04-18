@@ -8,22 +8,21 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  alignment: PropTypes.string,
   size: PropTypes.string,
-  color: PropTypes.string,
+  style: PropTypes.string
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'div'
 };
 
-const defaultClass = 'tag';
+const defaultClass = 'tabs';
 
-const Tag = (props) => {
+const Tabs = (props) => {
   const {
     className,
     cssModule,
-    size,
-    color,
     tag: Tag,
     ...attributes,
   } = props;
@@ -31,20 +30,15 @@ const Tag = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
-    size ? `is-${size}` : '',
-    color ? `is-${color}` : ''
   ), cssModule);
 
   return (
     <Tag {...attributes} className={classes}>
-      <ul>
-
-      </ul>
     </Tag>
   );
 };
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+Tabs.propTypes = propTypes;
+Tabs.defaultProps = defaultProps;
 
-export default Tag;
+export default Tabs;
