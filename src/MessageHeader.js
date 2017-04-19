@@ -9,7 +9,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  message: PropTypes.string
+  title: PropTypes.string
 };
 
 const defaultProps = {
