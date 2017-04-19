@@ -7,7 +7,8 @@ const {PropTypes} = React;
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  cssModule: PropTypes.object
+  cssModule: PropTypes.object,
+  color: PropTypes.string
 };
 
 const defaultProps = {
@@ -21,12 +22,14 @@ const Message = (props) => {
     className,
     cssModule,
     tag: Tag,
+    color,
     ...attributes,
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
+    color ? `is-${color}` : ''
   ), cssModule);
 
   return (

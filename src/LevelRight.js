@@ -14,7 +14,7 @@ const defaultProps = {
   tag: 'div'
 };
 
-const defaultClass = 'level-left';
+const defaultClass = 'level-right';
 
 const LevelRight = (props) => {
   const {
