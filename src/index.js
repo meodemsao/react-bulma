@@ -56,7 +56,6 @@ import TextArea from './TextArea';
 import Tile from './Tile';
 import Title from './Title';
 
-
 export {
     Box,
     Button,
@@ -115,8 +114,4 @@ export {
     TextArea,
     Tile,
     Title,
-    Icon,
-    Tile,
-    Menu,
-    Label
-};
+  };

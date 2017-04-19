@@ -1,36 +1,32 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import {  } from '../';
+import {shallow} from 'enzyme';
+import {Input} from '../';
 
-describe('Image', () => {
-  it('should render a image tag by default', () => {
-    const wrapper = shallow(<Image />);
+describe('Input', () => {
+  it('should render a input tag by default', () => {
+    const wrapper = shallow(<Input />);
 
-    expect(wrapper.html()).toBe('<figure class="image"><img/></figure>');
+    expect(wrapper.html()).toBe('<input class="input"/>');
   });
 
   it('should render default class', () => {
-    const wrapper = shallow(<Image />);
+    const wrapper = shallow(<Input />);
 
-    expect(wrapper.hasClass('image')).toBe(true);
-  });
-
-  it('should render children', () => {
-    const wrapper = shallow(<Image/>);
-
-    expect(wrapper.html()).toBe('<figure class="image"><img/></figure>');
+    expect(wrapper.hasClass('input')).toBe(true);
   });
 
   it('should pass additional classNames', () => {
-    const wrapper = shallow(<Image className="extra">Yo!</Image>);
+    const wrapper = shallow(<Input className="extra" />);
 
     expect(wrapper.hasClass('extra')).toBe(true);
   });
 
-  it('should render src & size', () => {
-    const wrapper = shallow(<Image size="128x128" src="http://bulma.io/images/placeholders/128x128.png"/>);
+  it('should render custom property', () => {
+    const wrapper = shallow(<Input size="medium" color="success" state="hovered" />);
 
-    expect(wrapper.html()).toBe('<figure class="image is-128x128"><img src="http://bulma.io/images/placeholders/128x128.png"/></figure>');
+    expect(wrapper.hasClass('is-hovered')).toBe(true);
+    expect(wrapper.hasClass('is-medium')).toBe(true);
+    expect(wrapper.hasClass('is-success')).toBe(true);
   });
 
 });

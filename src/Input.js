@@ -41,7 +41,6 @@ const Input = (props) => {
     color ? `is-${color}` : '',
     size ? `is-${size}` : '',
     state ? `is-${state}` : '',
-
   ), cssModule);
 
   return (
