@@ -29,6 +29,10 @@ import Modal from './Modal';
 import ModalBackground from './ModalBackground';
 import ModalClose from './ModalClose';
 import ModalContent from  './ModalContent';
+import ModalCard from './ModalCard';
+import ModalCardBody from './ModalCardBody';
+import ModalCardHead from './ModalCardHead';
+import ModalCardFoot from './ModalCardFoot';
 import Nav from './Nav';
 import NavCenter from './NavCenter';
 import NavItem from './NavItem';
@@ -88,6 +92,10 @@ export {
     ModalBackground,
     ModalClose,
     ModalContent,
+    ModalCard,
+    ModalCardHead,
+    ModalCardBody,
+    ModalCardFoot,
     Nav,
     NavCenter,
     NavItem,

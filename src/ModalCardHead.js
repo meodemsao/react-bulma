@@ -7,29 +7,26 @@ const {PropTypes} = React;
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  cssModule: PropTypes.object,
-  active: PropTypes.bool
+  cssModule: PropTypes.object
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'header'
 };
 
-const defaultClass = 'modal';
+const defaultClass = 'modal-card-head';
 
-const Modal = (props) => {
+const ModalCardHead = (props) => {
   const {
     className,
     cssModule,
-    active,
     tag: Tag,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass,
-    active ? 'is-active' : ''
+    defaultClass
   ), cssModule);
 
   return (
@@ -37,7 +34,7 @@ const Modal = (props) => {
   );
 };
 
-Modal.propTypes = propTypes;
-Modal.defaultProps = defaultProps;
+ModalCardHead.propTypes = propTypes;
+ModalCardHead.defaultProps = defaultProps;
 
-export default Modal;
+export default ModalCardHead;
