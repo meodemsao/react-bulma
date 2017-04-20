@@ -21,16 +21,12 @@ const PaginationList = (props) => {
     className,
     cssModule,
     tag: Tag,
-    size,
-    position,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass,
-    size ? `is-${size}` : '',
-    position ? `is-${position}` : ''
+    defaultClass
   ), cssModule);
 
   return (

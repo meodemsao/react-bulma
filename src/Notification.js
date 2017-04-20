@@ -9,8 +9,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  type: PropTypes.string,
-  content: PropTypes.string
+  color: PropTypes.string
 };
 
 const defaultProps = {
@@ -23,8 +22,7 @@ const Notification = (props) => {
   const {
     className,
     cssModule,
-    type,
-    content,
+    color,
     tag: Tag,
     ...attributes,
   } = props;
@@ -32,13 +30,11 @@ const Notification = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
-    type ? `is-${type}` : '',
+    color ? `is-${color}` : '',
   ), cssModule);
 
   return (
     <Tag {...attributes} className={classes}>
-      <Delete tag="button" />
-      {content ? content : null}
     </Tag>
   );
 };

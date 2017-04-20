@@ -8,8 +8,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  current: PropTypes.bool,
-  text: PropTypes.string
+  current: PropTypes.bool
 };
 
 const defaultProps = {
@@ -18,32 +17,29 @@ const defaultProps = {
 
 const defaultClass = 'pagination-link';
 
-const PaginationList = (props) => {
+const PaginationLink = (props) => {
   const {
     className,
     cssModule,
     tag: Tag,
     current,
-    text,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
-    current ? `is-${current}` : ''
+    current ? 'is-current' : ''
   ), cssModule);
 
   return (
     <li>
-      <Tag {...attributes} className={classes}>
-        {text}
-      </Tag>
+      <Tag {...attributes} className={classes} />
     </li>
   );
 };
 
-PaginationList.propTypes = propTypes;
-PaginationList.defaultProps = defaultProps;
+PaginationLink.propTypes = propTypes;
+PaginationLink.defaultProps = defaultProps;
 
-export default PaginationList;
+export default PaginationLink;
