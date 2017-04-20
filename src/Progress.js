@@ -9,6 +9,7 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   size: PropTypes.string,
+  color: PropTypes.string,
   value: PropTypes.string,
   max: PropTypes.string
 };
@@ -24,6 +25,7 @@ const Progress = (props) => {
     className,
     cssModule,
     size,
+    color,
     value,
     max,
     tag: Tag,
@@ -34,13 +36,11 @@ const Progress = (props) => {
     className,
     defaultClass,
     size ? `is-${size}` : '',
-    value ? value : '',
-    max ? max : ''
+    color ? `is-${color}` : ''
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    <Tag {...attributes} className={classes} value={value} max={max} />
   );
 };
 

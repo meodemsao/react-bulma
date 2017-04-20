@@ -8,10 +8,11 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  active: PropTypes.bool
 };
 
 const defaultProps = {
-  tag: 'nav'
+  tag: 'div'
 };
 
 const defaultClass = 'panel-block';
@@ -21,12 +22,14 @@ const PanelBlock = (props) => {
     className,
     cssModule,
     tag: Tag,
+    active,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass
+    defaultClass,
+    active ? 'is-active' : ''
   ), cssModule);
 
   return (
