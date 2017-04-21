@@ -1,4 +1,4 @@
-FROM node:7.9-alpine
+FROM node:6.3
 
 MAINTAINER bangvc <bangvc@vgroup.vn>
 
