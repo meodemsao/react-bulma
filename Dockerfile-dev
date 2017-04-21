@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node:7.9-alpine
 
-MAINTAINER bangvc <bangc@vgroup.vn>
+MAINTAINER bangvc <bangvc@vgroup.vn>
 
 RUN useradd --user-group --create-home --shell /bin/false app && mkdir -p /opt/app
 
