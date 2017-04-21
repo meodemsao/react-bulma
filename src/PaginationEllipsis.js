@@ -23,7 +23,6 @@ const PaginationEllipsis = (props) => {
     className,
     cssModule,
     tag: Tag,
-    text,
     ...attributes
   } = props;
 
@@ -34,9 +33,7 @@ const PaginationEllipsis = (props) => {
 
   return (
     <li>
-      <Tag {...attributes} className={classes}>
-        {text}
-      </Tag>
+      <Tag {...attributes} className={classes} />
     </li>
   );
 };

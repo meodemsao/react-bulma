@@ -10,7 +10,9 @@ const propTypes = {
   cssModule: PropTypes.object,
   alignment: PropTypes.string,
   size: PropTypes.string,
-  style: PropTypes.string
+  style: PropTypes.string,
+  toggle: PropTypes.bool,
+  fullWidth: PropTypes.bool
 };
 
 const defaultProps = {
@@ -23,6 +25,10 @@ const Tabs = (props) => {
   const {
     className,
     cssModule,
+    alignment,
+    size,
+    style,
+    fullWidth,
     tag: Tag,
     ...attributes,
   } = props;
@@ -30,11 +36,14 @@ const Tabs = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
+    alignment ? `is-${alignment}` : '',
+    size ? `is-${size}` : '',
+    style ? `is-${style}` : '',
+    fullWidth ? 'is-fullwidth' : ''
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 

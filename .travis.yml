@@ -27,9 +27,9 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: npm
-  email: edward.d.hernandez@gmail.com
+  email: bangvc@vgroup.vn
   api_key:
     secure: FFlZtXFtzHE0mnYlYPnv5g7CE3IYj4DdO28qxSLV1sa1UC/FJOAY6no5iiQ62aL0CH66B9sgXjvOvRDYoSfIWjOxYS49OcYQ1U6cW4x3azI34FTVCkjfsmoOrnsiBkNjYkKbz+XW7rsdN/u4CA9womdqHq4v4dNroB8mgrHKli5/CK7PhodRf9JYq758cc/cwZjnIQ3ioZ9vcsgsBcYO+705kh0x6HNEYQyhDMm++DMEupa7OtzZTeZbeDFxDCVlFWCxMJCbwkjqK4tqxXJglBbr2SPZ+LKi2EMHaILUoYwFsMimBFy+rYjCCe55zYnuYw2z+6lPeqbJ7pvhodTYcf/kUVpHzUKBMrCW4oJXlQ7MjaX9gaiiD8K+pnP7IF3N+j7iiroxsRa7floYTjDLstxNwrawfrIajL1C0wRTZ9g7CUX/Pbxjs818zOAloHqzlVQewIt3Jcj0CyXeVgZSQvcHvU1ROSJkN9qYyBXbb9rou4j+mgYvLLy+aql91dvmSjQIuDGqG9x+Acyz5Zl5N36JNjNAwJxF1NV1E/Vks8TPdgU3O6zylP+tg9HAzu7jG9gnIAusC7vkE/9RZ1TFQPAMTVrL+sqHmliDBHWBmMRibbkEsTl2vvV2ZSriHqQGqRFqv7jhON96RdzU6uxDtoRJb4ZGZrqEmt7l8n5USAU=
   on:
     tags: true
-    repo: reactstrap/reactstrap
+    repo: reactbulma/reactbulma

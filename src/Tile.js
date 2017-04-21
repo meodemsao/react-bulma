@@ -17,6 +17,8 @@ const defaultProps = {
   tag: 'div'
 };
 
+const defaultClass = "tile";
+
 const Tile = (props) => {
   const {
     className,
@@ -30,15 +32,14 @@ const Tile = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    'tile',
+    defaultClass,
     contextual ? `is-${contextual}` : '',
     directional ? 'is-vertical' : '',
     size ? `is-${size}` : ''
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 

@@ -6,6 +6,7 @@ const {PropTypes} = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  type: PropTypes.string,
   className: PropTypes.string,
   cssModule: PropTypes.object,
   color: PropTypes.string,
@@ -28,6 +29,7 @@ const Input = (props) => {
     className,
     cssModule,
     tag: Tag,
+    type,
     color,
     size,
     state,
@@ -43,9 +45,13 @@ const Input = (props) => {
     state ? `is-${state}` : '',
   ), cssModule);
 
+  if (Tag === 'input') {
+    attributes.type = type;
+  }
+
   return (
     disable
-      ? <Tag {...attributes} className={classes} diabled/>
+      ? <Tag {...attributes} className={classes} diabled />
       : <Tag {...attributes} className={classes} />
   );
 };

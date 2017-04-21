@@ -30,11 +30,7 @@ const TextArea = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-      <ul>
-
-      </ul>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 
