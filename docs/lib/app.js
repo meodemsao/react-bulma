@@ -2,6 +2,7 @@
  * Created by bangvu on 4/4/17.
  */
 import 'bulma-css';
+import 'font-awesome/css/font-awesome.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

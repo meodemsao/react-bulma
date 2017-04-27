@@ -12,18 +12,18 @@ const webpackProdConfig = require('./webpack.base.config')('production');
 const paths = [
   '/',
   '/components/',
-  '/components/grid',
-  '/components/notification',
-  // '/components/layout/',
-  // '/components/navs/',
-  // '/components/navbar/',
-  // '/components/breadcrumbs/',
+  '/components/columns/',
+  '/components/tiles',
+  '/components/box/',
+  '/components/button/',
+  '/components/content/',
+  '/components/delete/',
   // '/components/buttons/',
   // '/components/button-group/',
   // '/components/button-toolbar/',
   // '/components/button-dropdown/',
   // '/components/dropdowns/',
-  // '/components/form/',
+  '/components/form/',
   // '/components/input-group/',
   // '/components/popovers/',
   // '/components/progress/',
@@ -91,6 +91,14 @@ var config = [{
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
       },
     ]
   },

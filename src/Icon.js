@@ -48,6 +48,7 @@ const Icon = (props) => {
   return (
     <Tag {...attributes} className={classesTag}>
       <i className={classesIcon} />
+      {props.children}
     </Tag>
   );
 };

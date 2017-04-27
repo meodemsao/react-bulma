@@ -1,5 +1,4 @@
 FROM node:6.3
-
 MAINTAINER bangvc <bangvc@vgroup.vn>
 
 RUN useradd --user-group --create-home --shell /bin/false app && mkdir -p /opt/app

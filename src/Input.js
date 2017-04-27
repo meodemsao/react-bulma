@@ -12,10 +12,7 @@ const propTypes = {
   color: PropTypes.string,
   size: PropTypes.string,
   state: PropTypes.string,
-  focus: PropTypes.bool,
-  loading: PropTypes.bool,
-  disable: PropTypes.bool,
-  hasIcon: PropTypes.string
+  disabled: PropTypes.bool
 };
 
 const defaultProps = {
@@ -33,25 +30,29 @@ const Input = (props) => {
     color,
     size,
     state,
-    disable,
+    disabled,
     ...attributes,
   } = props;
+
+  if (Tag === 'input') {
+    type
+      ? attributes.type = type
+      : attributes.type = 'text'
+  }
 
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
     color ? `is-${color}` : '',
     size ? `is-${size}` : '',
-    state ? `is-${state}` : '',
+    state ? `is-${state}` : ''
   ), cssModule);
 
-  if (Tag === 'input') {
-    attributes.type = type;
-  }
+  console.log('disabled.......',disabled);
 
   return (
-    disable
-      ? <Tag {...attributes} className={classes} diabled />
+    disabled
+      ? <Tag {...attributes} className={classes} disabled />
       : <Tag {...attributes} className={classes} />
   );
 };

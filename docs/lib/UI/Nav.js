@@ -1,4 +1,5 @@
 import React from 'react';
+import {Nav, NavCenter, NavItem, NavLeft, NavRight, NavToggle, Icon} from 'reactbulma';
 
 export default class UINav extends React.Component {
   constructor(props) {
@@ -9,15 +10,31 @@ export default class UINav extends React.Component {
       showNavbar: false
     };
   }
+
   toggleNavbar(e) {
     e.preventDefault();
     this.setState({
       showNavbar: !this.state.showNavbar
     });
   }
+
   render() {
     return (
-      <div></div>
+      <Nav>
+        <NavLeft>
+          <NavItem>
+            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo" />
+          </NavItem>
+        </NavLeft>
+        <NavCenter>
+          <NavItem>
+            <Icon name="fa fa-github"/>
+          </NavItem>
+          <NavItem>
+            <Icon name="fa fa-twitter"/>
+          </NavItem>
+        </NavCenter>
+      </Nav>
     );
   }
 }

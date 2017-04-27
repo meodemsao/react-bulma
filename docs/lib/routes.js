@@ -6,16 +6,19 @@ import { Route, IndexRoute, IndexRedirect } from 'react-router';
 import Home from './Home';
 import NotFound from './NotFound';
 import UI from './UI/index'
-import Notification from './Components/Notification';
-import Grid from './Components/Grid';
+
+import Box from './Components/BoxPage';
+import Notification from './Components/NotificationPage';
+import Button from './Components/ButtonPage';
 
 const routes = (
   <Route path="/" component={UI.Layout}>
     <IndexRoute component={Home} />
     <Route path="/components">
-      <IndexRedirect to="alert" />
+      <IndexRedirect to="box" />
+      <Route path="box" component={Box}/>
       <Route path="notification" component={Notification}/>
-      <Route path="grid" component={Grid}/>
+      <Route path="button" component={Button}/>
     </Route>
     <Route path="*" component={NotFound} />
   </Route>
