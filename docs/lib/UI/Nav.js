@@ -34,6 +34,10 @@ export default class UINav extends React.Component {
             <Icon name="twitter"/>
           </NavItem>
         </NavCenter>
+        <NavRight navMenu={true}>
+          <NavItem href="/">Home</NavItem>
+          <NavItem href="/documents">Document</NavItem>
+        </NavRight>
       </Nav>
     );
   }

@@ -10,6 +10,7 @@ import UI from './UI/index'
 import Box from './Components/BoxPage';
 import Notification from './Components/NotificationPage';
 import Button from './Components/ButtonPage';
+import Cols from './Components/ColsPage';
 
 const routes = (
   <Route path="/" component={UI.Layout}>
@@ -19,6 +20,7 @@ const routes = (
       <Route path="box" component={Box}/>
       <Route path="notification" component={Notification}/>
       <Route path="button" component={Button}/>
+      <Route path="columns" component={Cols}/>
     </Route>
     <Route path="*" component={NotFound} />
   </Route>
