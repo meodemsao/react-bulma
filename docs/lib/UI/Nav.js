@@ -28,10 +28,10 @@ export default class UINav extends React.Component {
         </NavLeft>
         <NavCenter>
           <NavItem>
-            <Icon name="fa fa-github"/>
+            <Icon name="github"/>
           </NavItem>
           <NavItem>
-            <Icon name="fa fa-twitter"/>
+            <Icon name="twitter"/>
           </NavItem>
         </NavCenter>
       </Nav>
