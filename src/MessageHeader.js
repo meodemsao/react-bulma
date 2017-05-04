@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import Delete from './Delete';
 import {mapToCssModules} from './utils';
 
 const {PropTypes} = React;
@@ -22,7 +21,6 @@ const Notification = (props) => {
   const {
     className,
     cssModule,
-    title,
     tag: Tag,
     ...attributes,
   } = props;
@@ -33,10 +31,7 @@ const Notification = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes} >
-      {title}
-      <Delete/>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 
