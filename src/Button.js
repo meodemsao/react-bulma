@@ -40,9 +40,7 @@ const Button = (props) => {
   ), cssModule);
 
   return (
-    disabled
-      ? <Tag {...attributes} className={classes} disabled />
-      : <Tag {...attributes} className={classes} />
+    <Tag {...attributes} className={classes} disabled={disabled} />
   );
 };
 

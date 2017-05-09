@@ -32,8 +32,7 @@ const Level = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass,
-    type ? `level-${type}` : '',
+    type ? `level-${type}` : defaultClass,
     textCenter ? 'has-text-centered' : '',
     mobile ? `is-mobile` : ''
   ), cssModule);

@@ -1,8 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import {
+  mapToCssModules
+} from './utils';
 
-const {PropTypes} = React;
+const {
+  PropTypes
+} = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -29,9 +33,13 @@ const Box = (props) => {
     defaultClass,
   ), cssModule);
 
-  return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+  return ( <
+    Tag { ...attributes
+    }
+    className = {
+      classes
+    }
+    />
   );
 };
 

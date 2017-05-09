@@ -13,6 +13,9 @@ import ButtonPage from './Components/ButtonPage';
 import ColsPage from './Components/ColsPage';
 import ContentPage from  './Components/ContentPage';
 import DeletePage from './Components/DeletePage';
+import LevelPage from './Components/LevelPage';
+import MessagePage from './Components/MessagePage';
+
 const routes = (
   <Route path="/" component={UI.Layout}>
     <IndexRoute component={Home} />
@@ -24,7 +27,8 @@ const routes = (
       <Route path="columns" component={ColsPage} />
       <Route path="content" component={ContentPage} />
       <Route path="delete" component={DeletePage} />
-
+      <Route path="message" component={MessagePage} />
+      <Route path="level" component={LevelPage} />
     </Route>
     <Route path="*" component={NotFound} />
   </Route>
