@@ -1,4 +1,5 @@
 import React from 'react';
+import {PrismCode} from 'react-prism';
 import {
   Cols,
   Col,
@@ -18,6 +19,9 @@ import {
   Delete
 } from 'reactbulma';
 
+import MessageExample from '../Example/MessageExample';
+const MessageExampleSource = require('!!raw!../Example/MessageExample');
+
 export default class MessagePage extends React.Component {
   render() {
     return (
@@ -27,87 +31,19 @@ export default class MessagePage extends React.Component {
         <hr />
         <Cols>
           <Col size="half">
-            <Message>
-              <MessageHeader>
-                <p>Hello World</p>
-                <Delete />
-              </MessageHeader>
-              <MessageBody>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
-                quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
-                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
-                Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-              </MessageBody>
-            </Message>
-            <Message color="dark">
-              <MessageHeader>
-                <p>Hello World</p>
-                <Delete />
-              </MessageHeader>
-              <MessageBody>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
-                quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
-                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
-                Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-              </MessageBody>
-            </Message>
-            <Message color="primary">
-              <MessageHeader>
-                <p>Hello World</p>
-                <Delete />
-              </MessageHeader>
-              <MessageBody>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
-                quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
-                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
-                Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-              </MessageBody>
-            </Message>
-            <Message color="info">
-              <MessageHeader>
-                <p>Hello World</p>
-                <Delete />
-              </MessageHeader>
-              <MessageBody>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
-                quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
-                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
-                Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-              </MessageBody>
-            </Message>
-            <Message color="warning">
-              <MessageHeader>
-                <p>Hello World</p>
-                <Delete />
-              </MessageHeader>
-              <MessageBody>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
-                quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
-                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
-                Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-              </MessageBody>
-            </Message>
-            <Message color="danger">
-              <MessageHeader>
-                <p>Hello World</p>
-                <Delete />
-              </MessageHeader>
-              <MessageBody>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
-                quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
-                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
-                Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-              </MessageBody>
-            </Message>
+            <MessageExample />
+            <MessageExample color="dark" />
+            <MessageExample color="primary" />
+            <MessageExample color="info" />
+            <MessageExample color="warning" />
+            <MessageExample color="danger" />
           </Col>
           <Col size="half">
-
+            <pre>
+              <PrismCode className="language-jsx">
+                { MessageExampleSource }
+              </PrismCode>
+            </pre>
           </Col>
         </Cols>
       </Container>

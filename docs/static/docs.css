@@ -260,6 +260,7 @@ pre[class*="language-"] {
 .token.symbol,
 .token.deleted {
 	color: #f92672;
+    background-color: inherit;
 }
 
 .token.boolean,
@@ -315,5 +316,5 @@ pre[class*="language-"] {
 code .tag {
   font-size: inherit;
   padding: 0;
-  display: inherit;
+  /*display: inherit;*/
 }
