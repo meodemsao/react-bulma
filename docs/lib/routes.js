@@ -15,6 +15,7 @@ import ContentPage from  './Components/ContentPage';
 import DeletePage from './Components/DeletePage';
 import LevelPage from './Components/LevelPage';
 import MessagePage from './Components/MessagePage';
+import IconPage from './Components/IconPage';
 
 const routes = (
   <Route path="/" component={UI.Layout}>
@@ -29,6 +30,7 @@ const routes = (
       <Route path="delete" component={DeletePage} />
       <Route path="message" component={MessagePage} />
       <Route path="level" component={LevelPage} />
+      <Route path="icon" component={IconPage} />
     </Route>
     <Route path="*" component={NotFound} />
   </Route>

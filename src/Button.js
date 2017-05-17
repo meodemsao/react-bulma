@@ -8,6 +8,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  color: PropTypes.string,
   size: PropTypes.string,
   style: PropTypes.string,
   disabled: PropTypes.bool
@@ -23,6 +24,7 @@ const Button = (props) => {
   const {
     className,
     cssModule,
+    color,
     size,
     style,
     state,
@@ -35,6 +37,7 @@ const Button = (props) => {
     className,
     defaultClass,
     size ? `is-${size}` : '',
+    color ? `is-${color}` : '',
     style ? `is-${style}` : '',
     state ? `is-${state}` : ''
   ), cssModule);

@@ -1,13 +1,19 @@
 import React from 'react';
-import Nav from './Nav';
+import {Section} from 'reactbulma';
+import TopNav from './TopNav';
+import Menu from './Menu';
 import Footer from './Footer';
 
 export default (props) => {
+  console.log(props);
   return (
     <div className="wrapper">
-      <Nav />
-      {props.children}
-      <Footer/>
+      <TopNav />
+      <Menu {...props}/>
+      <Section>
+        {props.children}
+      </Section>
+      <Footer />
     </div>
   );
 };

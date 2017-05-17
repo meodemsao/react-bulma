@@ -33,8 +33,7 @@ const TabItem = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 

@@ -10,7 +10,7 @@ const propTypes = {
   cssModule: PropTypes.object,
   size: PropTypes.string,
   offset: PropTypes.string,
-  narrow: PropTypes.string
+  narrow: PropTypes.bool
 };
 
 const defaultProps = {

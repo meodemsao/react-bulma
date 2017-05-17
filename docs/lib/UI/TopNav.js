@@ -1,7 +1,7 @@
 import React from 'react';
 import {Nav, NavCenter, NavItem, NavLeft, NavRight, NavToggle, Icon} from 'reactbulma';
 
-export default class UINav extends React.Component {
+export default class TopNav extends React.Component {
   constructor(props) {
     super(props);
 
