@@ -30,7 +30,6 @@ const Input = (props) => {
     color,
     size,
     state,
-    disabled,
     ...attributes,
   } = props;
 
@@ -48,12 +47,10 @@ const Input = (props) => {
     state ? `is-${state}` : ''
   ), cssModule);
 
-  console.log('disabled.......',disabled);
-
+  //const disabledProp = disabled ? "true" : "false";
+  //console.log('.........', disabledProp);
   return (
-    disabled
-      ? <Tag {...attributes} className={classes} disabled />
-      : <Tag {...attributes} className={classes} />
+    <Tag {...attributes} className={classes} />
   );
 };
 

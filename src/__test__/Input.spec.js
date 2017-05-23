@@ -30,9 +30,9 @@ describe('Input', () => {
   });
 
   it('should render with disable state', () => {
-    const wrapper = shallow(<Input disabled={true} />);
+    const wrapper = shallow(<Input disabled="distabled" />);
 
-    expect(wrapper.html()).toBe('<input type="text" class="input" disabled/>');
+    expect(wrapper.html()).toBe('<input type="text" disabled="disabled" class="input"/>');
   });
 
   it('should render with radio type', () => {

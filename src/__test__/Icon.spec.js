@@ -18,7 +18,7 @@ describe('Icon', () => {
   it('should render children', () => {
     const wrapper = shallow(<Icon>Yo!</Icon>);
 
-    expect(wrapper.html()).toBe('<span class="icon"><i class=""></i></span>');
+    expect(wrapper.html()).toBe('<span class="icon"><i class=""></i>Yo!</span>');
   });
 
   it('should pass additional classNames', () => {

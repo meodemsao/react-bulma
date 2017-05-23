@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { MessageHeader } from '../';
+import {shallow} from 'enzyme';
+import {MessageHeader, Delete} from '../';
 
 describe('MessageHeader', () => {
   it('should render a message header tag by default', () => {
@@ -22,13 +22,13 @@ describe('MessageHeader', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<MessageHeader tag="span"/>);
+    const wrapper = shallow(<MessageHeader tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<MessageHeader title="Hello"/>);
+    const wrapper = shallow(<MessageHeader>Hello<Delete /></MessageHeader>);
 
     expect(wrapper.html()).toBe('<div class="message-header">Hello<a class="delete"></a></div>');
   });
