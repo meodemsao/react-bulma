@@ -28,7 +28,7 @@ describe('Menu', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Menu tag="ul"/>);
+    const wrapper = shallow(<Menu tag="ul" />);
 
     expect(wrapper.type()).toBe('ul');
   });

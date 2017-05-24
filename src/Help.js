@@ -14,10 +14,9 @@ const defaultProps = {
   tag: 'p'
 };
 
-const defaultClass = "help";
+const defaultClass = 'help';
 
 const Help = (props) => {
-
   const {
     className,
     cssModule,

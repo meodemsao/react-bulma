@@ -17,9 +17,10 @@ describe('Notification', () => {
 
   it('should render children', () => {
     const wrapper = shallow(<Notification>
-                              <Delete/>
-                                Info lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
-                            </Notification>);
+      <Delete />
+      Info lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing
+      elit
+    </Notification>);
 
     expect(wrapper.html()).toBe('<div class="notification"><a class="delete"></a>Info lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit</div>');
   });
@@ -31,15 +32,14 @@ describe('Notification', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Notification tag="span"/>);
+    const wrapper = shallow(<Notification tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Notification color="info"/>);
+    const wrapper = shallow(<Notification color="info" />);
 
     expect(wrapper.hasClass('is-info')).toBe(true);
   });
-
 });

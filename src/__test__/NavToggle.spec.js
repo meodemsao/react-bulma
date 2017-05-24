@@ -28,9 +28,8 @@ describe('NavToggle', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<NavToggle tag="span"/>);
+    const wrapper = shallow(<NavToggle tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

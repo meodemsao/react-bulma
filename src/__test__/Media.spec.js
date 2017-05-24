@@ -28,7 +28,7 @@ describe('Media', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Media tag="figure"/>);
+    const wrapper = shallow(<Media tag="figure" />);
 
     expect(wrapper.type()).toBe('figure');
   });

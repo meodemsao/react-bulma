@@ -34,9 +34,8 @@ describe('Container', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Container fluid={true}>Yo!</Container>);
+    const wrapper = shallow(<Container fluid>Yo!</Container>);
 
     expect(wrapper.hasClass('is-fluid')).toBe(true);
   });
-
 });

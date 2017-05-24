@@ -28,9 +28,8 @@ describe('Panel', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Panel tag="div"/>);
+    const wrapper = shallow(<Panel tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
-
 });

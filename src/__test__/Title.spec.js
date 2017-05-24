@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Title} from '../';
+import { shallow } from 'enzyme';
+import { Title } from '../';
 
 describe('Title', () => {
   it('should render a title tag by default', () => {
@@ -33,10 +33,9 @@ describe('Title', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Title size="2" spaced={true} />);
+    const wrapper = shallow(<Title size="2" spaced />);
 
     expect(wrapper.hasClass('is-2')).toBe(true);
     expect(wrapper.hasClass('is-spaced')).toBe(true);
   });
-
 });

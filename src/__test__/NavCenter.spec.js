@@ -28,9 +28,8 @@ describe('NavCenter', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<NavCenter tag="span"/>);
+    const wrapper = shallow(<NavCenter tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

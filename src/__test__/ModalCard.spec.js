@@ -28,9 +28,8 @@ describe('ModalCard', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<ModalCard tag="span"/>);
+    const wrapper = shallow(<ModalCard tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

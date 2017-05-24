@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Tag} from '../';
+import { shallow } from 'enzyme';
+import { Tag } from '../';
 
 describe('Tag', () => {
   it('should render a tag tag by default', () => {
@@ -39,5 +39,4 @@ describe('Tag', () => {
     expect(wrapper.hasClass('is-medium')).toBe(true);
     expect(wrapper.hasClass('is-info')).toBe(true);
   });
-
 });

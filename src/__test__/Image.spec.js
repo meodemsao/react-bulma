@@ -6,7 +6,7 @@ describe('Image', () => {
   it('should render a image tag by default', () => {
     const wrapper = shallow(<Image />);
 
-    expect(wrapper.html()).toBe('<figure class="image"><img/></figure>');
+    expect(wrapper.html()).toBe('<figure class="image"><img /></figure>');
   });
 
   it('should render default class', () => {
@@ -16,9 +16,9 @@ describe('Image', () => {
   });
 
   it('should render children', () => {
-    const wrapper = shallow(<Image/>);
+    const wrapper = shallow(<Image />);
 
-    expect(wrapper.html()).toBe('<figure class="image"><img/></figure>');
+    expect(wrapper.html()).toBe('<figure class="image"><img /></figure>');
   });
 
   it('should pass additional classNames', () => {
@@ -28,9 +28,8 @@ describe('Image', () => {
   });
 
   it('should render src & size', () => {
-    const wrapper = shallow(<Image size="128x128" src="http://bulma.io/images/placeholders/128x128.png"/>);
+    const wrapper = shallow(<Image size="128x128" src="http://bulma.io/images/placeholders/128x128.png" />);
 
-    expect(wrapper.html()).toBe('<figure class="image is-128x128"><img src="http://bulma.io/images/placeholders/128x128.png"/></figure>');
+    expect(wrapper.html()).toBe('<figure class="image is-128x128"><img src="http://bulma.io/images/placeholders/128x128.png" /></figure>');
   });
-
 });

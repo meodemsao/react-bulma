@@ -28,15 +28,14 @@ describe('Message', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Message tag="div"/>);
+    const wrapper = shallow(<Message tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Message color="info"/>);
+    const wrapper = shallow(<Message color="info" />);
 
     expect(wrapper.hasClass('is-info')).toBe(true);
   });
-
 });

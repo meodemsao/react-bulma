@@ -1,9 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import Delete from './Delete';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -16,7 +15,7 @@ const defaultProps = {
   tag: 'div'
 };
 
-const defaultClass = "notification";
+const defaultClass = 'notification';
 
 const Notification = (props) => {
   const {
@@ -24,18 +23,17 @@ const Notification = (props) => {
     cssModule,
     color,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
-    color ? `is-${color}` : '',
+    color ? `is-${color}` : ''
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 

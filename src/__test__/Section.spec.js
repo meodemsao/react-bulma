@@ -28,9 +28,8 @@ describe('Section', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Section tag="div"/>);
+    const wrapper = shallow(<Section tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
-
 });

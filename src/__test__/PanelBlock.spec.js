@@ -28,13 +28,13 @@ describe('PanelBlock', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<PanelBlock tag="span"/>);
+    const wrapper = shallow(<PanelBlock tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<PanelBlock active={true}/>);
+    const wrapper = shallow(<PanelBlock active />);
 
     expect(wrapper.hasClass('is-active')).toBe(true);
   });

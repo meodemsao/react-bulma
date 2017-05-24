@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -15,7 +15,7 @@ const defaultProps = {
   tag: 'aside'
 };
 
-const defaultClass = "menu";
+const defaultClass = 'menu';
 
 const Menu = (props) => {
   const {
@@ -23,12 +23,12 @@ const Menu = (props) => {
     cssModule,
     tag: Tag,
     type,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    type ? `menu-${type}` : defaultClass,
+    type ? `menu-${type}` : defaultClass
   ), cssModule);
 
   return (

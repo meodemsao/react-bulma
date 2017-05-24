@@ -1,15 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
   size: PropTypes.string,
-  color: PropTypes.string,
+  color: PropTypes.string
 };
 
 const defaultProps = {
@@ -18,14 +18,14 @@ const defaultProps = {
 
 const defaultClass = 'tag';
 
-const Tag = (props) => {
+const TagComponent = (props) => {
   const {
     className,
     cssModule,
     size,
     color,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
@@ -40,7 +40,7 @@ const Tag = (props) => {
   );
 };
 
-Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
+TagComponent.propTypes = propTypes;
+TagComponent.defaultProps = defaultProps;
 
-export default Tag;
+export default TagComponent;

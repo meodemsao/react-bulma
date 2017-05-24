@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {NavItem} from '../';
+import { shallow } from 'enzyme';
+import { NavItem } from '../';
 
 describe('NavItem', () => {
   it('should render a nav item tag by default', () => {
@@ -34,12 +34,11 @@ describe('NavItem', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<NavItem tab={true} active={true} hiddenMobile={true} hiddenTablet={true} />);
+    const wrapper = shallow(<NavItem tab active hiddenMobile hiddenTablet />);
 
     expect(wrapper.hasClass('is-tab')).toBe(true);
     expect(wrapper.hasClass('is-active')).toBe(true);
     expect(wrapper.hasClass('is-hidden-mobile')).toBe(true);
     expect(wrapper.hasClass('is-hidden-tablet')).toBe(true);
   });
-
 });

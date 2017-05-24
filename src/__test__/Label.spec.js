@@ -28,9 +28,8 @@ describe('Label', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Label tag="span"/>);
+    const wrapper = shallow(<Label tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

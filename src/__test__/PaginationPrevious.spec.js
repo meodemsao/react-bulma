@@ -28,9 +28,8 @@ describe('PaginationPrevious', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<PaginationPrevious tag="span"/>);
+    const wrapper = shallow(<PaginationPrevious tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

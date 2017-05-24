@@ -28,9 +28,8 @@ describe('ModalClose', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<ModalClose tag="span"/>);
+    const wrapper = shallow(<ModalClose tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

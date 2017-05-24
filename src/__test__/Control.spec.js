@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Control} from '../';
+import { shallow } from 'enzyme';
+import { Control } from '../';
 
 describe('Control', () => {
   it('should render a control tag by default', () => {
@@ -34,7 +34,7 @@ describe('Control', () => {
   });
 
   it('should render custom propery', () => {
-    const wrapper = shallow(<Control expanded={true} iconLeft={true} iconRight={true} />);
+    const wrapper = shallow(<Control expanded iconLeft iconRight />);
 
     expect(wrapper.hasClass('is-expanded')).toBe(true);
     expect(wrapper.hasClass('has-icons-left')).toBe(true);

@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Tabs} from '../';
+import { shallow } from 'enzyme';
+import { Tabs } from '../';
 
 describe('Tabs', () => {
   it('should render a subtitle tag by default', () => {
@@ -40,5 +40,4 @@ describe('Tabs', () => {
     expect(wrapper.hasClass('is-medium')).toBe(true);
     expect(wrapper.hasClass('is-boxed')).toBe(true);
   });
-
 });

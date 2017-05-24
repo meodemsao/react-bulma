@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -34,7 +34,7 @@ const Level = (props) => {
     className,
     type ? `level-${type}` : defaultClass,
     textCenter ? 'has-text-centered' : '',
-    mobile ? `is-mobile` : ''
+    mobile ? 'is-mobile' : ''
   ), cssModule);
 
   return (

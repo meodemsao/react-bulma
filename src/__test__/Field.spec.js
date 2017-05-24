@@ -34,7 +34,7 @@ describe('Field', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Field addons={true} grouped={true}>Yo!</Field>);
+    const wrapper = shallow(<Field addons grouped>Yo!</Field>);
 
     expect(wrapper.hasClass('has-addons')).toBe(true);
     expect(wrapper.hasClass('is-grouped')).toBe(true);

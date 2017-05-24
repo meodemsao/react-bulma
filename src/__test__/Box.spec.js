@@ -28,7 +28,7 @@ describe('Hero', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Box tag="span"/>);
+    const wrapper = shallow(<Box tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });

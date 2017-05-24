@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -31,12 +31,15 @@ const TextArea = (props) => {
     size,
     state,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass
+    defaultClass,
+    color ? `is-${color}` : '',
+    size ? `is-${size}` : '',
+    state ? `is-${state}` : ''
   ), cssModule);
 
   return (

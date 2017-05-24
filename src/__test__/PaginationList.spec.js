@@ -28,9 +28,8 @@ describe('PaginationList', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<PaginationList tag="div"/>);
+    const wrapper = shallow(<PaginationList tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
-
 });

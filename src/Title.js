@@ -1,15 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
   size: PropTypes.string,
-  spaced: PropTypes.bool,
+  spaced: PropTypes.bool
 };
 
 const defaultProps = {
@@ -25,7 +25,7 @@ const Title = (props) => {
     size,
     spaced,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
@@ -36,8 +36,7 @@ const Title = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>
-    </Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 

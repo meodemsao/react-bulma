@@ -28,9 +28,8 @@ describe('PanelTabs', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<PanelTabs tag="span"/>);
+    const wrapper = shallow(<PanelTabs tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

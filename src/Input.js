@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -21,7 +21,7 @@ const defaultProps = {
 
 const defaultClass = 'input';
 
-const Input = (props) => {
+const Input = props => {
   const {
     className,
     cssModule,
@@ -30,28 +30,25 @@ const Input = (props) => {
     color,
     size,
     state,
-    ...attributes,
+    ...attributes
   } = props;
 
   if (Tag === 'input') {
-    type
-      ? attributes.type = type
-      : attributes.type = 'text'
+    attributes.type = type;
   }
 
-  const classes = mapToCssModules(classNames(
-    className,
-    defaultClass,
-    color ? `is-${color}` : '',
-    size ? `is-${size}` : '',
-    state ? `is-${state}` : ''
-  ), cssModule);
-
-  //const disabledProp = disabled ? "true" : "false";
-  //console.log('.........', disabledProp);
-  return (
-    <Tag {...attributes} className={classes} />
+  const classes = mapToCssModules(
+    classNames(
+      className,
+      defaultClass,
+      color ? `is-${color}` : '',
+      size ? `is-${size}` : '',
+      state ? `is-${state}` : ''
+    ),
+    cssModule
   );
+
+  return <Tag {...attributes} className={classes} />;
 };
 
 Input.propTypes = propTypes;

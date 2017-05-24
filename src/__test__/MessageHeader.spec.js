@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {MessageHeader, Delete} from '../';
+import { shallow } from 'enzyme';
+import { MessageHeader, Delete } from '../';
 
 describe('MessageHeader', () => {
   it('should render a message header tag by default', () => {
@@ -32,5 +32,4 @@ describe('MessageHeader', () => {
 
     expect(wrapper.html()).toBe('<div class="message-header">Hello<a class="delete"></a></div>');
   });
-
 });

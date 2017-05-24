@@ -28,9 +28,8 @@ describe('Level', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Level tag="div"/>);
+    const wrapper = shallow(<Level tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
-
 });

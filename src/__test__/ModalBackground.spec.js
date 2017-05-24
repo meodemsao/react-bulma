@@ -28,9 +28,8 @@ describe('ModalBackground', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<ModalBackground tag="span"/>);
+    const wrapper = shallow(<ModalBackground tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

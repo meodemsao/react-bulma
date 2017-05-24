@@ -34,7 +34,7 @@ describe('Cols', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Cols responsive="mobile" gapless={true} multiline={true}>Yo!</Cols>);
+    const wrapper = shallow(<Cols responsive="mobile" gapless multiline>Yo!</Cols>);
 
     expect(wrapper.hasClass('is-mobile')).toBe(true);
     expect(wrapper.hasClass('is-gapless')).toBe(true);

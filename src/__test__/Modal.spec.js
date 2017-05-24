@@ -28,15 +28,14 @@ describe('Modal', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Modal tag="span"/>);
+    const wrapper = shallow(<Modal tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Modal active={true}/>);
+    const wrapper = shallow(<Modal active />);
 
     expect(wrapper.hasClass('is-active')).toBe(true);
   });
-
 });

@@ -34,7 +34,7 @@ describe('HeroBody', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<HeroBody size="medium" spaced={true}>Yo!</HeroBody>);
+    const wrapper = shallow(<HeroBody size="medium" spaced>Yo!</HeroBody>);
 
     expect(wrapper.hasClass('is-medium')).toBe(true);
     expect(wrapper.hasClass('is-spaced')).toBe(true);

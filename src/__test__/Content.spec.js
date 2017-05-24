@@ -28,7 +28,7 @@ describe('Content', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Content tag="span"/>);
+    const wrapper = shallow(<Content tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });

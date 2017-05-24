@@ -28,25 +28,25 @@ describe('Button', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Button tag="span"/>);
+    const wrapper = shallow(<Button tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
 
   it('should render custom size', () => {
-    const wrapper = shallow(<Button size="small"/>);
+    const wrapper = shallow(<Button size="small" />);
 
     expect(wrapper.hasClass('is-small')).toBe(true);
   });
 
   it('should render custom style', () => {
-    const wrapper = shallow(<Button style="outlined"/>);
+    const wrapper = shallow(<Button style="outlined" />);
 
     expect(wrapper.hasClass('is-outlined')).toBe(true);
   });
 
   it('should render custom state', () => {
-    const wrapper = shallow(<Button state="hovered"/>);
+    const wrapper = shallow(<Button state="hovered" />);
 
     expect(wrapper.hasClass('is-hovered')).toBe(true);
   });

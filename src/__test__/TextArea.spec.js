@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {TextArea} from '../';
+import { shallow } from 'enzyme';
+import { TextArea } from '../';
 
 describe('TextArea', () => {
   it('should render a textarea tag by default', () => {
@@ -32,5 +32,4 @@ describe('TextArea', () => {
 
     expect(wrapper.type()).toBe('div');
   });
-
 });

@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -10,7 +10,7 @@ const propTypes = {
   cssModule: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.string,
-  style: PropTypes.string,
+  state: PropTypes.string,
   disabled: PropTypes.bool
 };
 
@@ -26,11 +26,10 @@ const Button = (props) => {
     cssModule,
     color,
     size,
-    style,
     state,
     disabled,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
@@ -38,7 +37,6 @@ const Button = (props) => {
     defaultClass,
     size ? `is-${size}` : '',
     color ? `is-${color}` : '',
-    style ? `is-${style}` : '',
     state ? `is-${state}` : ''
   ), cssModule);
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Input} from '../';
+import { shallow } from 'enzyme';
+import { Input } from '../';
 
 describe('Input', () => {
   it('should render a input tag by default', () => {
@@ -46,5 +46,4 @@ describe('Input', () => {
 
     expect(wrapper.html()).toBe('<input type="checkbox" class="input"/>');
   });
-
 });

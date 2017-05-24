@@ -28,15 +28,14 @@ describe('LevelItem', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<LevelItem tag="span"/>);
+    const wrapper = shallow(<LevelItem tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<LevelItem textCenter={true} tag="span"/>);
+    const wrapper = shallow(<LevelItem textCenter tag="span" />);
 
     expect(wrapper.hasClass('has-text-centered')).toBe(true);
   });
-
 });

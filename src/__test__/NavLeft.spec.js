@@ -28,9 +28,8 @@ describe('NavLeft', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<NavLeft tag="div"/>);
+    const wrapper = shallow(<NavLeft tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
-
 });

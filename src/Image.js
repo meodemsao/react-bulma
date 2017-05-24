@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -25,18 +25,18 @@ const Image = (props) => {
     src,
     size,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
-    size ? `is-${size}` : '',
+    size ? `is-${size}` : ''
   ), cssModule);
 
   return (
     <Tag {...attributes} className={classes}>
-      <img src={src} />
+      <img src={src} role="presentation" />
     </Tag>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -35,7 +35,7 @@ const Col = (props) => {
     defaultClass,
     size ? `is-${size}` : '',
     offset ? `is-offset-${offset}` : '',
-    narrow ? `is-${narrow}` : '',
+    narrow ? `is-${narrow}` : ''
   ), cssModule);
 
   return (

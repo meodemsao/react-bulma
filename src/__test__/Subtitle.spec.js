@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Subtitle} from '../';
+import { shallow } from 'enzyme';
+import { Subtitle } from '../';
 
 describe('Subtitle', () => {
   it('should render a subtitle tag by default', () => {
@@ -33,10 +33,9 @@ describe('Subtitle', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Subtitle size="2" spaced={true} />);
+    const wrapper = shallow(<Subtitle size="2" spaced />);
 
     expect(wrapper.hasClass('is-2')).toBe(true);
     expect(wrapper.hasClass('is-spaced')).toBe(true);
   });
-
 });

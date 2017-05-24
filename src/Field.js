@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -25,7 +25,7 @@ const Field = (props) => {
     tag: Tag,
     addons,
     grouped,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
@@ -36,7 +36,7 @@ const Field = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}/>
+    <Tag {...attributes} className={classes} />
   );
 };
 

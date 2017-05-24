@@ -1,10 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.arrayOf(React.PropTypes.node),
+    React.PropTypes.node
+  ]),
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -15,7 +19,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'span',
+  children: null
 };
 
 const defaultClass = 'icon';
@@ -29,7 +34,7 @@ const Icon = (props) => {
     left,
     right,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classesTag = mapToCssModules(classNames(
@@ -42,7 +47,7 @@ const Icon = (props) => {
 
   const classesIcon = mapToCssModules(classNames(
     className,
-    name ? `fa fa-${name}` : '',
+    name ? `fa fa-${name}` : ''
   ), cssModule);
 
   return (

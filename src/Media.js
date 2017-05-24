@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -15,7 +15,7 @@ const defaultProps = {
   tag: 'article'
 };
 
-const defaultClass = "media";
+const defaultClass = 'media';
 
 const Media = (props) => {
   const {

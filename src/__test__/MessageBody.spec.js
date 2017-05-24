@@ -28,9 +28,8 @@ describe('MessageBody', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<MessageBody tag="div"/>);
+    const wrapper = shallow(<MessageBody tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
-
 });

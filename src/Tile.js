@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -10,14 +10,14 @@ const propTypes = {
   cssModule: PropTypes.object,
   contextual: PropTypes.string,
   directional: PropTypes.bool,
-  size: PropTypes.string,
+  size: PropTypes.string
 };
 
 const defaultProps = {
   tag: 'div'
 };
 
-const defaultClass = "tile";
+const defaultClass = 'tile';
 
 const Tile = (props) => {
   const {
@@ -27,7 +27,7 @@ const Tile = (props) => {
     directional,
     size,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(

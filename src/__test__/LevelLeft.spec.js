@@ -28,9 +28,8 @@ describe('LevelLeft', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<LevelLeft tag="span"/>);
+    const wrapper = shallow(<LevelLeft tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

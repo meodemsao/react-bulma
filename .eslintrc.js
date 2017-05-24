@@ -44,6 +44,7 @@ module.exports = {
     'es6': true
   },
   'globals': {
+    'expect': true,
     'describe': true,
     'it': true
   },

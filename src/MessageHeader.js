@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import {mapToCssModules} from './utils';
+import { mapToCssModules } from './utils';
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -15,19 +15,19 @@ const defaultProps = {
   tag: 'div'
 };
 
-const defaultClass = "message-header";
+const defaultClass = 'message-header';
 
-const Notification = (props) => {
+const MessageHeader = (props) => {
   const {
     className,
     cssModule,
     tag: Tag,
-    ...attributes,
+    ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass,
+    defaultClass
   ), cssModule);
 
   return (
@@ -35,7 +35,7 @@ const Notification = (props) => {
   );
 };
 
-Notification.propTypes = propTypes;
-Notification.defaultProps = defaultProps;
+MessageHeader.propTypes = propTypes;
+MessageHeader.defaultProps = defaultProps;
 
-export default Notification;
+export default MessageHeader;

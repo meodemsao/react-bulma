@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {PaginationLink} from '../';
+import { shallow } from 'enzyme';
+import { PaginationLink } from '../';
 
 describe('PaginationLink', () => {
   it('should render a pagination link tag by default', () => {
@@ -34,9 +34,8 @@ describe('PaginationLink', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<PaginationLink current={true}>Yo!</PaginationLink>);
+    const wrapper = shallow(<PaginationLink current>Yo!</PaginationLink>);
 
     expect(wrapper.html()).toBe('<li><a class="pagination-link is-current">Yo!</a></li>');
   });
-
 });

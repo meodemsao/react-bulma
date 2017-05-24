@@ -28,16 +28,15 @@ describe('Pagination', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<Pagination tag="div"/>);
+    const wrapper = shallow(<Pagination tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Pagination size="medium" position="centered"/>);
+    const wrapper = shallow(<Pagination size="medium" position="centered" />);
 
     expect(wrapper.hasClass('is-medium')).toBe(true);
     expect(wrapper.hasClass('is-centered')).toBe(true);
   });
-
 });

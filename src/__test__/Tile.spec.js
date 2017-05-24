@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Tile} from '../';
+import { shallow } from 'enzyme';
+import { Tile } from '../';
 
 describe('Tile', () => {
   it('should render a tile tag by default', () => {
@@ -34,11 +34,10 @@ describe('Tile', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Tile size="2" contextual="ancestor" directional={true}/>);
+    const wrapper = shallow(<Tile size="2" contextual="ancestor" directional />);
 
     expect(wrapper.hasClass('is-2')).toBe(true);
     expect(wrapper.hasClass('is-ancestor')).toBe(true);
     expect(wrapper.hasClass('is-ancestor')).toBe(true);
   });
-
 });

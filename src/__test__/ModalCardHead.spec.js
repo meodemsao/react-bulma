@@ -28,9 +28,8 @@ describe('ModalCardHead', () => {
   });
 
   it('should render custom tag', () => {
-    const wrapper = shallow(<ModalCardHead tag="span"/>);
+    const wrapper = shallow(<ModalCardHead tag="span" />);
 
     expect(wrapper.type()).toBe('span');
   });
-
 });

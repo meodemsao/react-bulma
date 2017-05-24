@@ -34,7 +34,7 @@ describe('Hero', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Hero color="primary" size="medium" bold={true}>Yo!</Hero>);
+    const wrapper = shallow(<Hero color="primary" size="medium" bold>Yo!</Hero>);
 
     expect(wrapper.hasClass('is-primary')).toBe(true);
     expect(wrapper.hasClass('is-medium')).toBe(true);

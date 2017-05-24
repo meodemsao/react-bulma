@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {PaginationEllipsis} from '../';
+import { shallow } from 'enzyme';
+import { PaginationEllipsis } from '../';
 
 describe('PaginationEllipsis', () => {
   it('should render a pagination ellipsis tag by default and default class', () => {
