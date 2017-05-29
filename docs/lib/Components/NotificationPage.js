@@ -1,47 +1,47 @@
-import React from 'react';
-import {Notification, Delete} from 'reactbulma';
+import React, { Component } from 'react';
+import { Notification, Delete } from 'reactbulma';
 
-export default class NotificationPage extends React.Component{
-  render(){
-    return(
+export default class NotificationPage extends Component {
+  render() {
+    return (
       <div>
         <Notification>
-          <Delete/>
+          <Delete />
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit lorem ipsum dolor sit amet,
           consectetur adipiscing elit
         </Notification>
         <Notification color="primary">
-          <Delete/>
+          <Delete />
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit lorem ipsum dolor sit amet,
           consectetur adipiscing elit
         </Notification>
         <Notification color="info">
-          <Delete/>
+          <Delete />
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit lorem ipsum dolor sit amet,
           consectetur adipiscing elit
         </Notification>
         <Notification color="success">
-          <Delete/>
+          <Delete />
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit lorem ipsum dolor sit amet,
           consectetur adipiscing elit
         </Notification>
         <Notification color="warning">
-          <Delete/>
+          <Delete />
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit lorem ipsum dolor sit amet,
           consectetur adipiscing elit
         </Notification>
         <Notification color="danger">
-          <Delete/>
+          <Delete />
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit lorem ipsum dolor sit amet,
           consectetur adipiscing elit
         </Notification>
       </div>
-    )
+    );
   }
 }

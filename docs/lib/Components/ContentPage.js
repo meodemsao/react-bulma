@@ -1,5 +1,14 @@
 import React from 'react';
-import {Container, Cols, Col, Content, Title, Subtitle, Delete, Icon} from 'reactbulma';
+import {
+  Container,
+  Cols,
+  Col,
+  Content,
+  Title,
+  Subtitle,
+  Delete,
+  Icon
+} from 'reactbulma';
 
 export default class ContentPage extends React.Component {
   render() {
@@ -12,7 +21,11 @@ export default class ContentPage extends React.Component {
         <hr />
         <Content>
           <p>
-            The <code>.delete</code> element is a stand-alone element that can be used in different contexts.
+            The
+            {' '}
+            <code>.delete</code>
+            {' '}
+            element is a stand-alone element that can be used in different contexts.
           </p>
         </Content>
         <Cols>
@@ -23,12 +36,9 @@ export default class ContentPage extends React.Component {
               </p>
             </Content>
           </Col>
-          <Col>
-
-          </Col>
+          <Col />
         </Cols>
       </Container>
-
-    )
+    );
   }
 }

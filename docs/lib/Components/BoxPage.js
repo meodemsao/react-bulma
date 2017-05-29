@@ -1,6 +1,16 @@
 import React from 'react';
-import {PrismCode} from 'react-prism';
-import {Container, Box, Media, Content, Image, Level, Title, Subtitle, Icon} from 'reactbulma';
+import { PrismCode } from 'react-prism';
+import {
+  Container,
+  Box,
+  Media,
+  Content,
+  Image,
+  Level,
+  Title,
+  Subtitle,
+  Icon
+} from 'reactbulma';
 
 import BoxExample from '../Example/BoxExample';
 const BoxExampleSource = require('!!raw!../Example/BoxExample');
@@ -10,7 +20,9 @@ export default class BoxPage extends React.Component {
     return (
       <Container>
         <Title tag="h1">Box</Title>
-        <Subtitle tag="h2">A white <strong>box</strong> to contain other elements</Subtitle>
+        <Subtitle tag="h2">
+          A white <strong>box</strong> to contain other elements
+        </Subtitle>
         <hr />
         <BoxExample />
         <pre>
@@ -19,6 +31,6 @@ export default class BoxPage extends React.Component {
           </PrismCode>
         </pre>
       </Container>
-    )
+    );
   }
 }

@@ -11,9 +11,9 @@ import {
   Icon
 } from 'reactbulma';
 
-export const ButtonAddons = (props) => {
+export const ButtonAddons = () => {
   return (
-    <Field addons={true}>
+    <Field addons>
       <Control>
         <Button color="primary">
           <Icon size="small" name="align-left" />
@@ -22,18 +22,18 @@ export const ButtonAddons = (props) => {
       </Control>
       <Control>
         <Button>
-          <Icon size="small" name="align-center"/>
+          <Icon size="small" name="align-center" />
           <span>Center</span>
         </Button>
       </Control>
       <Control>
         <Button color="danger">
-          <Icon size="small" name="align-right"/>
+          <Icon size="small" name="align-right" />
           <span>Right</span>
         </Button>
       </Control>
     </Field>
-  )
+  );
 };
 
 export default ButtonAddons;

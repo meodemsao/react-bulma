@@ -1,15 +1,15 @@
 import React from 'react';
-import {Box, Media, Content, Image, Level, Button, Icon} from 'reactbulma';
+import { Box, Media, Content, Image, Level, Button, Icon } from 'reactbulma';
 
-export const ButtonOutlined = (props) => {
+export const ButtonOutlined = () => {
   return (
-    <div class="block">
-      <Button color="primary" style="outlined">Outlined</Button>
-      <Button color="info" style="outlined">Outlined</Button>
-      <Button color="success" style="outlined">Outlined</Button>
-      <Button color="danger" style="outlined">Outlined</Button>
+    <div className="block">
+      <Button color="primary" state="outlined">Outlined</Button>
+      <Button color="info" state="outlined">Outlined</Button>
+      <Button color="success" state="outlined">Outlined</Button>
+      <Button color="danger" state="outlined">Outlined</Button>
     </div>
-  )
+  );
 };
 
 export default ButtonOutlined;

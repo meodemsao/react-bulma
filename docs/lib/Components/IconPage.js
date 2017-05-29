@@ -1,5 +1,5 @@
 import React from 'react';
-import {PrismCode} from 'react-prism';
+import { PrismCode } from 'react-prism';
 import {
   Container,
   Box,
@@ -20,7 +20,17 @@ export default class IconPage extends React.Component {
     return (
       <Container>
         <Title tag="h1">Icon</Title>
-        <Subtitle tag="h2">Bulma is compatible with <strong><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></strong> icons.</Subtitle>
+        <Subtitle tag="h2">
+          Bulma is compatible with
+          {' '}
+          <strong>
+            <a href="http://fortawesome.github.io/Font-Awesome/">
+              Font Awesome
+            </a>
+          </strong>
+          {' '}
+          icons.
+        </Subtitle>
         <hr />
         <IconExample />
         <pre>
@@ -29,6 +39,6 @@ export default class IconPage extends React.Component {
           </PrismCode>
         </pre>
       </Container>
-    )
+    );
   }
 }

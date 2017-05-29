@@ -40,7 +40,12 @@ export default class ColsPage extends React.Component {
         <hr />
         <Title tag="h3">Sizes</Title>
         <Content>
-          <p>If you want to change the <strong>size</strong> of a single column, you can use one the following classes:
+          <p>
+            If you want to change the
+            {' '}
+            <strong>size</strong>
+            {' '}
+            of a single column, you can use one the following classes:
           </p>
           <ul>
             <li>
@@ -59,7 +64,17 @@ export default class ColsPage extends React.Component {
               <code>is-one-quarter</code>
             </li>
           </ul>
-          <p>The <em>other</em> columns will fill up the <strong>remaining</strong> space automatically.</p>
+          <p>
+            The
+            {' '}
+            <em>other</em>
+            {' '}
+            columns will fill up the
+            {' '}
+            <strong>remaining</strong>
+            {' '}
+            space automatically.
+          </p>
         </Content>
         <Cols>
           <Col size="three-quarters">
@@ -118,7 +133,13 @@ export default class ColsPage extends React.Component {
         </Cols>
         <Title tag="h4">12 columns</Title>
         <Content>
-          <p>As the grid can be divided into <strong>12</strong> columns, there are size classes for each division:</p>
+          <p>
+            As the grid can be divided into
+            {' '}
+            <strong>12</strong>
+            {' '}
+            columns, there are size classes for each division:
+          </p>
           <ul>
             <li><code>is-2</code></li>
             <li><code>is-3</code></li>
@@ -470,41 +491,70 @@ export default class ColsPage extends React.Component {
         </Cols>
         <Title tag="h3">Offset</Title>
         <Content>
-          <p>While you can use <em>empty columns</em> (like <code>&lt;div class="column"&gt;&lt;/div&gt;</code>) to
-            create horizontal space around <code>.column</code> elements, you can also use <strong>offset</strong>
+          <p>
+            While you can use
+            {' '}
+            <em>empty columns</em>
+            {' '}
+            (like
+            {' '}
+            <code>&lt;div class="column"&gt;&lt;/div&gt;</code>
+            ) to
+            create horizontal space around
+            {' '}
+            <code>.column</code>
+            {' '}
+            elements, you can also use
+            {' '}
+            <strong>offset</strong>
             modifiers like <code>.is-offset-x</code>:
           </p>
         </Content>
         <Cols responsive="mobile">
           <Col size="half" offset="one-quarter">
             <Notification color="info">
-              <code class="html">is-half</code><br />
-              <code class="html">is-offset-one-quarter</code>
+              <code className="html">is-half</code><br />
+              <code className="html">is-offset-one-quarter</code>
             </Notification>
           </Col>
         </Cols>
         <Cols responsive="mobile">
           <Col size="4" offset="8">
             <Notification color="info">
-              <code class="html">is-4</code><br />
-              <code class="html">is-offset-8</code>
+              <code className="html">is-4</code><br />
+              <code className="html">is-offset-8</code>
             </Notification>
           </Col>
         </Cols>
         <Cols responsive="mobile">
           <Col size="11" offset="4">
             <Notification color="info">
-              <code class="html">is-11</code><br />
-              <code class="html">is-offset-4</code>
+              <code className="html">is-11</code><br />
+              <code className="html">is-offset-4</code>
             </Notification>
           </Col>
         </Cols>
         <Title tag="h3">Responsiveness</Title>
         <Content>
-          <p>By default, columns are only activated from <strong>tablet</strong> onwards. This means columns are stacked
-            on top of each other on <strong>mobile</strong>.</p>
-          <p>If you want columns to work on <strong>mobile too</strong>, just add the <code>is-mobile</code> modifier on
-            the <code>columns</code> container:</p>
+          <p>
+            By default, columns are only activated from
+            {' '}
+            <strong>tablet</strong>
+            {' '}
+            onwards. This means columns are stacked
+            on top of each other on <strong>mobile</strong>.
+          </p>
+          <p>
+            If you want columns to work on
+            {' '}
+            <strong>mobile too</strong>
+            , just add the
+            {' '}
+            <code>is-mobile</code>
+            {' '}
+            modifier on
+            the <code>columns</code> container:
+          </p>
         </Content>
         <Cols responsive="mobile">
           <Col>
@@ -531,11 +581,15 @@ export default class ColsPage extends React.Component {
         <Message color="info">
           <MessageHeader>Resize</MessageHeader>
           <MessageBody>
-            If you want to see the difference, resize your browser and see <em>when</em> the columns are stacked and
+            If you want to see the difference, resize your browser and see
+            {' '}
+            <em>when</em>
+            {' '}
+            the columns are stacked and
             when they are horizontally distributed.
           </MessageBody>
         </Message>
       </Container>
-    )
+    );
   }
 }

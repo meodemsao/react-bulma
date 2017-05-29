@@ -22,7 +22,9 @@ export default class LevelPage extends React.Component {
     return (
       <Container>
         <Title tag="h1">Level</Title>
-        <Subtitle tag="h2">A multi-purpose horizontal level, which can contain almost any other element</Subtitle>
+        <Subtitle tag="h2">
+          A multi-purpose horizontal level, which can contain almost any other element
+        </Subtitle>
         <hr />
         <Content>
           <p>The <strong>structure</strong> of a level is the following:</p>
@@ -40,9 +42,21 @@ export default class LevelPage extends React.Component {
               </ul>
             </li>
           </ul>
-          <p>In a <code>level-item</code>, you can then insert almost <em>anything</em> you want: a title, a button, a
-            text input, or just simple text. No matter what elements you put inside a Bulma <code>level</code>, they
-            will always be <strong>vertically centered</strong>.</p>
+          <p>
+            In a
+            {' '}
+            <code>level-item</code>
+            , you can then insert almost
+            {' '}
+            <em>anything</em>
+            {' '}
+            you want: a title, a button, a
+            text input, or just simple text. No matter what elements you put inside a Bulma
+            {' '}
+            <code>level</code>
+            , they
+            will always be <strong>vertically centered</strong>.
+          </p>
         </Content>
         <Level>
           <Level type="left" tag="div">
@@ -80,8 +94,23 @@ export default class LevelPage extends React.Component {
         </Level>
         <Title tag="h3">Centered level</Title>
         <Content>
-          If you want a <strong>centered level</strong>, you can use as many <code>level-item</code> as you want, as
-          long as they are <strong>direct</strong> children of the <code>level</code> container.
+          If you want a
+          {' '}
+          <strong>centered level</strong>
+          , you can use as many
+          {' '}
+          <code>level-item</code>
+          {' '}
+          as you want, as
+          long as they are
+          {' '}
+          <strong>direct</strong>
+          {' '}
+          children of the
+          {' '}
+          <code>level</code>
+          {' '}
+          container.
         </Content>
         <hr />
         <Level>
@@ -111,6 +140,6 @@ export default class LevelPage extends React.Component {
           </Level>
         </Level>
       </Container>
-    )
+    );
   }
 }

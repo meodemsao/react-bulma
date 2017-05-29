@@ -1,6 +1,19 @@
 import React from 'react';
-import {PrismCode} from 'react-prism';
-import {Container, Cols, Col, Box, Media, Content, Image, Level, Title, Subtitle, Button, Icon} from 'reactbulma';
+import { PrismCode } from 'react-prism';
+import {
+  Container,
+  Cols,
+  Col,
+  Box,
+  Media,
+  Content,
+  Image,
+  Level,
+  Title,
+  Subtitle,
+  Button,
+  Icon
+} from 'reactbulma';
 
 import ButtonColor from '../Example/ButtonExample';
 const ButtonColorSource = require('!!raw!../Example/ButtonExample');
@@ -28,7 +41,12 @@ export default class ButtonPage extends React.Component {
     return (
       <Container>
         <Title tag="h1">Buttons</Title>
-        <Subtitle tag="h2">The classic <strong>button</strong>, in different colors, sizes, and states</Subtitle>
+        <Subtitle tag="h2">
+          The classic
+          {' '}
+          <strong>button</strong>
+          , in different colors, sizes, and states
+        </Subtitle>
         <hr />
         <Cols>
           <Col size="half">
@@ -105,7 +123,15 @@ export default class ButtonPage extends React.Component {
         <Title tag="h3">Button group</Title>
         <Content>
           <p>
-            If you want to <strong>group</strong> buttons together, use the <code>is-grouped</code> modifier on the
+            If you want to
+            {' '}
+            <strong>group</strong>
+            {' '}
+            buttons together, use the
+            {' '}
+            <code>is-grouped</code>
+            {' '}
+            modifier on the
             <code>field</code> container:
             Save changes
             Cancel
@@ -128,7 +154,14 @@ export default class ButtonPage extends React.Component {
         <Title tag="h3">Button addons</Title>
         <Content>
           <p>
-            If you want to use buttons as <strong>addons</strong>, use the <code>has-addons</code> modifier on the
+            If you want to use buttons as
+            {' '}
+            <strong>addons</strong>
+            , use the
+            {' '}
+            <code>has-addons</code>
+            {' '}
+            modifier on the
             <code>field</code> container:
             Left
             Center
@@ -148,6 +181,6 @@ export default class ButtonPage extends React.Component {
           </Col>
         </Cols>
       </Container>
-    )
+    );
   }
 }

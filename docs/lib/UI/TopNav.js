@@ -1,5 +1,13 @@
 import React from 'react';
-import {Nav, NavCenter, NavItem, NavLeft, NavRight, NavToggle, Icon} from 'reactbulma';
+import {
+  Nav,
+  NavCenter,
+  NavItem,
+  NavLeft,
+  NavRight,
+  NavToggle,
+  Icon
+} from 'reactbulma';
 
 export default class TopNav extends React.Component {
   constructor(props) {
@@ -28,13 +36,13 @@ export default class TopNav extends React.Component {
         </NavLeft>
         <NavCenter>
           <NavItem>
-            <Icon name="github"/>
+            <Icon name="github" />
           </NavItem>
           <NavItem>
-            <Icon name="twitter"/>
+            <Icon name="twitter" />
           </NavItem>
         </NavCenter>
-        <NavRight navMenu={true}>
+        <NavRight navMenu>
           <NavItem href="/">Home</NavItem>
           <NavItem href="/documents">Document</NavItem>
         </NavRight>

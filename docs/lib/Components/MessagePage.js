@@ -1,5 +1,5 @@
 import React from 'react';
-import {PrismCode} from 'react-prism';
+import { PrismCode } from 'react-prism';
 import {
   Cols,
   Col,
@@ -27,7 +27,9 @@ export default class MessagePage extends React.Component {
     return (
       <Container>
         <Title tag="h1">Message</Title>
-        <Subtitle tag="h2">Colored message blocks, to emphasize part of your page</Subtitle>
+        <Subtitle tag="h2">
+          Colored message blocks, to emphasize part of your page
+        </Subtitle>
         <hr />
         <Cols>
           <Col size="half">
@@ -41,12 +43,12 @@ export default class MessagePage extends React.Component {
           <Col size="half">
             <pre>
               <PrismCode className="language-jsx">
-                { MessageExampleSource }
+                {MessageExampleSource}
               </PrismCode>
             </pre>
           </Col>
         </Cols>
       </Container>
-    )
+    );
   }
 }

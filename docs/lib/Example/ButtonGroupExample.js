@@ -11,9 +11,9 @@ import {
   Icon
 } from 'reactbulma';
 
-export const ButtonGroup = (props) => {
+export const ButtonGroup = () => {
   return (
-    <Field grouped={true}>
+    <Field grouped>
       <Control>
         <Button color="primary">
           Save changes
@@ -30,7 +30,7 @@ export const ButtonGroup = (props) => {
         </Button>
       </Control>
     </Field>
-  )
+  );
 };
 
 export default ButtonGroup;

@@ -1,12 +1,15 @@
 import React from 'react';
-import {Box, Media, Content, Image, Level, Icon} from 'reactbulma';
+import { Box, Media, Content, Image, Level, Icon } from 'reactbulma';
 
-const Example = (props) => {
+const Example = () => {
   return (
     <Box>
       <Media>
         <Media type="left">
-          <Image src="http://bulma.io/images/placeholders/128x128.png" size="128x128" />
+          <Image
+            src="http://bulma.io/images/placeholders/128x128.png"
+            size="128x128"
+          />
         </Media>
         <Media type="content">
           <Content>
@@ -19,7 +22,7 @@ const Example = (props) => {
               egestas. Nullam condimentum luctus turpis.
             </p>
           </Content>
-          <Level mobile={true}>
+          <Level mobile>
             <Level tag="div" type="left">
               <Level tag="a" type="item">
                 <Icon name="github" size="small" />
@@ -29,7 +32,7 @@ const Example = (props) => {
         </Media>
       </Media>
     </Box>
-  )
+  );
 };
 
 export default Example;

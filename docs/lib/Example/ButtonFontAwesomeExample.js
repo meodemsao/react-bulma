@@ -10,7 +10,7 @@ import {
   Icon
 } from 'reactbulma';
 
-const ButtonFontAwesome = (props) => {
+const ButtonFontAwesome = () => {
   return (
     <div>
       <Field>
@@ -43,7 +43,7 @@ const ButtonFontAwesome = (props) => {
         </Button>
       </Field>
     </div>
-  )
+  );
 };
 
 export default ButtonFontAwesome;
