@@ -1,40 +1,35 @@
 import React from 'react';
 import { PrismCode } from 'react-prism';
 import {
+  Button,
   Container,
   Cols,
   Col,
-  Box,
-  Media,
   Content,
-  Image,
-  Level,
   Title,
-  Subtitle,
-  Button,
-  Icon
+  Subtitle
 } from 'reactbulma';
 
-import ButtonColor from '../Example/ButtonExample';
-const ButtonColorSource = require('!!raw!../Example/ButtonExample');
+import ButtonColor from '../Example/Button/ButtonExample';
+const ButtonColorSource = require('!!raw!../Example/Button/ButtonExample');
 
-import ButtonSize from '../Example/ButtonSizeExample';
-const ButtonSizeSource = require('!!raw!../Example/ButtonSizeExample');
+import ButtonSize from '../Example/Button/ButtonSizeExample';
+const ButtonSizeSource = require('!!raw!../Example/Button/ButtonSizeExample');
 
-import ButtonOutline from '../Example/ButtonOutlineExample';
-const ButtonOutlineSource = require('!!raw!../Example/ButtonOutlineExample');
+import ButtonOutline from '../Example/Button/ButtonOutlineExample';
+const ButtonOutlineSource = require('!!raw!../Example/Button/ButtonOutlineExample');
 
-import ButtonInverted from '../Example/ButtonInvertedExample';
-const ButtonInvertedSource = require('!!raw!../Example/ButtonInvertedExample');
+import ButtonInverted from '../Example/Button/ButtonInvertedExample';
+const ButtonInvertedSource = require('!!raw!../Example/Button/ButtonInvertedExample');
 
-import ButtonFontAwesome from '../Example/ButtonFontAwesomeExample';
-const ButtonFontAwesomeSource = require('!!raw!../Example/ButtonFontAwesomeExample');
+import ButtonFontAwesome from '../Example/Button/ButtonFontAwesomeExample';
+const ButtonFontAwesomeSource = require('!!raw!../Example/Button/ButtonFontAwesomeExample');
 
-import ButtonGroup from '../Example/ButtonGroupExample';
-const ButtonGroupSource = require('!!raw!../Example/ButtonGroupExample');
+import ButtonGroup from '../Example/Button/ButtonGroupExample';
+const ButtonGroupSource = require('!!raw!../Example/Button/ButtonGroupExample');
 
-import ButtonAddons from '../Example/ButtonAddonsExample';
-const ButtonAddonsSource = require('!!raw!../Example/ButtonAddonsExample');
+import ButtonAddons from '../Example/Button/ButtonAddonsExample';
+const ButtonAddonsSource = require('!!raw!../Example/Button/ButtonAddonsExample');
 
 export default class ButtonPage extends React.Component {
   render() {
@@ -52,7 +47,7 @@ export default class ButtonPage extends React.Component {
           <Col size="half">
             <ButtonColor />
           </Col>
-          <Col size="half">
+          <Col>
             <pre>
               <PrismCode className="language-jsx">
                 {ButtonColorSource}
@@ -89,7 +84,7 @@ export default class ButtonPage extends React.Component {
             </pre>
           </Col>
         </Cols>
-        <Subtitle tag="h4">Inverted</Subtitle>
+        <Subtitle tag="h4">Inverted (the text color becomes the background color, and vice-versa)</Subtitle>
         <Cols>
           <Col size="half">
             <ButtonInverted />

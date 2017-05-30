@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Media, Content, Image, Level, Button, Icon } from 'reactbulma';
+import { Button } from 'reactbulma';
 
 export const ButtonInverted = () => {
   return (

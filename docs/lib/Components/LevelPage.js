@@ -1,15 +1,9 @@
 import React from 'react';
 import {
-  Cols,
-  Col,
-  Notification,
   Container,
   Content,
   Title,
   Subtitle,
-  Message,
-  MessageHeader,
-  MessageBody,
   Level,
   Field,
   Control,

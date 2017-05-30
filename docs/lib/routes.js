@@ -2,20 +2,21 @@
  * Created by bangvu on 4/4/17.
  */
 import React from 'react';
-import {Route, IndexRoute, IndexRedirect} from 'react-router';
+import { Route, IndexRoute, IndexRedirect } from 'react-router';
 import Home from './Home';
 import NotFound from './NotFound';
-import UI from './UI/index'
+import UI from './UI/index';
 
 import BoxPage from './Components/BoxPage';
 import NotificationPage from './Components/NotificationPage';
 import ButtonPage from './Components/ButtonPage';
 import ColsPage from './Components/ColsPage';
-import ContentPage from  './Components/ContentPage';
+import ContentPage from './Components/ContentPage';
 import DeletePage from './Components/DeletePage';
 import LevelPage from './Components/LevelPage';
 import MessagePage from './Components/MessagePage';
 import IconPage from './Components/IconPage';
+import TilesPage from './Components/TilesPage';
 
 const routes = (
   <Route path="/" component={UI.Layout}>
@@ -31,6 +32,7 @@ const routes = (
       <Route path="message" component={MessagePage} />
       <Route path="level" component={LevelPage} />
       <Route path="icon" component={IconPage} />
+      <Route path="tiles" component={TilesPage} />
     </Route>
     <Route path="*" component={NotFound} />
   </Route>

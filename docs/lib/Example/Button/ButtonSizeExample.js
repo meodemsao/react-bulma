@@ -1,13 +1,13 @@
 import React from 'react';
-import { Box, Media, Content, Image, Level, Button, Icon } from 'reactbulma';
+import { Button } from 'reactbulma';
 
 const ButtonSize = () => {
   return (
     <div className="block">
       <Button size="small">Small</Button>
       <Button>Normal</Button>
-      <Button size="Medium">Medium</Button>
-      <Button size="Large">Large</Button>
+      <Button size="medium">Medium</Button>
+      <Button size="large">Large</Button>
     </div>
   );
 };

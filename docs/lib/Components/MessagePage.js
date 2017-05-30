@@ -3,20 +3,9 @@ import { PrismCode } from 'react-prism';
 import {
   Cols,
   Col,
-  Notification,
   Container,
-  Content,
   Title,
-  Subtitle,
-  Message,
-  MessageHeader,
-  MessageBody,
-  Level,
-  Field,
-  Control,
-  Input,
-  Button,
-  Delete
+  Subtitle
 } from 'reactbulma';
 
 import MessageExample from '../Example/MessageExample';

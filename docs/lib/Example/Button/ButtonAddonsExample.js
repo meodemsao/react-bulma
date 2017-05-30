@@ -1,36 +1,34 @@
 import React from 'react';
 import {
-  Box,
-  Media,
-  Content,
-  Image,
   Field,
-  Level,
   Control,
   Button,
   Icon
 } from 'reactbulma';
 
-export const ButtonGroup = () => {
+export const ButtonAddons = () => {
   return (
-    <Field grouped>
+    <Field addons>
       <Control>
         <Button color="primary">
-          Save changes
+          <Icon size="small" name="align-left" />
+          <span>Left</span>
         </Button>
       </Control>
       <Control>
         <Button>
-          Cancel
+          <Icon size="small" name="align-center" />
+          <span>Center</span>
         </Button>
       </Control>
       <Control>
         <Button color="danger">
-          Delete post
+          <Icon size="small" name="align-right" />
+          <span>Right</span>
         </Button>
       </Control>
     </Field>
   );
 };
 
-export default ButtonGroup;
+export default ButtonAddons;

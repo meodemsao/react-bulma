@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Media, Content, Image, Level, Button, Icon } from 'reactbulma';
+import { Button } from 'reactbulma';
 
 export const ButtonOutlined = () => {
   return (
     <div className="block">
+      <Button state="outlined">Outlined</Button>
       <Button color="primary" state="outlined">Outlined</Button>
       <Button color="info" state="outlined">Outlined</Button>
       <Button color="success" state="outlined">Outlined</Button>
