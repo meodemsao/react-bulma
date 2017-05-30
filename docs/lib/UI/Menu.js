@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 import {
+  Col,
+  Cols,
   Container,
   Hero,
-  Cols,
-  Col,
   HeroBody,
   HeroFoot,
   Nav,
-  NavLeft,
   NavItem,
-  Title,
+  NavLeft,
   Subtitle,
-  Tabs
+  Tabs,
+  Title
 } from 'reactbulma';
 
 const menuData = [

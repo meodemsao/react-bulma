@@ -1,5 +1,11 @@
 import React from 'react';
-import { Footer, Container, Content, Cols, Col } from 'reactbulma';
+import {
+  Col,
+  Cols,
+  Container,
+  Content,
+  Footer
+} from 'reactbulma';
 
 export default () => {
   return (

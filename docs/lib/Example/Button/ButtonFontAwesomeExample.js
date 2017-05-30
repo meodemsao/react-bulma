@@ -1,10 +1,5 @@
 import React from 'react';
 import {
-  Box,
-  Media,
-  Content,
-  Image,
-  Level,
   Field,
   Button,
   Icon
@@ -37,7 +32,7 @@ const ButtonFontAwesome = () => {
           <Icon name="check" />
           <span>Success</span>
         </Button>
-        <Button style="outline" color="danger">
+        <Button state="outlined" color="danger">
           <Icon name="times" />
           <span>Delete</span>
         </Button>

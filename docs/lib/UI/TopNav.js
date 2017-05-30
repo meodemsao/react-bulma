@@ -1,12 +1,11 @@
 import React from 'react';
 import {
+  Icon,
   Nav,
   NavCenter,
   NavItem,
   NavLeft,
-  NavRight,
-  NavToggle,
-  Icon
+  NavRight
 } from 'reactbulma';
 
 export default class TopNav extends React.Component {

@@ -1,42 +1,72 @@
 import React from 'react';
+import { PrismCode } from 'react-prism';
 import {
-  Cols,
-  Col,
-  Notification,
   Container,
   Content,
-  Title,
   Message,
   MessageHeader,
-  MessageBody
+  MessageBody,
+  Subtitle,
+  Title,
 } from 'reactbulma';
+
+import ColsExample from '../Example/Cols/ColsExample';
+const ColsExampleSource = require('!!raw!../Example/Cols/ColsExample');
+
+import ColsSize from '../Example/Cols/ColsSize';
+const ColsSizeSource = require('!!raw!../Example/Cols/ColsSize');
+
+import Cols12Columns from '../Example/Cols/Cols12Columns';
+
+import ColsOffset from '../Example/Cols/ColsOffset';
+const ColsOffsetSource = require('!!raw!../Example/Cols/ColsOffset');
+
+import ColsMobile from '../Example/Cols/ColsMobile';
+const ColsMobileSource = require('!!raw!../Example/Cols/ColsMobile');
+
+import ColsDesktop from '../Example/Cols/ColsDesktop';
+const ColsDesktopSource = require('!!raw!../Example/Cols/ColsDesktop');
+
+import ColsCustom from '../Example/Cols/ColsCustom';
+const ColsCustomSource = require('!!raw!../Example/Cols/ColsCustom');
+
+import ColsNesting from '../Example/Cols/ColsNesting';
+const ColsNestingSource = require('!!raw!../Example/Cols/ColsNesting');
+
+import ColsMultiline from '../Example/Cols/ColsMultiline';
+const ColsMultilineSource = require('!!raw!../Example/Cols/ColsMultiline');
+
+import ColsGaplessExample from '../Example/Cols/ColsGaplessExample';
+
+import ColsGapless from '../Example/Cols/ColsGapless';
+const ColsGaplessSource = require('!!raw!../Example/Cols/ColsGapless');
+
+import ColsNarrowColumn from '../Example/Cols/ColsNarrowColumn';
+const ColsNarrowColumnSource = require('!!raw!../Example/Cols/ColsNarrowColumn');
 
 export default class ColsPage extends React.Component {
   render() {
     return (
       <Container>
-        <Cols>
-          <Col>
-            <Notification color="info">
-              First column
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              Second column
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              Third column
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="danger">
-              Fourth column
-            </Notification>
-          </Col>
-        </Cols>
+        <Title tag="h1">Columns</Title>
+        <Subtitle tag="h2">A simple way to build <strong>responsive columns</strong></Subtitle>
+        <hr />
+        <Content>
+          <p>To build a <strong>grid</strong>, just:</p>
+          <ol>
+            <li>Add a <code>columns</code> container</li>
+            <li>Add as many <code>column</code> elements as you want</li>
+          </ol>
+          <p>Each column will have an <strong>equal width</strong>, no matter the number of columns.</p>
+        </Content>
+        <ColsExample />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsExampleSource}
+            </PrismCode>
+          </pre>
+        </figure>
         <hr />
         <Title tag="h3">Sizes</Title>
         <Content>
@@ -76,61 +106,14 @@ export default class ColsPage extends React.Component {
             space automatically.
           </p>
         </Content>
-        <Cols>
-          <Col size="three-quarters">
-            <Notification color="info">is-three-quarters</Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">Auto</Notification>
-          </Col>
-          <Col>
-            <Notification color="danger">Auto</Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="two-thirds">
-            <Notification color="info">is-two-thirds</Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">Auto</Notification>
-          </Col>
-          <Col>
-            <Notification color="danger">Auto</Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="half">
-            <Notification color="info">is-half</Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">Auto</Notification>
-          </Col>
-          <Col>
-            <Notification color="danger">Auto</Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="one-thirds">
-            <Notification color="info">is-one-thirds</Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">Auto</Notification>
-          </Col>
-          <Col>
-            <Notification color="danger">Auto</Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="one-quarter">
-            <Notification color="info">one-quarter</Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">Auto</Notification>
-          </Col>
-          <Col>
-            <Notification color="danger">Auto</Notification>
-          </Col>
-        </Cols>
+        <ColsSize />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsSizeSource}
+            </PrismCode>
+          </pre>
+        </figure>
         <Title tag="h4">12 columns</Title>
         <Content>
           <p>
@@ -156,339 +139,11 @@ export default class ColsPage extends React.Component {
         <Message color="danger">
           <MessageHeader>Naming</MessageHeader>
           <MessageBody>
-            Each modifier class is named after
-            <strong>how many columns you want out of 12</strong>.
-            So if you want 7 columns out of 12, use <code>is-7</code>.
+            Each modifier class is named after <strong>how many columns you want out of 12</strong>. So if you want 7 columns out of 12, use <code>is-7</code>.
           </MessageBody>
         </Message>
-        <Cols>
-          <Col size="2">
-            <Notification color="info">
-              is-2
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="3">
-            <Notification color="info">
-              is-3
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="4">
-            <Notification color="info">
-              is-4
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="5">
-            <Notification color="info">
-              is-5
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="6">
-            <Notification color="info">
-              is-6
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="7">
-            <Notification color="info">
-              is-7
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="8">
-            <Notification color="info">
-              is-8
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="9">
-            <Notification color="info">
-              is-9
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              1
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="11">
-            <Notification color="info">
-              is-11
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              1
-            </Notification>
-          </Col>
-        </Cols>
+        <Cols12Columns />
+        <hr />
         <Title tag="h3">Offset</Title>
         <Content>
           <p>
@@ -507,33 +162,18 @@ export default class ColsPage extends React.Component {
             elements, you can also use
             {' '}
             <strong>offset</strong>
-            modifiers like <code>.is-offset-x</code>:
+             modifiers like <code>.is-offset-x</code>:
           </p>
         </Content>
-        <Cols responsive="mobile">
-          <Col size="half" offset="one-quarter">
-            <Notification color="info">
-              <code className="html">is-half</code><br />
-              <code className="html">is-offset-one-quarter</code>
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols responsive="mobile">
-          <Col size="4" offset="8">
-            <Notification color="info">
-              <code className="html">is-4</code><br />
-              <code className="html">is-offset-8</code>
-            </Notification>
-          </Col>
-        </Cols>
-        <Cols responsive="mobile">
-          <Col size="11" offset="4">
-            <Notification color="info">
-              <code className="html">is-11</code><br />
-              <code className="html">is-offset-4</code>
-            </Notification>
-          </Col>
-        </Cols>
+        <ColsOffset />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsOffsetSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
         <Title tag="h3">Responsiveness</Title>
         <Content>
           <p>
@@ -556,28 +196,14 @@ export default class ColsPage extends React.Component {
             the <code>columns</code> container:
           </p>
         </Content>
-        <Cols responsive="mobile">
-          <Col>
-            <Notification color="info">
-              First column
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="success">
-              Second column
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="warning">
-              Third column
-            </Notification>
-          </Col>
-          <Col>
-            <Notification color="danger">
-              Fourth column
-            </Notification>
-          </Col>
-        </Cols>
+        <ColsMobile />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsMobileSource}
+            </PrismCode>
+          </pre>
+        </figure>
         <Message color="info">
           <MessageHeader>Resize</MessageHeader>
           <MessageBody>
@@ -589,6 +215,146 @@ export default class ColsPage extends React.Component {
             when they are horizontally distributed.
           </MessageBody>
         </Message>
+        <Content>
+          <p>If you <em>only</em> want columns on desktop, just use the <code>is-desktop</code> modifier on the <code>columns</code> container:</p>
+        </Content>
+        <ColsDesktop />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsDesktopSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <Title tag="h4">Different sizes per breakpoint</Title>
+        <Content>
+          <p>You can define a <strong>column size</strong> for <em>each</em> viewport size: mobile, tablet, and desktop.</p>
+        </Content>
+        <ColsCustom />
+        <Message color="info">
+          <MessageHeader>Resize</MessageHeader>
+          <MessageBody>
+            If you want to see these classes in action, resize your browser window and see how the same column varies in width at each breakpoint.
+          </MessageBody>
+        </Message>
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsCustomSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
+        <Title tag="h3">Nesting</Title>
+        <Content>
+          <p>
+            You can <strong>nest</strong> columns to have more flexibility in your design. You only need to follow this structure:
+          </p>
+          <ul>
+            <li>
+              <code>columns</code>: top-level columns container
+              <ul>
+                <li>
+                  <code>column</code>
+                  <ul>
+                    <li>
+                      <code>columns</code>: nested columns
+                      <ul>
+                        <li>
+                          <code>column</code> and so on…
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            The difference with <a href="#multiline">multiline columns</a> is the <strong>order</strong> in the HTML code: all the <strong className="has-text-info">blue</strong> columns appear <em>before</em> the <strong className="has-text-danger">red</strong> ones. Resize to a narrower viewport to see the result.
+          </p>
+        </Content>
+        <ColsNesting />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsNestingSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
+        <Title tag="h3">Multiline</Title>
+        <Content>
+          <p>Whenever you want to start a new line, you can close a <code>columns</code> container and start a new one.
+            But you can also add the <code>is-multiline</code> modifier and add <strong>more</strong> column elements that would fit in a single row.</p>
+        </Content>
+        <ColsMultiline />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsMultilineSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
+        <Title tag="h3">Gapless</Title>
+        <Content>
+          <p>If you want to remove the <strong>space</strong> between the columns, add the <code>is-gapless</code> modifier on the <code>columns</code> container:</p>
+        </Content>
+        <ColsGaplessExample />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {`
+                <Cols responsive="gapless">
+                  <Col><Notification color="info">First column</Notification></Col>
+                  <Col><Notification color="info">Second column</Notification></Col>
+                  <Col><Notification color="info">Third column</Notification></Col>
+                  <Col><Notification color="info">Fourth column</Notification></Col>
+                </Cols>
+              `}
+            </PrismCode>
+          </pre>
+        </figure>
+        <Content>
+          <p>You can combine it with the <code>is-multiline</code> modifier:</p>
+        </Content>
+        <ColsGapless />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsGaplessSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
+        <Title tag="h3">Narrow column</Title>
+        <Content>
+          <p>If you want a column to only take the <strong>space it needs</strong>, use the <code>is-narrow</code> modifier.
+            The other column(s) will fill up the remaining space.</p>
+        </Content>
+        <ColsNarrowColumn />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {ColsNarrowColumnSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <Content>
+          <p>As for the size modifiers, you can have narrow columns for different <strong>breakpoints</strong>:</p>
+          <ul>
+            <li>
+              <code>is-narrow-mobile</code>
+            </li>
+            <li>
+              <code>is-narrow-tablet</code>
+            </li>
+            <li>
+              <code>is-narrow-desktop</code>
+            </li>
+          </ul>
+        </Content>
       </Container>
     );
   }

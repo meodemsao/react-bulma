@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Media, Content, Image, Level, Button, Icon } from 'reactbulma';
+import { Button } from 'reactbulma';
 
 export const ButtonColor = () => {
   return (
@@ -13,7 +13,6 @@ export const ButtonColor = () => {
         <Button color="link">Link</Button>
       </div>
       <div className="block">
-        <Button>Button</Button>
         <Button color="primary">Primary</Button>
         <Button color="info">Info</Button>
         <Button color="success">Success</Button>

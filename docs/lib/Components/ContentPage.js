@@ -1,13 +1,11 @@
 import React from 'react';
 import {
-  Container,
-  Cols,
   Col,
+  Cols,
+  Container,
   Content,
   Title,
-  Subtitle,
-  Delete,
-  Icon
+  Subtitle
 } from 'reactbulma';
 
 export default class ContentPage extends React.Component {
@@ -36,9 +34,9 @@ export default class ContentPage extends React.Component {
               </p>
             </Content>
           </Col>
-          <Col />
         </Cols>
       </Container>
+
     );
   }
 }

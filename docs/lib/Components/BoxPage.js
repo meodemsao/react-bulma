@@ -2,14 +2,8 @@ import React from 'react';
 import { PrismCode } from 'react-prism';
 import {
   Container,
-  Box,
-  Media,
-  Content,
-  Image,
-  Level,
   Title,
-  Subtitle,
-  Icon
+  Subtitle
 } from 'reactbulma';
 
 import BoxExample from '../Example/BoxExample';

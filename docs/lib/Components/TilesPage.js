@@ -1,20 +1,33 @@
 import React from 'react';
+import { PrismCode } from 'react-prism';
 import {
-  Container,
-  Tile,
-  Cols,
   Col,
+  Cols,
+  Container,
   Content,
-  Tag,
-  Title,
-  Subtitle,
-  Notification,
+  Image,
   Message,
-  MessageHeader,
   MessageBody,
-  Delete,
-  Icon
+  MessageHeader,
+  Subtitle,
+  Tile,
+  Title,
 } from 'reactbulma';
+
+import TileExample from '../Example/Tile/TileExample';
+const TileExampleSource = require('!!raw!../Example/Tile/TileExample');
+
+import TileNesting from '../Example/Tile/TileNesting';
+const TileNestingSource = require('!!raw!../Example/Tile/TileNesting');
+
+import TileNestingRequirement from '../Example/Tile/TileNestingRequirement';
+const TileNestingRequirementSource = require('!!raw!../Example/Tile/TileNestingRequirement');
+
+import Tile3Columns from '../Example/Tile/Tile3Columns';
+const Tile3ColumnsSource = require('!!raw!../Example/Tile/Tile3Columns');
+
+import Tile4Columns from '../Example/Tile/Tile4Columns';
+const Tile4ColumnsSource = require('!!raw!../Example/Tile/Tile4Columns');
 
 export default class TilesPage extends React.Component {
   render() {
@@ -24,9 +37,9 @@ export default class TilesPage extends React.Component {
         <Subtitle tag="h2">
           A
           {' '}
-          <strong>single</strong>
+          <strong>single tile</strong>
           {' '}
-          tile element to build 2-dimensional Metro-like, Pinterest-like, or whatever-you-like
+          element to build 2-dimensional Metro-like, Pinterest-like, or whatever-you-like
           grids
         </Subtitle>
         <hr />
@@ -41,16 +54,284 @@ export default class TilesPage extends React.Component {
             :
           </p>
         </Content>
+        <pre>
+          <PrismCode className="language-jsx">
+            {`
+              <Tile>
+                <!-- The magical tile element! -->
+              </Tile>
+            `}
+          </PrismCode>
+        </pre>
         <hr />
         <Title tag="h3">Example</Title>
-        <Tile contextual="ancestor">
-          <Tile vertical size="8">
-            <Tile>
-              <Tile contextual="parent" vertical />
-            </Tile>
-            <Tile contextual="parent" />
-          </Tile>
-        </Tile>
+        <TileExample />
+        <pre>
+          <PrismCode className="language-jsx">
+            {TileExampleSource}
+          </PrismCode>
+        </pre>
+        <hr />
+        <Title tag="h3">Modifiers</Title>
+        <Content>
+          <p>
+            The <code>tile</code> element has <strong>16 modifiers</strong>:
+            </p>
+          <ul>
+            <li>
+              <strong>3 contextual</strong> modifiers
+              <ul>
+                <li>
+                  <code>is-ancestor</code>
+                </li>
+                <li>
+                  <code>is-parent</code>
+                </li>
+                <li>
+                  <code>is-child</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>1 directional</strong> modifier
+              <ul>
+                <li>
+                  <code>is-vertical</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>12 horizontal size</strong> modifiers
+              <ul>
+                <li>from <code>is-1</code></li>
+                <li>to <code>is-12</code></li>
+              </ul>
+            </li>
+          </ul>
+        </Content>
+        <hr />
+        <Title tag="h3">How it works: Nesting</Title>
+        <Content>
+          <p>Everything is a tile! To create a grid of tiles, you only need to <strong>nest</strong> <code>tile</code> elements.</p>
+        </Content>
+        <Cols>
+          <Col size="one-third">
+            <p>Start with an <strong>ancestor</strong> tile that will wrap all other tiles:</p>
+          </Col>
+          <Col size="tow-thirds">
+            <figure className="highlight">
+              <pre>
+                <PrismCode className="language-jsx">
+                  {`
+                    <Tile contextual="ancestor">
+                      <!-- All other tile elemnts -->
+                    </Tile>
+                  `}
+                </PrismCode>
+              </pre>
+            </figure>
+          </Col>
+        </Cols>
+        <Cols>
+          <Col size="one-third">
+            <p>Add tile elements that will distribute themselves <strong>horizontally</strong>:</p>
+          </Col>
+          <Col size="tow-thirds">
+            <figure className="highlight">
+              <pre>
+                <PrismCode className="language-jsx">
+                  {`
+                    <Tile contextual="ancestor">
+                      <Tile size="4">
+                        <!-- 1/3 -->
+                      </Tile>
+                      <Tile>
+                        <!-- This tile will take the rest: 2/3 -->
+                      </Tile>
+                    </Tile>
+                  `}
+                </PrismCode>
+              </pre>
+            </figure>
+          </Col>
+        </Cols>
+        <Cols>
+          <Col size="one-third">
+            <p>
+              You can <strong>resize</strong> any tile according to a <strong>12 column</strong> grid.
+              <br />
+              For example, <code>is-4</code> will take up 1/3 of the horizontal space:
+            </p>
+          </Col>
+          <Col size="tow-thirds">
+            <figure className="highlight">
+              <pre>
+                <PrismCode className="language-jsx">
+                  {`
+                    <Tile contextual="ancestor">
+                      <Tile>
+                        <!-- Add content or other tiles -->
+                      </Tile>
+                      <Tile>
+                        <!-- Add content or other tiles -->
+                      </Tile>
+                    </Tile>
+                  `}
+                </PrismCode>
+              </pre>
+            </figure>
+          </Col>
+        </Cols>
+        <Cols>
+          <Col size="one-third">
+            <p>If you want to stack tiles <strong>vertically</strong>, add <code>is-vertical</code> on the parent tile:</p>
+          </Col>
+          <Col size="tow-thirds">
+            <figure className="highlight">
+              <pre>
+                <PrismCode className="language-jsx">
+                  {`
+                    <Tile contextual="ancestor">
+                      <Tile size="4" directional>
+                        <Tile>
+                          <!-- Top tile -->
+                        </Tile>
+                        <Tile>
+                          <!-- Bottom tile -->
+                        </Tile>
+                      </Tile>
+                      <Tile>
+                        <!-- This tile will take up the whole vertical space -->
+                      </Tile>
+                    </Tile>
+                  `}
+                </PrismCode>
+              </pre>
+            </figure>
+          </Col>
+        </Cols>
+        <Cols>
+          <Col size="one-third">
+            <Content>
+              <p>As soon as you want to add <strong>content</strong> to a tile, just:</p>
+              <ul>
+                <li>add <em>any</em> class you want, like <code>box</code></li>
+                <li>add the <code>is-child</code> modifier on the tile</li>
+                <li>add the <code>is-parent</code> modifier on the <em>parent</em> tile</li>
+              </ul>
+            </Content>
+          </Col>
+          <Col size="tow-thirds">
+            <figure className="highlight">
+              <pre>
+                <PrismCode className="language-jsx">
+                  {`
+                    <Tile contextual="ancestor">
+                      <Tile size="4" directional contextual="is-parent">
+                        <Tile contextual="child box">
+                          <p className="title">One</p>
+                        </Tile>
+                        <Tile contextual="child box">
+                          <p className="title">Two</p>
+                        </Tile>
+                      </Tile>
+                      <Tile contextual="parent">
+                        <Tile contextual="child box">
+                          <p className="title">Three</p>
+                        </Tile>
+                      </Tile>
+                    </Tile>
+                  `}
+                </PrismCode>
+              </pre>
+            </figure>
+          </Col>
+        </Cols>
+        <TileNesting />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {TileNestingSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
+        <Title tag="h3">Nesting requirements</Title>
+        <Message color="danger">
+          <MessageHeader>3 levels deep at least...</MessageHeader>
+          <MessageBody>
+            <Content>
+              <p>You need at least <strong>3 levels</strong> of hierarchy:</p>
+              <pre>
+                <PrismCode className="language-markdown">{
+                  `tile is-ancestor
+|
+└───tile is-parent
+    |
+    └───tile is-child`}
+                </PrismCode>
+              </pre>
+            </Content>
+          </MessageBody>
+        </Message>
+        <Message color="success">
+          <MessageHeader>...but more levels if you want!</MessageHeader>
+          <MessageBody>
+            <Content>
+              <p>You can however nest tiles more deeply than that, and mix it up!</p>
+              <pre>
+                <PrismCode className="language-markdown">
+                  {`tile is-ancestor
+|
+├───tile is-vertical is-8
+|   |
+|   ├───tile
+|   |   |
+|   |   ├───tile is-parent is-vertical
+|   |   |   ├───tile is-child
+|   |   |   └───tile is-child
+|   |   |
+|   |   └───tile is-parent
+|   |       └───tile is-child
+|   |
+|   └───tile is-parent
+|       └───tile is-child
+|
+└───tile is-parent
+    └───tile is-child`}
+                </PrismCode>
+              </pre>
+            </Content>
+          </MessageBody>
+        </Message>
+        <TileNestingRequirement />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {TileNestingRequirementSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
+        <Title tag="h3">3 columns</Title>
+        <Tile3Columns />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {Tile3ColumnsSource}
+            </PrismCode>
+          </pre>
+        </figure>
+        <hr />
+        <Title tag="h3">4 columns</Title>
+        <Tile4Columns />
+        <figure className="highlight">
+          <pre>
+            <PrismCode className="language-jsx">
+              {Tile4ColumnsSource}
+            </PrismCode>
+          </pre>
+        </figure>
       </Container>
     );
   }

@@ -11,8 +11,7 @@ import {
   Message,
   MessageHeader,
   MessageBody,
-  Delete,
-  Icon
+  Delete
 } from 'reactbulma';
 
 export default class DeletePage extends React.Component {
@@ -38,9 +37,6 @@ export default class DeletePage extends React.Component {
               <Delete />
             </Content>
           </Col>
-          <Col>
-
-          </Col>
         </Cols>
         <Cols>
           <Col>
@@ -54,17 +50,12 @@ export default class DeletePage extends React.Component {
               <Delete size="large" />
             </Content>
           </Col>
-          <Col>
-
-          </Col>
         </Cols>
         <Cols>
           <Col>
             <Content>
               <p>
-                Bulma uses it for the <a href="/documentation/elements/tag/">tags</a>, the <a
-                href="/documentation/elements/notification/">notifications</a>, and the <a
-                href="/documentation/components/message/">messages</a>:
+                Bulma uses it for the <a href="/documentation/elements/tag/">tags</a>, the <a href="/documentation/elements/notification/">notifications</a>, and the <a href="/documentation/components/message/">messages</a>:
               </p>
               <Tag color="success">
                 Hello world
@@ -90,9 +81,8 @@ export default class DeletePage extends React.Component {
               </Message>
             </Content>
           </Col>
-          <Col></Col>
         </Cols>
       </Container>
-    )
+    );
   }
 }
