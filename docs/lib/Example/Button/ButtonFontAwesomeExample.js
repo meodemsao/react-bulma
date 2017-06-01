@@ -1,25 +1,25 @@
 import React from 'react';
 import {
-  Field,
   Button,
+  Field,
   Icon
 } from 'reactbulma';
 
 const ButtonFontAwesome = () => {
   return (
     <div>
-      <Field>
-        <Button size="small">
-          <Icon name="bold" />
+      <Field tag="p">
+        <Button>
+          <Icon name="bold" size="small" />
         </Button>
-        <Button size="small">
-          <Icon name="italic" />
+        <Button>
+          <Icon name="italic" size="small" />
         </Button>
-        <Button size="small">
-          <Icon name="underline" />
+        <Button>
+          <Icon name="underline" size="small" />
         </Button>
       </Field>
-      <Field>
+      <Field tag="p">
         <Button>
           <Icon name="github" />
           <span>GitHub</span>
@@ -35,6 +35,24 @@ const ButtonFontAwesome = () => {
         <Button state="outlined" color="danger">
           <Icon name="times" />
           <span>Delete</span>
+        </Button>
+      </Field>
+      <Field tag="p">
+        <Button size="small">
+          <Icon name="github" size="small" />
+          <span>GitHub</span>
+        </Button>
+        <Button>
+          <Icon name="github" />
+          <span>GitHub</span>
+        </Button>
+        <Button size="medium">
+          <Icon name="github" />
+          <span>GitHub</span>
+        </Button>
+        <Button size="large">
+          <Icon name="github" size="medium" />
+          <span>GitHub</span>
         </Button>
       </Field>
     </div>

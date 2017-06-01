@@ -322,3 +322,115 @@ code .tag {
   padding: 0;
   /*display: inherit;*/
 }
+
+.callout {
+    background-color: whitesmoke;
+    border-radius: 3px;
+    padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+    position: relative;
+}
+
+.callout:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.callout.is-white {
+    background-color: white;
+    color: #0a0a0a;
+}
+
+.callout.is-black {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.callout.is-light {
+    background-color: whitesmoke;
+    color: #363636;
+}
+
+.callout.is-dark {
+    background-color: #363636;
+    color: whitesmoke;
+}
+
+.callout.is-primary {
+    background-color: #00d1b2;
+    color: #fff;
+}
+
+.callout.is-info {
+    background-color: #3273dc;
+    color: #fff;
+}
+
+.callout.is-success {
+    background-color: #23d160;
+    color: #fff;
+}
+
+.callout.is-warning {
+    background-color: #ffdd57;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.callout.is-danger {
+    background-color: #ff3860;
+    color: #fff;
+}
+
+.example,
+.structure {
+    border: 1px solid #ffdd57;
+    border-top-right-radius: 3px;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.example:not(:first-child),
+.structure:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.example:not(:last-child),
+.structure:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.example:before,
+.structure:before {
+    background: #ffdd57;
+    border-radius: 3px 3px 0 0;
+    bottom: 100%;
+    content: "Example";
+    display: inline-block;
+    font-size: 7px;
+    font-weight: bold;
+    left: -1px;
+    letter-spacing: 1px;
+    padding: 3px 5px;
+    position: absolute;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+@media screen and (min-width: 769px), print {
+    .example.is-fullwidth,
+    .structure.is-fullwidth {
+        border-left: none;
+        border-right: none;
+        padding: 0;
+    }
+}
+
+.example + .highlight {
+    border: 1px solid #ffdd57;
+    border-radius: 0 0 3px 3px;
+    border-top: none;
+    margin-top: -1.5rem;
+}
+
+.example + .highlight:not(:last-child) {
+    margin-bottom: 1.5rem;
+}

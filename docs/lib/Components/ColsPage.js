@@ -48,8 +48,12 @@ export default class ColsPage extends React.Component {
   render() {
     return (
       <Container>
-        <Title tag="h1">Columns</Title>
-        <Subtitle tag="h2">A simple way to build <strong>responsive columns</strong></Subtitle>
+        <Title>Columns</Title>
+        <Subtitle>
+          A simple way to build
+          {' '}
+          <strong>responsive columns</strong>
+        </Subtitle>
         <hr />
         <Content>
           <p>To build a <strong>grid</strong>, just:</p>

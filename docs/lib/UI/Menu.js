@@ -29,6 +29,7 @@ const menuData = [
     name: 'Elements',
     url: '/components/button/',
     children: [
+      { name: 'Box', url: '/components/box' },
       { name: 'Button', url: '/components/button/' },
       { name: 'Content', url: '/components/content/' },
       { name: 'Delete', url: '/components/delete/' },

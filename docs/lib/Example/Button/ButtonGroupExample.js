@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  Field,
-  Control,
   Button,
+  Control,
+  Field,
 } from 'reactbulma';
 
 export const ButtonGroup = () => {

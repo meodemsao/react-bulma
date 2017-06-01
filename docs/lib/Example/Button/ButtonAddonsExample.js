@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  Field,
-  Control,
   Button,
+  Control,
+  Field,
   Icon
 } from 'reactbulma';
 
@@ -10,7 +10,7 @@ export const ButtonAddons = () => {
   return (
     <Field addons>
       <Control>
-        <Button color="primary">
+        <Button>
           <Icon size="small" name="align-left" />
           <span>Left</span>
         </Button>
@@ -22,7 +22,7 @@ export const ButtonAddons = () => {
         </Button>
       </Control>
       <Control>
-        <Button color="danger">
+        <Button>
           <Icon size="small" name="align-right" />
           <span>Right</span>
         </Button>

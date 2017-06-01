@@ -15,8 +15,8 @@ export default class MessagePage extends React.Component {
   render() {
     return (
       <Container>
-        <Title tag="h1">Message</Title>
-        <Subtitle tag="h2">
+        <Title>Message</Title>
+        <Subtitle>
           Colored message blocks, to emphasize part of your page
         </Subtitle>
         <hr />

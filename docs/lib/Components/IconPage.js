@@ -13,8 +13,8 @@ export default class IconPage extends React.Component {
   render() {
     return (
       <Container>
-        <Title tag="h1">Icon</Title>
-        <Subtitle tag="h2">
+        <Title>Icon</Title>
+        <Subtitle>
           Bulma is compatible with
           {' '}
           <strong>

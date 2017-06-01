@@ -15,8 +15,8 @@ export default class LevelPage extends React.Component {
   render() {
     return (
       <Container>
-        <Title tag="h1">Level</Title>
-        <Subtitle tag="h2">
+        <Title>Level</Title>
+        <Subtitle>
           A multi-purpose horizontal level, which can contain almost any other element
         </Subtitle>
         <hr />

@@ -33,8 +33,8 @@ export default class TilesPage extends React.Component {
   render() {
     return (
       <Container>
-        <Title tag="h1">Tiles</Title>
-        <Subtitle tag="h2">
+        <Title>Tiles</Title>
+        <Subtitle>
           A
           {' '}
           <strong>single tile</strong>
@@ -56,11 +56,11 @@ export default class TilesPage extends React.Component {
         </Content>
         <pre>
           <PrismCode className="language-jsx">
-            {`
-              <Tile>
-                <!-- The magical tile element! -->
-              </Tile>
-            `}
+            {
+              '<Tile>\n' +
+              '\t<!-- The magical tile element! -->\n' +
+              '</Tile>'
+            }
           </PrismCode>
         </pre>
         <hr />
@@ -122,11 +122,11 @@ export default class TilesPage extends React.Component {
             <figure className="highlight">
               <pre>
                 <PrismCode className="language-jsx">
-                  {`
-                    <Tile contextual="ancestor">
-                      <!-- All other tile elemnts -->
-                    </Tile>
-                  `}
+                  {
+                    '<Tile contextual="ancestor">\n' +
+                    '\t<!-- All other tile elemnts -->\n' +
+                    '</Tile>'
+                  }
                 </PrismCode>
               </pre>
             </figure>
@@ -140,16 +140,16 @@ export default class TilesPage extends React.Component {
             <figure className="highlight">
               <pre>
                 <PrismCode className="language-jsx">
-                  {`
-                    <Tile contextual="ancestor">
-                      <Tile size="4">
-                        <!-- 1/3 -->
-                      </Tile>
-                      <Tile>
-                        <!-- This tile will take the rest: 2/3 -->
-                      </Tile>
-                    </Tile>
-                  `}
+                  {
+                    '<Tile contextual="ancestor">\n' +
+                    '\t<Tile size="4">\n' +
+                    '\t\t<!-- 1/3 -->\n' +
+                    '\t</Tile>\n' +
+                    '\t<Tile>\n' +
+                    '\t\t<!-- This tile will take the rest: 2/3 -->\n' +
+                    '\t</Tile>\n' +
+                    '</Tile>'
+                  }
                 </PrismCode>
               </pre>
             </figure>
@@ -167,16 +167,16 @@ export default class TilesPage extends React.Component {
             <figure className="highlight">
               <pre>
                 <PrismCode className="language-jsx">
-                  {`
-                    <Tile contextual="ancestor">
-                      <Tile>
-                        <!-- Add content or other tiles -->
-                      </Tile>
-                      <Tile>
-                        <!-- Add content or other tiles -->
-                      </Tile>
-                    </Tile>
-                  `}
+                  {
+                    '<Tile contextual="ancestor">\n' +
+                    '\t<Tile>\n' +
+                    '\t\t<!-- Add content or other tiles -->\n' +
+                    '\t</Tile>\n' +
+                    '\t<Tile>\n' +
+                    '\t\t<!-- Add content or other tiles -->\n' +
+                    '\t</Tile>\n' +
+                    '</Tile>'
+                  }
                 </PrismCode>
               </pre>
             </figure>
@@ -190,21 +190,19 @@ export default class TilesPage extends React.Component {
             <figure className="highlight">
               <pre>
                 <PrismCode className="language-jsx">
-                  {`
-                    <Tile contextual="ancestor">
-                      <Tile size="4" directional>
-                        <Tile>
-                          <!-- Top tile -->
-                        </Tile>
-                        <Tile>
-                          <!-- Bottom tile -->
-                        </Tile>
-                      </Tile>
-                      <Tile>
-                        <!-- This tile will take up the whole vertical space -->
-                      </Tile>
-                    </Tile>
-                  `}
+                  {
+                    '<Tile contextual="ancestor">\n' +
+                    '\t<Tile size="4" directional>\n' +
+                    '\t\t<!-- Top tile -->\n' +
+                    '\t</Tile>\n' +
+                    '\t<Tile>\n' +
+                    '\t\t<!-- Bottom tile -->\n' +
+                    '\t</Tile>\n' +
+                    '\t<Tile>\n' +
+                    '\t\t<!-- This tile will take up the whole vertical space -->\n' +
+                    '\t</Tile>\n' +
+                    '</Tile>'
+                  }
                 </PrismCode>
               </pre>
             </figure>
@@ -225,23 +223,23 @@ export default class TilesPage extends React.Component {
             <figure className="highlight">
               <pre>
                 <PrismCode className="language-jsx">
-                  {`
-                    <Tile contextual="ancestor">
-                      <Tile size="4" directional contextual="is-parent">
-                        <Tile contextual="child box">
-                          <p className="title">One</p>
-                        </Tile>
-                        <Tile contextual="child box">
-                          <p className="title">Two</p>
-                        </Tile>
-                      </Tile>
-                      <Tile contextual="parent">
-                        <Tile contextual="child box">
-                          <p className="title">Three</p>
-                        </Tile>
-                      </Tile>
-                    </Tile>
-                  `}
+                  {
+                    '<Tile contextual="ancestor">\n' +
+                    '\t<Tile size="4" directional contextual="is-parent">\n' +
+                    '\t\t<Tile contextual="child box">\n' +
+                    '\t\t\t<p className="title">One</p>\n' +
+                    '\t\t</Tile>\n' +
+                    '\t\t<Tile contextual="child box">\n' +
+                    '\t\t\t<p className="title">Two</p>\n' +
+                    '\t\t</Tile>\n' +
+                    '\t</Tile>\n' +
+                    '\t<Tile contextual="parent">\n' +
+                    '\t\t<Tile contextual="child box">\n' +
+                    '\t\t\t<p className="title">Three</p>\n' +
+                    '\t\t</Tile>\n' +
+                    '\t</Tile>\n' +
+                    '</Tile>'
+                  }
                 </PrismCode>
               </pre>
             </figure>
@@ -263,12 +261,14 @@ export default class TilesPage extends React.Component {
             <Content>
               <p>You need at least <strong>3 levels</strong> of hierarchy:</p>
               <pre>
-                <PrismCode className="language-markdown">{
-                  `tile is-ancestor
-|
-└───tile is-parent
-    |
-    └───tile is-child`}
+                <PrismCode className="language-markdown">
+                  {
+                    'tile is-ancestor\n' +
+                    '|\n' +
+                    '└───tile is-parent\n' +
+                    '\t\t|\n' +
+                    '\t\t└───tile is-child\n'
+                  }
                 </PrismCode>
               </pre>
             </Content>
@@ -281,24 +281,26 @@ export default class TilesPage extends React.Component {
               <p>You can however nest tiles more deeply than that, and mix it up!</p>
               <pre>
                 <PrismCode className="language-markdown">
-                  {`tile is-ancestor
-|
-├───tile is-vertical is-8
-|   |
-|   ├───tile
-|   |   |
-|   |   ├───tile is-parent is-vertical
-|   |   |   ├───tile is-child
-|   |   |   └───tile is-child
-|   |   |
-|   |   └───tile is-parent
-|   |       └───tile is-child
-|   |
-|   └───tile is-parent
-|       └───tile is-child
-|
-└───tile is-parent
-    └───tile is-child`}
+                  {
+                    'tile is-ancestor\n' +
+                    '|\n' +
+                    '├───tile is-vertical is-8\n' +
+                    '|   |\n' +
+                    '|   ├───tile\n' +
+                    '|   |   |\n' +
+                    '|   |   ├───tile is-parent is-vertical\n' +
+                    '|   |   |   ├───tile is-child\n' +
+                    '|   |   |   └───tile is-child\n' +
+                    '|   |   |\n' +
+                    '|   |   └───tile is-parent\n' +
+                    '|   |       └───tile is-child\n' +
+                    '|   |\n' +
+                    '|   └───tile is-parent\n' +
+                    '|       └───tile is-child\n' +
+                    '|\n' +
+                    '└───tile is-parent\n' +
+                    '└───tile is-child\n'
+                  }
                 </PrismCode>
               </pre>
             </Content>
