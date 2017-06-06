@@ -17,6 +17,10 @@ import LevelPage from './Components/LevelPage';
 import MessagePage from './Components/MessagePage';
 import IconPage from './Components/IconPage';
 import TilesPage from './Components/TilesPage';
+import ImagePage from './Components/ImagePage';
+import ProgressPage from './Components/ProgressPage';
+import TagPage from './Components/TagPage';
+import TitlePage from './Components/TitlePage';
 
 const routes = (
   <Route path="/" component={UI.Layout}>
@@ -33,6 +37,10 @@ const routes = (
       <Route path="level" component={LevelPage} />
       <Route path="icon" component={IconPage} />
       <Route path="tiles" component={TilesPage} />
+      <Route path="image" component={ImagePage} />
+      <Route path="progress" component={ProgressPage} />
+      <Route path="tag" component={TagPage} />
+      <Route path="title" component={TitlePage} />
     </Route>
     <Route path="*" component={NotFound} />
   </Route>

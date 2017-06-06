@@ -1,47 +1,38 @@
-import React, { Component } from 'react';
-import { Notification, Delete } from 'reactbulma';
+import React from 'react';
+import { PrismCode } from 'react-prism';
+import {
+  Col,
+  Cols,
+  Container,
+  Subtitle,
+  Title
+} from 'reactbulma';
 
-export default class NotificationPage extends Component {
+import NotificationExample from '../Example/NotificationExample';
+const NotificationExampleSource = require('!!raw!../Example/NotificationExample');
+
+export default class NotificationPage extends React.Component {
   render() {
     return (
-      <div>
-        <Notification>
-          <Delete />
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit lorem ipsum dolor sit amet,
-          consectetur adipiscing elit
-        </Notification>
-        <Notification color="primary">
-          <Delete />
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit lorem ipsum dolor sit amet,
-          consectetur adipiscing elit
-        </Notification>
-        <Notification color="info">
-          <Delete />
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit lorem ipsum dolor sit amet,
-          consectetur adipiscing elit
-        </Notification>
-        <Notification color="success">
-          <Delete />
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit lorem ipsum dolor sit amet,
-          consectetur adipiscing elit
-        </Notification>
-        <Notification color="warning">
-          <Delete />
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit lorem ipsum dolor sit amet,
-          consectetur adipiscing elit
-        </Notification>
-        <Notification color="danger">
-          <Delete />
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit lorem ipsum dolor sit amet,
-          consectetur adipiscing elit
-        </Notification>
-      </div>
+      <Container>
+        <Title>Notifications</Title>
+        <Subtitle>Bold <strong>notification</strong> blocks, to alert your users of something</Subtitle>
+        <hr />
+        <Cols>
+          <Col>
+            <NotificationExample />
+          </Col>
+          <Col>
+            <figure className="highlight">
+              <pre>
+                <PrismCode className="language-jsx">
+                  {NotificationExampleSource}
+                </PrismCode>
+              </pre>
+            </figure>
+          </Col>
+        </Cols>
+      </Container>
     );
   }
 }

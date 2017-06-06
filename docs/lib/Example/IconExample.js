@@ -2,7 +2,9 @@ import React from 'react';
 import { Icon } from 'reactbulma';
 
 const IconExample = () => {
-  return <Icon size="small" name="home" />;
+  return (
+    <Icon name="home" />
+  );
 };
 
 export default IconExample;

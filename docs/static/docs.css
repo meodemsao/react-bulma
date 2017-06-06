@@ -434,3 +434,7 @@ code .tag {
 .example + .highlight:not(:last-child) {
     margin-bottom: 1.5rem;
 }
+
+#images tr td:nth-child(2) {
+    width: 320px;
+}
