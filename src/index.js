@@ -1,5 +1,6 @@
 import Box from './Box';
 import Button from './Button';
+import Card from './Card';
 import Cols from './Cols';
 import Col from './Col';
 import Container from './Container';
@@ -63,6 +64,7 @@ import Title from './Title';
 export {
   Box,
   Button,
+  Card,
   Cols,
   Col,
   Container,

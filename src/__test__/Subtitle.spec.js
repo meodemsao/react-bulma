@@ -6,7 +6,7 @@ describe('Subtitle', () => {
   it('should render a subtitle tag by default', () => {
     const wrapper = shallow(<Subtitle />);
 
-    expect(wrapper.type()).toBe('h1');
+    expect(wrapper.type()).toBe('h2');
   });
 
   it('should render default class', () => {

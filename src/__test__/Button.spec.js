@@ -39,12 +39,6 @@ describe('Button', () => {
     expect(wrapper.hasClass('is-small')).toBe(true);
   });
 
-  it('should render custom style', () => {
-    const wrapper = shallow(<Button style="outlined" />);
-
-    expect(wrapper.hasClass('is-outlined')).toBe(true);
-  });
-
   it('should render custom state', () => {
     const wrapper = shallow(<Button state="hovered" />);
 

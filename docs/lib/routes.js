@@ -21,6 +21,7 @@ import ImagePage from './Components/ImagePage';
 import ProgressPage from './Components/ProgressPage';
 import TagPage from './Components/TagPage';
 import TitlePage from './Components/TitlePage';
+import CardPage from './Components/CardPage';
 
 const routes = (
   <Route path="/" component={UI.Layout}>
@@ -41,6 +42,7 @@ const routes = (
       <Route path="progress" component={ProgressPage} />
       <Route path="tag" component={TagPage} />
       <Route path="title" component={TitlePage} />
+      <Route path="card" component={CardPage} />
     </Route>
     <Route path="*" component={NotFound} />
   </Route>
