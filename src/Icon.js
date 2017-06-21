@@ -15,7 +15,8 @@ const propTypes = {
   name: PropTypes.string,
   size: PropTypes.string,
   left: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
+  panel: PropTypes.bool
 };
 
 const defaultProps = {
@@ -33,16 +34,17 @@ const Icon = (props) => {
     size,
     left,
     right,
+    panel,
     tag: Tag,
     ...attributes
   } = props;
 
   const classesTag = mapToCssModules(classNames(
     className,
-    defaultClass,
     size ? `is-${size}` : '',
     left ? 'is-left' : '',
-    right ? 'is-right' : ''
+    right ? 'is-right' : '',
+    panel ? 'panel-icon' : defaultClass
   ), cssModule);
 
   const classesIcon = mapToCssModules(classNames(

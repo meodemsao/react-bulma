@@ -13,7 +13,7 @@ const propTypes = {
   state: PropTypes.string,
   focus: PropTypes.bool,
   loading: PropTypes.bool,
-  disable: PropTypes.bool,
+  disabled: PropTypes.bool,
   hasIcon: PropTypes.string
 };
 
@@ -30,6 +30,7 @@ const TextArea = (props) => {
     color,
     size,
     state,
+    disabled,
     tag: Tag,
     ...attributes
   } = props;
@@ -43,7 +44,7 @@ const TextArea = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes} />
+    <Tag {...attributes} className={classes} disabled={disabled} />
   );
 };
 

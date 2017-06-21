@@ -39,15 +39,15 @@ describe('Button', () => {
     expect(wrapper.hasClass('is-small')).toBe(true);
   });
 
-  it('should render custom style', () => {
-    const wrapper = shallow(<Button style="outlined" />);
-
-    expect(wrapper.hasClass('is-outlined')).toBe(true);
-  });
-
   it('should render custom state', () => {
     const wrapper = shallow(<Button state="hovered" />);
 
     expect(wrapper.hasClass('is-hovered')).toBe(true);
+  });
+
+  it('should render modal button type', () => {
+    const wrapper = shallow(<Button modalType="button" />);
+
+    expect(wrapper.hasClass('modal-button')).toBe(true);
   });
 });

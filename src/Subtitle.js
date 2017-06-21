@@ -13,7 +13,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'h1'
+  tag: 'h2'
 };
 
 const defaultClass = 'subtitle';

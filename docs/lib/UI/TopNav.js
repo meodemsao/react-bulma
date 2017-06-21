@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Container,
   Icon,
   Nav,
   NavCenter,
@@ -27,25 +28,27 @@ export default class TopNav extends React.Component {
 
   render() {
     return (
-      <Nav>
-        <NavLeft>
-          <NavItem>
-            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo" />
-          </NavItem>
-        </NavLeft>
-        <NavCenter>
-          <NavItem>
-            <Icon name="github" />
-          </NavItem>
-          <NavItem>
-            <Icon name="twitter" />
-          </NavItem>
-        </NavCenter>
-        <NavRight navMenu>
-          <NavItem href="/">Home</NavItem>
-          <NavItem href="/documents">Document</NavItem>
-        </NavRight>
-      </Nav>
+      <Container>
+        <Nav>
+          <NavLeft>
+            <NavItem>
+              <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo" />
+            </NavItem>
+          </NavLeft>
+          <NavCenter>
+            <NavItem>
+              <Icon name="github" />
+            </NavItem>
+            <NavItem>
+              <Icon name="twitter" />
+            </NavItem>
+          </NavCenter>
+          <NavRight navMenu>
+            <NavItem href="/">Home</NavItem>
+            <NavItem href="/documents">Document</NavItem>
+          </NavRight>
+        </Nav>
+      </Container>
     );
   }
 }

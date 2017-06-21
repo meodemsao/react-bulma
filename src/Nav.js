@@ -7,7 +7,8 @@ const { PropTypes } = React;
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  cssModule: PropTypes.object
+  cssModule: PropTypes.object,
+  shadow: PropTypes.bool
 };
 
 const defaultProps = {
@@ -20,13 +21,15 @@ const Nav = (props) => {
   const {
     className,
     cssModule,
+    shadow,
     tag: Tag,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass
+    defaultClass,
+    shadow ? 'has-shadow' : ''
   ), cssModule);
 
   return (

@@ -10,7 +10,8 @@ const propTypes = {
   cssModule: PropTypes.object,
   expanded: PropTypes.bool,
   iconLeft: PropTypes.bool,
-  iconRight: PropTypes.bool
+  iconRight: PropTypes.bool,
+  loading: PropTypes.bool
 };
 
 const defaultProps = {
@@ -27,6 +28,7 @@ const Control = (props) => {
     expanded,
     iconLeft,
     iconRight,
+    loading,
     ...attributes
   } = props;
 
@@ -35,7 +37,8 @@ const Control = (props) => {
     defaultClass,
     expanded ? 'is-expanded' : '',
     iconLeft ? 'has-icons-left' : '',
-    iconRight ? 'has-icon-right' : ''
+    iconRight ? 'has-icons-right' : '',
+    loading ? 'is-loading' : ''
   ), cssModule);
 
   return (

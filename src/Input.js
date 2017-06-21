@@ -40,13 +40,11 @@ const Input = props => {
   const classes = mapToCssModules(
     classNames(
       className,
-      defaultClass,
       color ? `is-${color}` : '',
       size ? `is-${size}` : '',
-      state ? `is-${state}` : ''
-    ),
-    cssModule
-  );
+      state ? `is-${state}` : '',
+      type === 'checkbox' || type === 'radio' ? defaultClass === '' : defaultClass
+    ), cssModule);
 
   return <Tag {...attributes} className={classes} />;
 };

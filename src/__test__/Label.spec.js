@@ -32,4 +32,10 @@ describe('Label', () => {
 
     expect(wrapper.type()).toBe('span');
   });
+
+  it('should render radio type', () => {
+    const wrapper = shallow(<Label radio />);
+
+    expect(wrapper.html()).toBe('<label class="radio">');
+  });
 });
