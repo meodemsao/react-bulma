@@ -6,7 +6,7 @@ describe('NavToggle', () => {
   it('should render a nav toggle tag by default', () => {
     const wrapper = shallow(<NavToggle />);
 
-    expect(wrapper.type()).toBe('div');
+    expect(wrapper.type()).toBe('span');
   });
 
   it('should render default class', () => {

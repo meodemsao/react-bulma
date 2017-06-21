@@ -27,7 +27,7 @@ const menuData = [
   },
   {
     name: 'Elements',
-    url: '/components/button/',
+    url: '/components/box/',
     children: [
       { name: 'Box', url: '/components/box' },
       { name: 'Button', url: '/components/button/' },
@@ -49,7 +49,7 @@ const menuData = [
     children: [
       { name: 'Card', url: '/components/card/' },
       { name: 'Level', url: '/components/level/' },
-      { name: 'Media object', url: '/components/mediaobject/' },
+      { name: 'Media object', url: '/components/mediaObject/' },
       { name: 'Menu', url: '/components/menu/' },
       { name: 'Message', url: '/components/message/' },
       { name: 'Modal', url: '/components/modal/' },
@@ -117,6 +117,7 @@ export default class Menu extends React.Component {
   renderNavItem(nav, index) {
     return (
       <NavItem
+        tab
         key={index}
         className={this.activeRoute(nav.url)}
         onClick={() => this.changeRoute(nav.url)}
@@ -128,7 +129,7 @@ export default class Menu extends React.Component {
 
   renderNavMenu(tab) {
     return (
-      <Nav>
+      <Nav shadow>
         <Container>
           <NavLeft>
             {tab.children.map((nav, index) => {

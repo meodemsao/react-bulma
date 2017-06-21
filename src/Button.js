@@ -11,6 +11,9 @@ const propTypes = {
   color: PropTypes.string,
   size: PropTypes.string,
   state: PropTypes.string,
+  outlined: PropTypes.bool,
+  modalType: PropTypes.string,
+  inverted: PropTypes.bool,
   disabled: PropTypes.bool
 };
 
@@ -27,6 +30,9 @@ const Button = (props) => {
     color,
     size,
     state,
+    modalType,
+    outlined,
+    inverted,
     disabled,
     tag: Tag,
     ...attributes
@@ -34,10 +40,13 @@ const Button = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass,
     size ? `is-${size}` : '',
     color ? `is-${color}` : '',
-    state ? `is-${state}` : ''
+    state ? `is-${state}` : '',
+    outlined ? 'is-outlined' : '',
+    inverted ? 'is-inverted' : '',
+    modalType ? `modal-${modalType}` : '',
+    modalType === 'close' ? defaultClass === '' : defaultClass
   ), cssModule);
 
   return (

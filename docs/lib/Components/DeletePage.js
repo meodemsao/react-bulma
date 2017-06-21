@@ -6,6 +6,7 @@ import {
   Container,
   Content,
   Delete,
+  Section,
   Subtitle,
   Title
 } from 'reactbulma';
@@ -16,86 +17,88 @@ const DeleteExampleSource = require('!!raw!../Example/DeleteExample');
 export default class DeletePage extends React.Component {
   render() {
     return (
-      <Container>
-        <Title>Delete</Title>
-        <Subtitle>
-          A versatile
-          {' '}
-          <strong>delete</strong>
-          {' '}
-          cross
-        </Subtitle>
-        <hr />
-        <Content>
-          <p>
-            The
+      <Section>
+        <Container>
+          <Title>Delete</Title>
+          <Subtitle>
+            A versatile
             {' '}
-            <code>.delete</code>
+            <strong>delete</strong>
             {' '}
-            element is a stand-alone element that can be used in different contexts.
-          </p>
-        </Content>
-        <Cols>
-          <Col>
-            <Content>
-              <p>
-                On its own, it's a simple circle with a cross:
-              </p>
-              <Delete />
-            </Content>
-          </Col>
-          <Col>
-            <figure className="highlight">
-              <pre>
-                <PrismCode className="language-jsx">
-                  {'<Delete />'}
-                </PrismCode>
-              </pre>
-            </figure>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col>
-            <Content>
-              <p>
-                It comes in <strong>4 sizes</strong>:
-              </p>
-              <Delete size="small" />
-              <Delete />
-              <Delete size="medium" />
-              <Delete size="large" />
-            </Content>
-          </Col>
-          <Col>
-            <figure className="highlight">
-              <pre>
-                <PrismCode className="language-jsx">
-                  {
-                    '<Delete size="small" />\n' +
-                    '<Delete />\n' +
-                    '<Delete size="medium" />\n' +
-                    '<Delete size="large" />'
-                  }
-                </PrismCode>
-              </pre>
-            </figure>
-          </Col>
-        </Cols>
-        <Cols>
-          <Col size="half">
-            <DeleteExample />
-          </Col>
-          <Col size="half">
-            <figure className="highlight">
-              <pre>
-                <PrismCode className="language-jsx">
-                  {DeleteExampleSource}
-                </PrismCode>
-              </pre>
-            </figure>
-          </Col>
-        </Cols>
-      </Container>
+            cross
+          </Subtitle>
+          <hr />
+          <Content>
+            <p>
+              The
+              {' '}
+              <code>.delete</code>
+              {' '}
+              element is a stand-alone element that can be used in different contexts.
+            </p>
+          </Content>
+          <Cols>
+            <Col>
+              <Content>
+                <p>
+                  On its own, it's a simple circle with a cross:
+                </p>
+                <Delete />
+              </Content>
+            </Col>
+            <Col>
+              <figure className="highlight">
+                <pre>
+                  <PrismCode className="language-jsx">
+                    {'<Delete />'}
+                  </PrismCode>
+                </pre>
+              </figure>
+            </Col>
+          </Cols>
+          <Cols>
+            <Col>
+              <Content>
+                <p>
+                  It comes in <strong>4 sizes</strong>:
+                </p>
+                <Delete size="small" />
+                <Delete />
+                <Delete size="medium" />
+                <Delete size="large" />
+              </Content>
+            </Col>
+            <Col>
+              <figure className="highlight">
+                <pre>
+                  <PrismCode className="language-jsx">
+                    {
+                      '<Delete size="small" />\n' +
+                      '<Delete />\n' +
+                      '<Delete size="medium" />\n' +
+                      '<Delete size="large" />'
+                    }
+                  </PrismCode>
+                </pre>
+              </figure>
+            </Col>
+          </Cols>
+          <Cols>
+            <Col size="half">
+              <DeleteExample />
+            </Col>
+            <Col size="half">
+              <figure className="highlight">
+                <pre>
+                  <PrismCode className="language-jsx">
+                    {DeleteExampleSource}
+                  </PrismCode>
+                </pre>
+              </figure>
+            </Col>
+          </Cols>
+        </Container>
+      </Section>
     );
   }
 }

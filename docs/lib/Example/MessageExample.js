@@ -1,11 +1,11 @@
 import React from 'react';
 import { Message, MessageHeader, MessageBody, Delete } from 'reactbulma';
 
-const Example = props => {
+const Example = (props) => {
   return (
     <Message color={props.color}>
       <MessageHeader>
-        <p>Hello World</p>
+        <p>{props.title}</p>
         <Delete />
       </MessageHeader>
       <MessageBody>

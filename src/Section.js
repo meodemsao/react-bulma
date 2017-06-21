@@ -7,7 +7,9 @@ const { PropTypes } = React;
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  cssModule: PropTypes.object
+  cssModule: PropTypes.object,
+  size: PropTypes.string,
+  fullWidth: PropTypes.bool
 };
 
 const defaultProps = {
@@ -20,13 +22,17 @@ const Section = (props) => {
   const {
     className,
     cssModule,
+    size,
+    fullWidth,
     tag: Tag,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    defaultClass
+    defaultClass,
+    size ? `is-${size}` : '',
+    fullWidth ? 'is-fullwidth' : ''
   ), cssModule);
 
   return (

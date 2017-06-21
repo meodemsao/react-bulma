@@ -8,7 +8,10 @@ import Content from './Content';
 import Control from './Control';
 import Delete from './Delete';
 import Field from './Field';
+import FieldBody from './FieldBody';
+import FieldLabel from './FieldLabel';
 import Footer from './Footer';
+import Help from './Help';
 import Hero from './Hero';
 import HeroFoot from './HeroFoot';
 import HeroBody from './HeroBody';
@@ -34,6 +37,7 @@ import ModalCard from './ModalCard';
 import ModalCardBody from './ModalCardBody';
 import ModalCardHead from './ModalCardHead';
 import ModalCardFoot from './ModalCardFoot';
+import ModalCardTitle from './ModalCardTitle';
 import Nav from './Nav';
 import NavCenter from './NavCenter';
 import NavItem from './NavItem';
@@ -52,6 +56,7 @@ import PanelBlock from './PanelBlock';
 import PanelHeading from './PanelHeading';
 import PanelTabs from './PanelTabs';
 import Progress from './Progress';
+import Select from './Select';
 import Section from './Section';
 import Subtitle from './Subtitle';
 import TabItem from './TabItem';
@@ -72,7 +77,10 @@ export {
   Control,
   Delete,
   Field,
+  FieldBody,
+  FieldLabel,
   Footer,
+  Help,
   Hero,
   HeroBody,
   HeroFoot,
@@ -98,6 +106,7 @@ export {
   ModalCardHead,
   ModalCardBody,
   ModalCardFoot,
+  ModalCardTitle,
   Nav,
   NavCenter,
   NavItem,
@@ -116,6 +125,7 @@ export {
   PanelHeading,
   PanelTabs,
   Progress,
+  Select,
   Section,
   Subtitle,
   TabItem,

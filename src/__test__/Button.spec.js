@@ -44,4 +44,10 @@ describe('Button', () => {
 
     expect(wrapper.hasClass('is-hovered')).toBe(true);
   });
+
+  it('should render modal button type', () => {
+    const wrapper = shallow(<Button modalType="button" />);
+
+    expect(wrapper.hasClass('modal-button')).toBe(true);
+  });
 });

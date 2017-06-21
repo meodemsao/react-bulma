@@ -506,6 +506,40 @@ code .tag {
     padding: 0.5rem 0.75rem;
 }
 
+@media screen and (min-width: 769px), print {
+    .highlight pre {
+        white-space: pre-wrap;
+    }
+}
+
+@media screen and (min-width: 769px), print {
+    .section:not(.is-fullwidth) > .example:not(.is-fullwidth) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .section:not(.is-fullwidth) > .example:not(.is-fullwidth) + .highlight {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.section.is-fullwidth {
+    padding: 0 !important;
+}
+
+.section.is-fullwidth .example {
+    border-left: none;
+    border-radius: 0;
+    border-right: none;
+    padding: 0;
+}
+
+.section.is-fullwidth .example + .highlight {
+    border-left: none;
+    border-radius: 0;
+    border-right: none;
+}
+
 #images tr td:nth-child(2) {
     width: 320px;
 }

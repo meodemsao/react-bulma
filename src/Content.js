@@ -8,7 +8,8 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  size: PropTypes.string
+  size: PropTypes.string,
+  textCenter: PropTypes.bool
 };
 
 const defaultProps = {
@@ -22,6 +23,7 @@ const Content = (props) => {
     className,
     cssModule,
     size,
+    textCenter,
     tag: Tag,
     ...attributes
   } = props;
@@ -29,6 +31,7 @@ const Content = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     defaultClass,
+    textCenter ? 'has-text-centered' : '',
     size ? `is-${size}` : ''
   ), cssModule);
 

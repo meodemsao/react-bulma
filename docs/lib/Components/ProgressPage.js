@@ -4,9 +4,8 @@
 import React from 'react';
 import { PrismCode } from 'react-prism';
 import {
-  Col,
-  Cols,
   Container,
+  Section,
   Subtitle,
   Title
 } from 'reactbulma';
@@ -19,33 +18,35 @@ const ProgressSizeSource = require('!!raw!../Example/Progress/ProgressSize');
 
 export default class ProgressPage extends React.Component {
   render() {
-    return(
-      <Container>
-        <Title>Progress bars</Title>
-        <Subtitle>Native HTML <strong>progress</strong> bars</Subtitle>
-        <hr />
-        <div className="example">
-          <ProgressExample />
-        </div>
-        <figure className="highlight">
-          <pre>
-            <PrismCode className="language-jsx">
-              {ProgressExampleSource}
-            </PrismCode>
-          </pre>
-        </figure>
-        <hr />
-        <div className="example">
-          <ProgressSize />
-        </div>
-        <figure className="highlight">
-          <pre>
-            <PrismCode className="language-jsx">
-              {ProgressSizeSource}
-            </PrismCode>
-          </pre>
-        </figure>
-      </Container>
+    return (
+      <Section>
+        <Container>
+          <Title>Progress bars</Title>
+          <Subtitle>Native HTML <strong>progress</strong> bars</Subtitle>
+          <hr />
+          <div className="example">
+            <ProgressExample />
+          </div>
+          <figure className="highlight">
+            <pre>
+              <PrismCode className="language-jsx">
+                {ProgressExampleSource}
+              </PrismCode>
+            </pre>
+          </figure>
+          <hr />
+          <div className="example">
+            <ProgressSize />
+          </div>
+          <figure className="highlight">
+            <pre>
+              <PrismCode className="language-jsx">
+                {ProgressSizeSource}
+              </PrismCode>
+            </pre>
+          </figure>
+        </Container>
+      </Section>
     );
   }
 }

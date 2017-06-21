@@ -9,9 +9,7 @@ export default props => {
     <div className="wrapper">
       <TopNav />
       <Menu {...props} />
-      <Section>
-        {props.children}
-      </Section>
+      {props.children}
       <Footer />
     </div>
   );

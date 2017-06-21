@@ -6,7 +6,7 @@ describe('Input', () => {
   it('should render a input tag by default', () => {
     const wrapper = shallow(<Input />);
 
-    expect(wrapper.html()).toBe('<input type="text" class="input"/>');
+    expect(wrapper.html()).toBe('<input class="input"/>');
   });
 
   it('should render default class', () => {
@@ -30,20 +30,20 @@ describe('Input', () => {
   });
 
   it('should render with disable state', () => {
-    const wrapper = shallow(<Input disabled="distabled" />);
+    const wrapper = shallow(<Input disabled />);
 
-    expect(wrapper.html()).toBe('<input type="text" disabled="disabled" class="input"/>');
+    expect(wrapper.html()).toBe('<input disabled="" class="input"/>');
   });
 
   it('should render with radio type', () => {
     const wrapper = shallow(<Input type="radio" />);
 
-    expect(wrapper.html()).toBe('<input type="radio" class="input"/>');
+    expect(wrapper.html()).toBe('<input type="radio"/>');
   });
 
   it('should render with checkbox type', () => {
     const wrapper = shallow(<Input type="checkbox" />);
 
-    expect(wrapper.html()).toBe('<input type="checkbox" class="input"/>');
+    expect(wrapper.html()).toBe('<input type="checkbox"/>');
   });
 });

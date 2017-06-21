@@ -11,7 +11,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'span'
 };
 
 const defaultClass = 'nav-toggle';

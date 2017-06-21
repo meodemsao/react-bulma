@@ -22,6 +22,18 @@ import ProgressPage from './Components/ProgressPage';
 import TagPage from './Components/TagPage';
 import TitlePage from './Components/TitlePage';
 import CardPage from './Components/CardPage';
+import MediaPage from './Components/MediaPage';
+import MenuPage from './Components/MenuPage';
+import ModalPage from './Components/ModalPage';
+import FormPage from './Components/FormPage';
+import NavPage from './Components/NavPage';
+import PaginationPage from './Components/PaginationPage';
+import PanelPage from './Components/PanelPage';
+import TabPage from './Components/TabPage';
+import ContainerPage from './Components/ContainerPage';
+import HeroPage from './Components/HeroPage';
+import SectionPage from './Components/SectionPage';
+import FooterPage from './Components/FooterPage';
 
 const routes = (
   <Route path="/" component={UI.Layout}>
@@ -43,6 +55,18 @@ const routes = (
       <Route path="tag" component={TagPage} />
       <Route path="title" component={TitlePage} />
       <Route path="card" component={CardPage} />
+      <Route path="mediaObject" component={MediaPage} />
+      <Route path="menu" component={MenuPage} />
+      <Route path="modal" component={ModalPage} />
+      <Route path="form" component={FormPage} />
+      <Route path="nav" component={NavPage} />
+      <Route path="pagination" component={PaginationPage} />
+      <Route path="panel" component={PanelPage} />
+      <Route path="tabs" component={TabPage} />
+      <Route path="container" component={ContainerPage} />
+      <Route path="hero" component={HeroPage} />
+      <Route path="section" component={SectionPage} />
+      <Route path="footer" component={FooterPage} />
     </Route>
     <Route path="*" component={NotFound} />
   </Route>
