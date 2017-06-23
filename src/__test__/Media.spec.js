@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Media} from '../';
+import { shallow } from 'enzyme';
+import { Media } from '../';
 
 describe('Media', () => {
   it('should render a media tag by default', () => {

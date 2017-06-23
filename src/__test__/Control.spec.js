@@ -34,7 +34,7 @@ describe('Control', () => {
   });
 
   it('should render custom propery', () => {
-    const wrapper = shallow(<Control expanded iconLeft iconRight loading/>);
+    const wrapper = shallow(<Control expanded iconLeft iconRight loading />);
 
     expect(wrapper.hasClass('is-expanded')).toBe(true);
     expect(wrapper.hasClass('has-icons-left')).toBe(true);
