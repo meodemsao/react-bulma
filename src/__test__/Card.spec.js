@@ -39,4 +39,3 @@ describe('Card', () => {
     expect(wrapper.hasClass('card-header')).toBe(true);
   });
 });
-

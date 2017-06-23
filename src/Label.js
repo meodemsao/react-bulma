@@ -31,7 +31,7 @@ const Label = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     size ? `is-${size}` : '',
-    type ? type : defaultClass
+    type ? `${type}` : defaultClass
   ), cssModule);
 
   return (
