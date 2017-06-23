@@ -34,9 +34,15 @@ describe('Field', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Field addons grouped>Yo!</Field>);
+    const wrapper = shallow(<Field addons addonsCenter addonsRight grouped groupedCenter groupedRight horizontal narrow >Yo!</Field>);
 
     expect(wrapper.hasClass('has-addons')).toBe(true);
+    expect(wrapper.hasClass('has-addons-centered')).toBe(true);
+    expect(wrapper.hasClass('has-addons-right')).toBe(true);
     expect(wrapper.hasClass('is-grouped')).toBe(true);
+    expect(wrapper.hasClass('is-grouped-centered')).toBe(true);
+    expect(wrapper.hasClass('is-grouped-right')).toBe(true);
+    expect(wrapper.hasClass('is-horizontal')).toBe(true);
+    expect(wrapper.hasClass('is-narrow')).toBe(true);
   });
 });

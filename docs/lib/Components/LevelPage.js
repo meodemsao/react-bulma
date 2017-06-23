@@ -8,6 +8,9 @@ import {
   Field,
   Input,
   Level,
+  LevelItem,
+  LevelLeft,
+  LevelRight,
   Section,
   Subtitle,
   Title
@@ -42,11 +45,11 @@ export default class LevelPage extends React.Component {
               <li>
                 <code>{'<Level />'}</code>: main container
                 <ul>
-                  <li><code>{'<Level type="left" />'}</code> for the left side</li>
+                  <li><code>{'<LevelLeft />'}</code> for the left side</li>
                   <li>
-                    <code>{'<Level type="right" />'}</code> for the right side
+                    <code>{'<LevelRight />'}</code> for the right side
                     <ul>
-                      <li><code>{'<Level type="item" />'}</code> for each individual element</li>
+                      <li><code>{'<LevelItem />'}</code> for each individual element</li>
                     </ul>
                   </li>
                 </ul>
@@ -55,7 +58,7 @@ export default class LevelPage extends React.Component {
             <p>
               In a
               {' '}
-              <code>{'<Level type="item" />'}</code>
+              <code>{'<LevelItem />'}</code>
               , you can then insert almost
               {' '}
               <em>anything</em>
@@ -71,13 +74,13 @@ export default class LevelPage extends React.Component {
           </Content>
           <div className="structure">
             <Level title="level" className="structure-item is-structure-container">
-              <Level tag="div" type="left" className="structure-item" title="level-left">
-                <Level tag="div" type="item">
+              <LevelLeft className="structure-item" title="level-left">
+                <LevelItem>
                   <p className="subtitle is-5">
                     <strong>123</strong> posts
                   </p>
-                </Level>
-                <Level tag="div" type="item">
+                </LevelItem>
+                <LevelItem>
                   <Field addons>
                     <Control>
                       <Input type="text" placeholder="Find a post" />
@@ -86,27 +89,27 @@ export default class LevelPage extends React.Component {
                       <Button>Search</Button>
                     </Control>
                   </Field>
-                </Level>
-              </Level>
-              <Level tag="div" type="right" className="structure-item" title="level-right">
-                <Level tag="p" type="item">
+                </LevelItem>
+              </LevelLeft>
+              <LevelRight className="structure-item" title="level-right">
+                <LevelItem tag="p">
                   <strong>All</strong>
-                </Level>
-                <Level tag="p" type="item">
+                </LevelItem>
+                <LevelItem tag="p">
                   <a>Published</a>
-                </Level>
-                <Level tag="p" type="item">
+                </LevelItem>
+                <LevelItem tag="p">
                   <a>Drafts</a>
-                </Level>
-                <Level tag="p" type="item">
+                </LevelItem>
+                <LevelItem tag="p">
                   <a>Deleted</a>
-                </Level>
-                <Level tag="p" type="item">
+                </LevelItem>
+                <LevelItem tag="p">
                   <Button color="success">
                     New
                   </Button>
-                </Level>
-              </Level>
+                </LevelItem>
+              </LevelRight>
             </Level>
           </div>
           <div className="example">
@@ -127,7 +130,7 @@ export default class LevelPage extends React.Component {
             <strong>centered level</strong>
             , you can use as many
             {' '}
-            <code>level-item</code>
+            <code>{'<LevelItem />'}</code>
             {' '}
             as you want, as
             long as they are
@@ -136,7 +139,7 @@ export default class LevelPage extends React.Component {
             {' '}
             children of the
             {' '}
-            <code>level</code>
+            <code>{'<Level />'}</code>
             {' '}
             container.
           </Content>

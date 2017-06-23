@@ -7,17 +7,16 @@ const { PropTypes } = React;
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  cssModule: PropTypes.object,
-  text: PropTypes.string
+  cssModule: PropTypes.object
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'ul'
 };
 
-const defaultClass = 'pagination-ellipsis';
+const defaultClass = '';
 
-const PaginationEllipsis = (props) => {
+const TabList = (props) => {
   const {
     className,
     cssModule,
@@ -31,13 +30,11 @@ const PaginationEllipsis = (props) => {
   ), cssModule);
 
   return (
-    <li>
-      <Tag {...attributes} className={classes} />
-    </li>
+    <Tag {...attributes} className={classes} />
   );
 };
 
-PaginationEllipsis.propTypes = propTypes;
-PaginationEllipsis.defaultProps = defaultProps;
+TabList.propTypes = propTypes;
+TabList.defaultProps = defaultProps;
 
-export default PaginationEllipsis;
+export default TabList;

@@ -38,6 +38,6 @@ describe('Tile', () => {
 
     expect(wrapper.hasClass('is-2')).toBe(true);
     expect(wrapper.hasClass('is-ancestor')).toBe(true);
-    expect(wrapper.hasClass('is-ancestor')).toBe(true);
+    expect(wrapper.hasClass('is-vertical')).toBe(true);
   });
 });

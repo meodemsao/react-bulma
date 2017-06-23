@@ -32,4 +32,16 @@ describe('Section', () => {
 
     expect(wrapper.type()).toBe('div');
   });
+
+  it('should render custom size', () => {
+    const wrapper = shallow(<Section size="medium" />);
+
+    expect(wrapper.hasClass('is-medium')).toBe(true);
+  });
+
+  it('should render custom property', () => {
+    const wrapper = shallow(<Section fullWidth />);
+
+    expect(wrapper.hasClass('is-fullwidth')).toBe(true);
+  });
 });

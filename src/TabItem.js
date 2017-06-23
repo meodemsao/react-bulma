@@ -6,6 +6,10 @@ const { PropTypes } = React;
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.arrayOf(React.PropTypes.node),
+    React.PropTypes.node
+  ]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
   active: PropTypes.bool
@@ -33,7 +37,11 @@ const TabItem = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes} />
+    <Tag {...attributes} className={classes}>
+      <a>
+        {props.children}
+      </a>
+    </Tag>
   );
 };
 

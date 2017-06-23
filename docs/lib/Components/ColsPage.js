@@ -60,8 +60,8 @@ export default class ColsPage extends React.Component {
           <Content>
             <p>To build a <strong>grid</strong>, just:</p>
             <ol>
-              <li>Add a <code>columns</code> container</li>
-              <li>Add as many <code>column</code> elements as you want</li>
+              <li>Add a <code>{'<Cols />'}</code> container</li>
+              <li>Add as many <code>{'<Col />'}</code> elements as you want</li>
             </ol>
             <p>Each column will have an <strong>equal width</strong>, no matter the number of columns.</p>
           </Content>
@@ -85,19 +85,19 @@ export default class ColsPage extends React.Component {
             </p>
             <ul>
               <li>
-                <code>is-three-quarters</code>
+                <code>{'<Col size="three-quarters" />'}</code>
               </li>
               <li>
-                <code>is-two-thirds</code>
+                <code>{'<Col size="two-thirds" />'}</code>
               </li>
               <li>
-                <code>is-half</code>
+                <code>{'<Col size="half" />'}</code>
               </li>
               <li>
-                <code>is-one-third</code>
+                <code>{'<Col size="one-third" />'}</code>
               </li>
               <li>
-                <code>is-one-quarter</code>
+                <code>{'<Col size="one-quarter" />'}</code>
               </li>
             </ul>
             <p>
@@ -130,16 +130,16 @@ export default class ColsPage extends React.Component {
               columns, there are size classes for each division:
             </p>
             <ul>
-              <li><code>is-2</code></li>
-              <li><code>is-3</code></li>
-              <li><code>is-4</code></li>
-              <li><code>is-5</code></li>
-              <li><code>is-6</code></li>
-              <li><code>is-7</code></li>
-              <li><code>is-8</code></li>
-              <li><code>is-9</code></li>
-              <li><code>is-10</code></li>
-              <li><code>is-11</code></li>
+              <li><code>{'<Col size="2" />'}</code></li>
+              <li><code>{'<Col size="3" />'}</code></li>
+              <li><code>{'<Col size="4" />'}</code></li>
+              <li><code>{'<Col size="5" />'}</code></li>
+              <li><code>{'<Col size="6" />'}</code></li>
+              <li><code>{'<Col size="7" />'}</code></li>
+              <li><code>{'<Col size="8" />'}</code></li>
+              <li><code>{'<Col size="9" />'}</code></li>
+              <li><code>{'<Col size="10" />'}</code></li>
+              <li><code>{'<Col size="11" />'}</code></li>
             </ul>
           </Content>
           <Message color="danger">
@@ -159,7 +159,7 @@ export default class ColsPage extends React.Component {
               {' '}
               (like
               {' '}
-              <code>&lt;div class="column"&gt;&lt;/div&gt;</code>
+              <code>{'<Col />'}</code>
               ) to
               create horizontal space around
               {' '}
@@ -168,7 +168,7 @@ export default class ColsPage extends React.Component {
               elements, you can also use
               {' '}
               <strong>offset</strong>
-               modifiers like <code>.is-offset-x</code>:
+               modifiers like <code>{'<Col size="offset-x" />'}</code>:
             </p>
           </Content>
           <ColsOffset />
@@ -196,10 +196,10 @@ export default class ColsPage extends React.Component {
               <strong>mobile too</strong>
               , just add the
               {' '}
-              <code>is-mobile</code>
+              <code>responsive="mobile"</code>
               {' '}
               modifier on
-              the <code>columns</code> container:
+              the <code>{'<Cols />'}</code> container:
             </p>
           </Content>
           <ColsMobile />
@@ -222,7 +222,7 @@ export default class ColsPage extends React.Component {
             </MessageBody>
           </Message>
           <Content>
-            <p>If you <em>only</em> want columns on desktop, just use the <code>is-desktop</code> modifier on the <code>columns</code> container:</p>
+            <p>If you <em>only</em> want columns on desktop, just use the <code>responsive="desktop"</code> modifier on the <code>{'<Cols />'}</code> container:</p>
           </Content>
           <ColsDesktop />
           <figure className="highlight">
@@ -258,16 +258,16 @@ export default class ColsPage extends React.Component {
             </p>
             <ul>
               <li>
-                <code>columns</code>: top-level columns container
+                <code>{'<Cols />'}</code>: top-level columns container
                 <ul>
                   <li>
-                    <code>column</code>
+                    <code>{'<Col />'}</code>
                     <ul>
                       <li>
-                        <code>columns</code>: nested columns
+                        <code>{'<Cols />'}</code>: nested columns
                         <ul>
                           <li>
-                            <code>column</code> and so on…
+                            <code>{'<Col />'}</code> and so on…
                           </li>
                         </ul>
                       </li>
@@ -291,8 +291,8 @@ export default class ColsPage extends React.Component {
           <hr />
           <Title tag="h3">Multiline</Title>
           <Content>
-            <p>Whenever you want to start a new line, you can close a <code>columns</code> container and start a new one.
-              But you can also add the <code>is-multiline</code> modifier and add <strong>more</strong> column elements that would fit in a single row.</p>
+            <p>Whenever you want to start a new line, you can close a <code>{'<Cols />'}</code> container and start a new one.
+              But you can also add the <code>multiline</code> modifier and add <strong>more</strong> column elements that would fit in a single row.</p>
           </Content>
           <ColsMultiline />
           <figure className="highlight">
@@ -305,7 +305,7 @@ export default class ColsPage extends React.Component {
           <hr />
           <Title tag="h3">Gapless</Title>
           <Content>
-            <p>If you want to remove the <strong>space</strong> between the columns, add the <code>is-gapless</code> modifier on the <code>columns</code> container:</p>
+            <p>If you want to remove the <strong>space</strong> between the columns, add the <code>gapless</code> modifier on the <code>{'<Cols />'}</code> container:</p>
           </Content>
           <ColsGaplessExample />
           <figure className="highlight">
@@ -323,7 +323,7 @@ export default class ColsPage extends React.Component {
             </pre>
           </figure>
           <Content>
-            <p>You can combine it with the <code>is-multiline</code> modifier:</p>
+            <p>You can combine it with the <code>multiline</code> modifier:</p>
           </Content>
           <ColsGapless />
           <figure className="highlight">
@@ -336,7 +336,7 @@ export default class ColsPage extends React.Component {
           <hr />
           <Title tag="h3">Narrow column</Title>
           <Content>
-            <p>If you want a column to only take the <strong>space it needs</strong>, use the <code>is-narrow</code> modifier.
+            <p>If you want a column to only take the <strong>space it needs</strong>, use the <code>narrow</code> modifier.
               The other column(s) will fill up the remaining space.</p>
           </Content>
           <ColsNarrowColumn />

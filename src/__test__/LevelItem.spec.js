@@ -34,7 +34,7 @@ describe('LevelItem', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<LevelItem textCenter tag="span" />);
+    const wrapper = shallow(<LevelItem textCenter />);
 
     expect(wrapper.hasClass('has-text-centered')).toBe(true);
   });

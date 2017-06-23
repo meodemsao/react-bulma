@@ -32,4 +32,10 @@ describe('PaginationPrevious', () => {
 
     expect(wrapper.type()).toBe('span');
   });
+
+  it('should render disabled', () => {
+    const wrapper = shallow(<PaginationPrevious disabled />);
+
+    expect(wrapper.html()).toBe('<a class="pagination-previous" disabled=""></a>');
+  });
 });

@@ -32,9 +32,7 @@ const PaginationPrevious = (props) => {
   ), cssModule);
 
   return (
-    disabled
-      ? <Tag {...attributes} className={classes} diabled />
-      : <Tag {...attributes} className={classes} />
+    <Tag {...attributes} className={classes} disabled={disabled} />
   );
 };
 

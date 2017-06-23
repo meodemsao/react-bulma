@@ -38,12 +38,12 @@ describe('Input', () => {
   it('should render with radio type', () => {
     const wrapper = shallow(<Input type="radio" />);
 
-    expect(wrapper.html()).toBe('<input type="radio"/>');
+    expect(wrapper.html()).toBe('<input type="radio" class=""/>');
   });
 
   it('should render with checkbox type', () => {
     const wrapper = shallow(<Input type="checkbox" />);
 
-    expect(wrapper.html()).toBe('<input type="checkbox"/>');
+    expect(wrapper.html()).toBe('<input type="checkbox" class=""/>');
   });
 });

@@ -34,10 +34,11 @@ describe('Tabs', () => {
   });
 
   it('should render custom property', () => {
-    const wrapper = shallow(<Tabs alignment="centered" size="medium" style="boxed" />);
+    const wrapper = shallow(<Tabs alignment="centered" size="medium" style="boxed" fullWidth />);
 
     expect(wrapper.hasClass('is-centered')).toBe(true);
     expect(wrapper.hasClass('is-medium')).toBe(true);
     expect(wrapper.hasClass('is-boxed')).toBe(true);
+    expect(wrapper.hasClass('is-fullwidth')).toBe(true);
   });
 });

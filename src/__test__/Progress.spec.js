@@ -36,8 +36,6 @@ describe('Progress', () => {
   it('should render custom property', () => {
     const wrapper = shallow(<Progress size="medium" color="info" value="15" max="100" />);
 
-    expect(wrapper.hasClass('is-info')).toBe(true);
-    expect(wrapper.hasClass('is-medium')).toBe(true);
     expect(wrapper.html()).toBe('<progress class="progress is-medium is-info" value="15" max="100"></progress>');
   });
 });

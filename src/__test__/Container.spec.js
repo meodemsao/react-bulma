@@ -38,4 +38,10 @@ describe('Container', () => {
 
     expect(wrapper.hasClass('is-fluid')).toBe(true);
   });
+
+  it('should render container text center', () => {
+    const wrapper = shallow(<Container textCenter>Yo!</Container>);
+
+    expect(wrapper.hasClass('has-text-centered')).toBe(true);
+  });
 });

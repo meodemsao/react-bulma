@@ -32,4 +32,16 @@ describe('Level', () => {
 
     expect(wrapper.type()).toBe('div');
   });
+
+  it('should render level mobile', () => {
+    const wrapper = shallow(<Level mobile />);
+
+    expect(wrapper.hasClass('is-mobile')).toBe(true);
+  });
+
+  it('should render custom property', () => {
+    const wrapper = shallow(<Level textCenter />);
+
+    expect(wrapper.hasClass('has-text-centered')).toBe(true);
+  });
 });

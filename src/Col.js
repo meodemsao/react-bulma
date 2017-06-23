@@ -10,7 +10,10 @@ const propTypes = {
   cssModule: PropTypes.object,
   size: PropTypes.string,
   offset: PropTypes.string,
-  narrow: PropTypes.bool
+  narrow: PropTypes.bool,
+  narrowMobile: PropTypes.bool,
+  narrowDesktop: PropTypes.bool,
+  narrowTablet: PropTypes.bool
 };
 
 const defaultProps = {
@@ -26,6 +29,9 @@ const Col = (props) => {
     size,
     offset,
     narrow,
+    narrowMobile,
+    narrowDesktop,
+    narrowTablet,
     tag: Tag,
     ...attributes
   } = props;
@@ -35,7 +41,10 @@ const Col = (props) => {
     defaultClass,
     size ? `is-${size}` : '',
     offset ? `is-offset-${offset}` : '',
-    narrow ? `is-${narrow}` : ''
+    narrow ? 'is-narrow' : '',
+    narrowMobile ? 'is-narrow-mobile' : '',
+    narrowDesktop ? 'is-narrow-desktop' : '',
+    narrowTablet ? 'is-narrow-tablet' : ''
   ), cssModule);
 
   return (
