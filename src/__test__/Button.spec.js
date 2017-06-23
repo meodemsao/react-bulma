@@ -39,15 +39,39 @@ describe('Button', () => {
     expect(wrapper.hasClass('is-small')).toBe(true);
   });
 
-  it('should render custom state', () => {
-    const wrapper = shallow(<Button state="hovered" />);
+  it('should render custom color', () => {
+    const wrapper = shallow(<Button color="primary" />);
 
-    expect(wrapper.hasClass('is-hovered')).toBe(true);
+    expect(wrapper.hasClass('is-primary')).toBe(true);
+  });
+
+  it('should render custom state', () => {
+    const wrapper = shallow(<Button state="active" />);
+
+    expect(wrapper.hasClass('is-active')).toBe(true);
   });
 
   it('should render modal button type', () => {
     const wrapper = shallow(<Button modalType="button" />);
 
     expect(wrapper.hasClass('modal-button')).toBe(true);
+  });
+
+  it('should render modal close type', () => {
+    const wrapper = shallow(<Button modalType="close" />);
+
+    expect(wrapper.hasClass('modal-close')).toBe(true);
+  });
+
+  it('should render button outlined', () => {
+    const wrapper = shallow(<Button outlined />);
+
+    expect(wrapper.hasClass('is-outlined')).toBe(true);
+  });
+
+  it('should render button inverted', () => {
+    const wrapper = shallow(<Button inverted />);
+
+    expect(wrapper.hasClass('is-inverted')).toBe(true);
   });
 });

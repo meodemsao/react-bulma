@@ -32,4 +32,25 @@ describe('Col', () => {
 
     expect(wrapper.type()).toBe('span');
   });
+
+  it('should render custom size', () => {
+    const wrapper = shallow(<Col size="1">Yo!</Col>);
+
+    expect(wrapper.hasClass('is-1')).toBe(true);
+  });
+
+  it('should render custom offset', () => {
+    const wrapper = shallow(<Col offset="1">Yo!</Col>);
+
+    expect(wrapper.hasClass('is-offset-1')).toBe(true);
+  });
+
+  it('should render col narrow', () => {
+    const wrapper = shallow(<Col narrow narrowMobile narrowDesktop narrowTablet>Yo!</Col>);
+
+    expect(wrapper.hasClass('is-narrow')).toBe(true);
+    expect(wrapper.hasClass('is-narrow-mobile')).toBe(true);
+    expect(wrapper.hasClass('is-narrow-desktop')).toBe(true);
+    expect(wrapper.hasClass('is-narrow-tablet')).toBe(true);
+  });
 });

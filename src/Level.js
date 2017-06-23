@@ -8,7 +8,6 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  type: PropTypes.string,
   textCenter: PropTypes.bool,
   mobile: PropTypes.bool
 };
@@ -24,7 +23,6 @@ const Level = (props) => {
     className,
     cssModule,
     tag: Tag,
-    type,
     textCenter,
     mobile,
     ...attributes
@@ -32,7 +30,7 @@ const Level = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    type ? `level-${type}` : defaultClass,
+    defaultClass,
     textCenter ? 'has-text-centered' : '',
     mobile ? 'is-mobile' : ''
   ), cssModule);

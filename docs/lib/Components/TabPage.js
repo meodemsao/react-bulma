@@ -7,6 +7,8 @@ import {
   Container,
   Content,
   Icon,
+  TabItem,
+  TabList,
   Tabs,
   Section,
   Subtitle,
@@ -27,35 +29,37 @@ export default class TabPage extends React.Component {
               {' '}
               only require a
               {' '}
-              <code>tabs</code>
+              <code>{'<Tabs />'}</code>
               {' '}
               container and a
               {' '}
-              <code>{'<ul>'}</code>
+              <code>{'<TabList />'}</code>
               {' '}
               list.<br />
               The <strong>default</strong> tabs style has a single border at the bottom.</p>
           </Content>
           <div className="example">
             <Tabs>
-              <ul>
-                <li className="is-active"><a>Pictures</a></li>
-                <li><a>Music</a></li>
-                <li><a>Videos</a></li>
-                <li><a>Documents</a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active">Pictures</TabItem>
+                <TabItem>Music</TabItem>
+                <TabItem>Videos</TabItem>
+                <TabItem>Documents</TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
             <pre>
               <PrismCode className="language-jsx">
                 {
-                  '<ul>\n' +
-                  '\t<li className="is-active"><a>Pictures</a></li>\n' +
-                  '\t<li><a>Music</a></li>\n' +
-                  '\t<li><a>Videos</a></li>\n' +
-                  '\t<li><a>Documents</a></li>' +
-                  '</ul>'
+                  '<Tabs>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active">Pictures</TabItem>\n' +
+                  '\t\t<TabItem>Music</TabItem>\n' +
+                  '\t\t<TabItem>Videos</TabItem>\n' +
+                  '\t\t<TabItem>Documents</TabItem>\n' +
+                  '\t</TabList>\n' +
+                  '</Tabs>'
                 }
               </PrismCode>
             </pre>
@@ -77,12 +81,12 @@ export default class TabPage extends React.Component {
           </Content>
           <div className="example">
             <Tabs alignment="centered">
-              <ul>
-                <li className="is-active"><a>Pictures</a></li>
-                <li><a>Music</a></li>
-                <li><a>Videos</a></li>
-                <li><a>Documents</a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active">Pictures</TabItem>
+                <TabItem>Music</TabItem>
+                <TabItem>Videos</TabItem>
+                <TabItem>Documents</TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -90,12 +94,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="centered">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a>Pictures</a></li>\n' +
-                  '\t\t<li><a>Music</a></li>\n' +
-                  '\t\t<li><a>Videos</a></li>\n' +
-                  '\t\t<li><a>Documents</a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active">Pictures</TabItem>\n' +
+                  '\t\t<TabItem>Music</TabItem>\n' +
+                  '\t\t<TabItem>Videos</TabItem>\n' +
+                  '\t\t<TabItem>Documents</TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -103,12 +107,12 @@ export default class TabPage extends React.Component {
           </figure>
           <div className="example">
             <Tabs alignment="right">
-              <ul>
-                <li className="is-active"><a>Pictures</a></li>
-                <li><a>Music</a></li>
-                <li><a>Videos</a></li>
-                <li><a>Documents</a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active">Pictures</TabItem>
+                <TabItem>Music</TabItem>
+                <TabItem>Videos</TabItem>
+                <TabItem>Documents</TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -116,12 +120,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="right">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a>Pictures</a></li>\n' +
-                  '\t\t<li><a>Music</a></li>\n' +
-                  '\t\t<li><a>Videos</a></li>\n' +
-                  '\t\t<li><a>Documents</a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active">Pictures</TabItem>\n' +
+                  '\t\t<TabItem>Music</TabItem>\n' +
+                  '\t\t<TabItem>Videos</TabItem>\n' +
+                  '\t\t<TabItem>Documents</TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -130,17 +134,22 @@ export default class TabPage extends React.Component {
           <hr />
           <Title tag="h3">Icons</Title>
           <Content>
-            <p>You can use any of the <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>
-              <strong>icons</strong>.</p>
+            <p>
+              You can use any of the
+              {' '}
+              <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>
+              {' '}
+              <strong>icons</strong>.
+            </p>
           </Content>
           <div className="example">
             <Tabs alignment="centered">
-              <ul>
-                <li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>
-                <li><a><Icon size="small" name="music" /><span>Music</span></a></li>
-                <li><a><Icon size="small" name="film" /><span>Videos</span></a></li>
-                <li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>
+                <TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>
+                <TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>
+                <TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -148,12 +157,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="centered">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="music" /><span>Music</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="film" /><span>Videos</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -178,12 +187,12 @@ export default class TabPage extends React.Component {
           </Content>
           <div className="example">
             <Tabs size="small">
-              <ul>
-                <li className="is-active"><a>Pictures</a></li>
-                <li><a>Music</a></li>
-                <li><a>Videos</a></li>
-                <li><a>Documents</a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active">Pictures</TabItem>
+                <TabItem>Music</TabItem>
+                <TabItem>Videos</TabItem>
+                <TabItem>Documents</TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -191,12 +200,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs size="small">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a>Pictures</a></li>\n' +
-                  '\t\t<li><a>Music</a></li>\n' +
-                  '\t\t<li><a>Videos</a></li>\n' +
-                  '\t\t<li><a>Documents</a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active">Pictures</TabItem>\n' +
+                  '\t\t<TabItem>Music</TabItem>\n' +
+                  '\t\t<TabItem>Videos</TabItem>\n' +
+                  '\t\t<TabItem>Documents</TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -204,12 +213,12 @@ export default class TabPage extends React.Component {
           </figure>
           <div className="example">
             <Tabs size="medium">
-              <ul>
-                <li className="is-active"><a>Pictures</a></li>
-                <li><a>Music</a></li>
-                <li><a>Videos</a></li>
-                <li><a>Documents</a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active">Pictures</TabItem>
+                <TabItem>Music</TabItem>
+                <TabItem>Videos</TabItem>
+                <TabItem>Documents</TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -217,12 +226,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs size="medium">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a>Pictures</a></li>\n' +
-                  '\t\t<li><a>Music</a></li>\n' +
-                  '\t\t<li><a>Videos</a></li>\n' +
-                  '\t\t<li><a>Documents</a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active">Pictures</TabItem>\n' +
+                  '\t\t<TabItem>Music</TabItem>\n' +
+                  '\t\t<TabItem>Videos</TabItem>\n' +
+                  '\t\t<TabItem>Documents</TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -230,12 +239,12 @@ export default class TabPage extends React.Component {
           </figure>
           <div className="example">
             <Tabs size="large">
-              <ul>
-                <li className="is-active"><a>Pictures</a></li>
-                <li><a>Music</a></li>
-                <li><a>Videos</a></li>
-                <li><a>Documents</a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active">Pictures</TabItem>
+                <TabItem>Music</TabItem>
+                <TabItem>Videos</TabItem>
+                <TabItem>Documents</TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -243,12 +252,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs size="large">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a>Pictures</a></li>\n' +
-                  '\t\t<li><a>Music</a></li>\n' +
-                  '\t\t<li><a>Videos</a></li>\n' +
-                  '\t\t<li><a>Documents</a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active">Pictures</TabItem>\n' +
+                  '\t\t<TabItem>Music</TabItem>\n' +
+                  '\t\t<TabItem>Videos</TabItem>\n' +
+                  '\t\t<TabItem>Documents</TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -261,12 +270,12 @@ export default class TabPage extends React.Component {
           </Content>
           <div className="example">
             <Tabs style="boxed">
-              <ul>
-                <li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>
-                <li><a><Icon size="small" name="music" /><span>Music</span></a></li>
-                <li><a><Icon size="small" name="film" /><span>Videos</span></a></li>
-                <li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>
+                <TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>
+                <TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>
+                <TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -274,12 +283,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs style="boxed">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="music" /><span>Music</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="film" /><span>Videos</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -298,12 +307,12 @@ export default class TabPage extends React.Component {
           </Content>
           <div className="example">
             <Tabs style="toggle">
-              <ul>
-                <li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>
-                <li><a><Icon size="small" name="music" /><span>Music</span></a></li>
-                <li><a><Icon size="small" name="film" /><span>Videos</span></a></li>
-                <li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>
+                <TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>
+                <TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>
+                <TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -311,12 +320,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs style="toggle">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="music" /><span>Music</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="film" /><span>Videos</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -333,26 +342,11 @@ export default class TabPage extends React.Component {
           </Content>
           <div className="example">
             <Tabs alignment="fullwidth">
-              <ul>
-                <li>
-                  <a>
-                    <Icon name="angle-left" />
-                    <span>Left</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <Icon name="angle-up" />
-                    <span>Up</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <span>Right</span>
-                    <Icon name="angle-right" />
-                  </a>
-                </li>
-              </ul>
+              <TabList>
+                <TabItem><Icon name="angle-left" /><span>Left</span></TabItem>
+                <TabItem><Icon name="angle-up" /><span>Up</span></TabItem>
+                <TabItem><span>Right</span><Icon name="angle-right" /></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -360,26 +354,11 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="fullwidth">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li>\n' +
-                  '\t\t\t<a>\n' +
-                  '\t\t\t\t<Icon name="angle-left" />\n' +
-                  '\t\t\t\t<span>Left</span>\n' +
-                  '\t\t\t</a>\n' +
-                  '\t\t</li>\n' +
-                  '\t\t<li>\n' +
-                  '\t\t\t<a>\n' +
-                  '\t\t\t\t<Icon name="angle-up" />\n' +
-                  '\t\t\t\t<span>Up</span>\n' +
-                  '\t\t\t</a>\n' +
-                  '\t\t</li>\n' +
-                  '\t\t<li>\n' +
-                  '\t\t\t<a>\n' +
-                  '\t\t\t\t<span>Right</span>\n' +
-                  '\t\t\t\t<Icon name="angle-right" />\n' +
-                  '\t\t\t</a>\n' +
-                  '\t\t</li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem><Icon name="angle-left" /><span>Left</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon name="angle-up" /><span>Up</span></TabItem>\n' +
+                  '\t\t<TabItem><span>Right</span><Icon name="angle-right" /></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -400,12 +379,12 @@ export default class TabPage extends React.Component {
           </Content>
           <div className="example">
             <Tabs alignment="centered" style="boxed">
-              <ul>
-                <li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>
-                <li><a><Icon size="small" name="music" /><span>Music</span></a></li>
-                <li><a><Icon size="small" name="film" /><span>Videos</span></a></li>
-                <li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>
+                <TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>
+                <TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>
+                <TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -413,12 +392,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="centered" style="boxed">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="music" /><span>Music</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="film" /><span>Videos</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -426,12 +405,12 @@ export default class TabPage extends React.Component {
           </figure>
           <div className="example">
             <Tabs alignment="fullwidth" style="toggle">
-              <ul>
-                <li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>
-                <li><a><Icon size="small" name="music" /><span>Music</span></a></li>
-                <li><a><Icon size="small" name="film" /><span>Videos</span></a></li>
-                <li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>
+                <TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>
+                <TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>
+                <TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -439,12 +418,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="fullwidth" style="toggle">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="music" /><span>Music</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="film" /><span>Videos</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -452,12 +431,12 @@ export default class TabPage extends React.Component {
           </figure>
           <div className="example">
             <Tabs alignment="centered" style="boxed" size="medium">
-              <ul>
-                <li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>
-                <li><a><Icon size="small" name="music" /><span>Music</span></a></li>
-                <li><a><Icon size="small" name="film" /><span>Videos</span></a></li>
-                <li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>
+                <TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>
+                <TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>
+                <TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -465,12 +444,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="centered" style="boxed" size="medium">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="music" /><span>Music</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="film" /><span>Videos</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>
@@ -478,12 +457,12 @@ export default class TabPage extends React.Component {
           </figure>
           <div className="example">
             <Tabs alignment="fullwidth" style="toggle" size="large">
-              <ul>
-                <li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>
-                <li><a><Icon size="small" name="music" /><span>Music</span></a></li>
-                <li><a><Icon size="small" name="film" /><span>Videos</span></a></li>
-                <li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>
-              </ul>
+              <TabList>
+                <TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>
+                <TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>
+                <TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>
+                <TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>
+              </TabList>
             </Tabs>
           </div>
           <figure className="highlight">
@@ -491,12 +470,12 @@ export default class TabPage extends React.Component {
               <PrismCode className="language-jsx">
                 {
                   '<Tabs alignment="fullwidth" style="toggle" size="large">\n' +
-                  '\t<ul>\n' +
-                  '\t\t<li className="is-active"><a><Icon size="small" name="image" /><span>Pictures</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="music" /><span>Music</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="film" /><span>Videos</span></a></li>\n' +
-                  '\t\t<li><a><Icon size="small" name="file-text-o" /><span>Documents</span></a></li>\n' +
-                  '\t</ul>\n' +
+                  '\t<TabList>\n' +
+                  '\t\t<TabItem className="is-active"><Icon size="small" name="image" /><span>Pictures</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="music" /><span>Music</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="film" /><span>Videos</span></TabItem>\n' +
+                  '\t\t<TabItem><Icon size="small" name="file-text-o" /><span>Documents</span></TabItem>\n' +
+                  '\t</TabList>\n' +
                   '</Tabs>'
                 }
               </PrismCode>

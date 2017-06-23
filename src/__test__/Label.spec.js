@@ -34,8 +34,8 @@ describe('Label', () => {
   });
 
   it('should render radio type', () => {
-    const wrapper = shallow(<Label radio />);
+    const wrapper = shallow(<Label type="radio" />);
 
-    expect(wrapper.html()).toBe('<label class="radio">');
+    expect(wrapper.hasClass('radio')).toBe(true);
   });
 });

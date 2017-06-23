@@ -33,7 +33,7 @@ describe('Message', () => {
     expect(wrapper.type()).toBe('div');
   });
 
-  it('should render custom property', () => {
+  it('should render custom color', () => {
     const wrapper = shallow(<Message color="info" />);
 
     expect(wrapper.hasClass('is-info')).toBe(true);

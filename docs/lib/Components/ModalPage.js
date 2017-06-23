@@ -21,6 +21,7 @@ import {
   ModalCardFoot,
   ModalCardHead,
   ModalCardTitle,
+  ModalClose,
   ModalContent,
   Media,
   Message,
@@ -86,7 +87,7 @@ export default class ModalPage extends React.Component {
             </Media>
           </Box>
         </ModalContent>
-        <Button tag="button" modalType="close" onClick={() => this.closeModal(false)} />
+        <ModalClose onClick={() => this.closeModal(false)} />
       </Modal>
     );
   }
@@ -97,7 +98,7 @@ export default class ModalPage extends React.Component {
         <ModalContent>
           <Image tag="p" size="4by3" src="http://bulma.io/images/placeholders/1280x960.png" />
         </ModalContent>
-        <Button tag="button" modalType="close" onClick={() => this.closeModal(false)} />
+        <ModalClose onClick={() => this.closeModal(false)} />
       </Modal>
     );
   }
@@ -198,13 +199,13 @@ export default class ModalPage extends React.Component {
                   <code>{'<Modal />'}</code>: the main container
                   <ul>
                     <li>
-                      <code>{'<Modal type="background" />'}</code>: a transparent overlay that can act as a click target to close the modal
+                      <code>{'<ModalBackground />'}</code>: a transparent overlay that can act as a click target to close the modal
                     </li>
                     <li>
-                      <code>{'<Modal type="content" />'}</code>: a horizontally and verticaly centered container, with a maximum width of 640px, in which you can include <em>any</em> content
+                      <code>{'<ModalContent />'}</code>: a horizontally and verticaly centered container, with a maximum width of 640px, in which you can include <em>any</em> content
                     </li>
                     <li>
-                      <code>{'<Modal type="close" />'}</code>: a simple cross located in the top right corner
+                      <code>{'<ModalClose />'}</code>: a simple cross located in the top right corner
                     </li>
                   </ul>
                 </li>
@@ -222,7 +223,7 @@ export default class ModalPage extends React.Component {
                     '\t\t<Modal type="content">\n' +
                     '\t\t\t<!-- Any other React-Bulma elements you want -->\n' +
                     '\t\t</Modal>\n' +
-                    '\t<Button modalType="close" onClick="Any func..."></Button>\n' +
+                    '\t<ModalClose onClick="Any func..."></ModalClose>\n' +
                     '</Modal>\n'
                   }
                 </PrismCode>
@@ -274,7 +275,7 @@ export default class ModalPage extends React.Component {
                     '\t<ModalContent>\n' +
                     '\t\t<Image tag="p" size="4by3" src="http://bulma.io/images/placeholders/1280x960.png" />\n' +
                     '\t</ModalContent>\n' +
-                    '\t<Button tag="button" modalType="close" onClick="Any func..."/>\n' +
+                    '\t<ModalClose onClick="Any func..."/>\n' +
                     '</Modal>'
                   }
                 </PrismCode>

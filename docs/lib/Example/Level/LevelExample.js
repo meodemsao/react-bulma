@@ -1,18 +1,18 @@
 import React from 'react';
-import { Control, Button, Field, Input, Level } from 'reactbulma';
+import { Control, Button, Field, Input, Level, LevelItem, LevelLeft, LevelRight } from 'reactbulma';
 
 export const LevelExample = () => {
   return (
     <Level>
-      <Level type="left" tag="div">
-        <Level tag="div" type="item">
+      <LevelLeft>
+        <LevelItem>
           <p className="subtitle is-5">
             <strong>123</strong>
             {' '}
             post
           </p>
-        </Level>
-        <Level tag="div" type="item">
+        </LevelItem>
+        <LevelItem>
           <Field addons>
             <Control>
               <Input type="text" placeholder="Find a post" />
@@ -21,25 +21,25 @@ export const LevelExample = () => {
               <Button>Search</Button>
             </Control>
           </Field>
-        </Level>
-      </Level>
-      <Level type="right">
-        <Level type="item" tag="p">
+        </LevelItem>
+      </LevelLeft>
+      <LevelRight>
+        <LevelItem tag="p">
           <strong>All</strong>
-        </Level>
-        <Level type="item" tag="p">
+        </LevelItem>
+        <LevelItem tag="p">
           <a>Published</a>
-        </Level>
-        <Level type="item" tag="p">
+        </LevelItem>
+        <LevelItem tag="p">
           <a>Drafts</a>
-        </Level>
-        <Level type="item" tag="p">
+        </LevelItem>
+        <LevelItem tag="p">
           <a>Deleted</a>
-        </Level>
-        <Level type="item" tag="p">
+        </LevelItem>
+        <LevelItem tag="p">
           <Button state="success">New</Button>
-        </Level>
-      </Level>
+        </LevelItem>
+      </LevelRight>
     </Level>
   );
 };

@@ -60,6 +60,7 @@ import Select from './Select';
 import Section from './Section';
 import Subtitle from './Subtitle';
 import TabItem from './TabItem';
+import TabList from './TabList';
 import Tabs from './Tabs';
 import Tag from './Tag';
 import TextArea from './TextArea';
@@ -129,6 +130,7 @@ export {
   Section,
   Subtitle,
   TabItem,
+  TabList,
   Tabs,
   Tag,
   TextArea,

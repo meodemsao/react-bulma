@@ -32,4 +32,10 @@ describe('NavRight', () => {
 
     expect(wrapper.type()).toBe('div');
   });
+
+  it('should render custom property', () => {
+    const wrapper = shallow(<NavRight navMenu />);
+
+    expect(wrapper.hasClass('nav-menu')).toBe(true);
+  });
 });

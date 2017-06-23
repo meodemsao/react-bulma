@@ -32,4 +32,16 @@ describe('Content', () => {
 
     expect(wrapper.type()).toBe('span');
   });
+
+  it('should render custom size', () => {
+    const wrapper = shallow(<Content size="small" />);
+
+    expect(wrapper.hasClass('is-small')).toBe(true);
+  });
+
+  it('should render content text center', () => {
+    const wrapper = shallow(<Content textCenter />);
+
+    expect(wrapper.hasClass('has-text-centered')).toBe(true);
+  });
 });

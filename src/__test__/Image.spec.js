@@ -27,6 +27,12 @@ describe('Image', () => {
     expect(wrapper.hasClass('extra')).toBe(true);
   });
 
+  it('should render custom tag', () => {
+    const wrapper = shallow(<Image tag="span">Yo!</Image>);
+
+    expect(wrapper.type()).toBe('span');
+  });
+
   it('should render src & size', () => {
     const wrapper = shallow(<Image size="128x128" src="http://bulma.io/images/placeholders/128x128.png" />);
 

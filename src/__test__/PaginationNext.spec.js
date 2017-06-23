@@ -32,4 +32,10 @@ describe('PaginationNext', () => {
 
     expect(wrapper.type()).toBe('span');
   });
+
+  it('should render disabled', () => {
+    const wrapper = shallow(<PaginationNext disabled />);
+
+    expect(wrapper.html()).toBe('<a class="pagination-next" disabled=""></a>');
+  });
 });
